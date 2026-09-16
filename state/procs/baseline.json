@@ -1,17 +1,1 @@
-{
- "ppid0": {
-  "1": {
-   "comm": "systemd",
-   "cmdline": "/usr/lib/systemd/systemd"
-  },
-  "67": {
-   "comm": "hatch",
-   "cmdline": "/opt/hatch/bin/hatch daemon --runtime-cell-leader=1967"
-  },
-  "706": {
-   "comm": "hatch-execd",
-   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1967"
-  }
- },
- "established": "2026-09-16T07:34:49Z"
-}
+{"established":"2026-09-16T07:34:49Z","ppid0":{"1":{"cmdline":"/usr/lib/systemd/systemd","comm":"systemd"},"67":{"cmdline":"/opt/hatch/bin/hatch daemon --runtime-cell-leader=1958","comm":"hatch","note":"cell reboot ~08:25:49Z 2026-09-16; leader 1967 -> 1958; exe unreadable (kernel-isolated, as documented)"},"706":{"cmdline":"/opt/hatch/bin/hatch-execd --runtime-cell-leader=1967","comm":"hatch-execd","note":"superseded 2026-09-16T08:27Z by PID 715 on cell reboot"},"715":{"cmdline":"/opt/hatch/bin/hatch-execd --runtime-cell-leader=1958","comm":"hatch-execd","note":"known hatch infra: replaced 706 on cell reboot ~08:25:49Z 2026-09-16; verified /proc/715/status PPid 0, exe -> /opt/hatch/bin/hatch-execd, starttime 5797 ticks"}},"update_reason":"cell reboot: PID 706 -> 715, leader 1967 -> 1958","updated":"2026-09-16T08:28:00Z"}

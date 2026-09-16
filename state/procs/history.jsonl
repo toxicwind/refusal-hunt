@@ -4,3 +4,7 @@
 {"ts": "2026-09-16T07:34:49Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
 {"ts": "2026-09-16T07:34:52Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
 {"ts": "2026-09-16T07:34:53Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T07:49:54Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T08:04:55Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T08:19:55Z", "n_procs": 15, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T08:27:16Z", "n_procs": 16, "ppid0_count": 3, "ppid0_pids": [1, 67, 715], "new_ppid0": [715], "cold_start": false, "ms": 5}

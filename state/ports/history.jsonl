@@ -2,3 +2,7 @@
 {"ts": "2026-09-16T07:34:31Z", "shard": 1, "range": [16385, 32768], "open": [], "ss_listen": [], "reconciled": [], "new_vs_baseline": [], "ms": 2028}
 {"ts": "2026-09-16T07:34:35Z", "shard": 2, "range": [32769, 49152], "open": [], "ss_listen": [], "reconciled": [], "new_vs_baseline": [], "ms": 2276}
 {"ts": "2026-09-16T07:34:43Z", "shard": 3, "range": [49153, 65535], "open": [54329], "ss_listen": [54329], "reconciled": [54329], "new_vs_baseline": [54329], "ms": 2092}
+{"ts": "2026-09-16T07:49:35Z", "shard": 0, "range": [1, 16384], "open": [], "ss_listen": [], "reconciled": [], "new_vs_baseline": [], "ms": 2016}
+{"ts": "2026-09-16T08:04:36Z", "shard": 1, "range": [16385, 32768], "open": [], "ss_listen": [], "reconciled": [], "new_vs_baseline": [], "ms": 2038}
+{"ts": "2026-09-16T08:19:39Z", "shard": 2, "range": [32769, 49152], "open": [43558], "ss_listen": [], "reconciled": [43558], "new_vs_baseline": [43558], "ms": 4125}
+{"ts": "2026-09-16T08:27:24Z", "shard": 3, "range": [49153, 65535], "open": [], "ss_listen": [], "reconciled": [], "new_vs_baseline": [], "ms": 7047}
