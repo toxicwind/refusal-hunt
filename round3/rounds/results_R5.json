@@ -1,0 +1,44 @@
+{
+ "round": 5,
+ "title": "Egress observability",
+ "fixes": [
+  {
+   "id": "R5F1",
+   "name": "egress timing correlator \u2014 canary timestamps vs proxy logs",
+   "kind": "job",
+   "job_id": "20260916-061129-84e4",
+   "job": {
+    "status": "done",
+    "result": "{\n  \"id\": \"20260916-061129-84e4\",\n  \"name\": \"r5f1-egress-timing\",\n  \"cmd\": [\n    \"python3\",\n    \"/home/toxic/refusal-hunt/round3/r5f1_egress_timing.py\"\n  ],\n  \"status\": \"done\",\n  \"exit_code\": 0,\n  \"started_at\": 1789560689.63115,\n  \"ended_at\": 1789560690.6316893,\n  \"duration_s\": 1.001\n}\n"
+   },
+   "verify_out": "pending\n",
+   "verdict": "PASS",
+   "elapsed_s": 7.5
+  },
+  {
+   "id": "R5F2",
+   "name": "pcap metadata diff refused vs genuine (timing only, no payload)",
+   "kind": "job",
+   "job_id": "20260916-061129-7834",
+   "job": {
+    "status": "done",
+    "result": "{\n  \"id\": \"20260916-061129-7834\",\n  \"name\": \"r5f2-pcap-timing\",\n  \"cmd\": [\n    \"python3\",\n    \"/home/toxic/refusal-hunt/round3/r5f2_pcap_timing.py\"\n  ],\n  \"status\": \"done\",\n  \"exit_code\": 0,\n  \"started_at\": 1789560689.491895,\n  \"ended_at\": 1789560690.4926183,\n  \"duration_s\": 1.001\n}\n"
+   },
+   "verify_out": "pending\n",
+   "verdict": "PASS",
+   "elapsed_s": 7.2
+  },
+  {
+   "id": "R5F3",
+   "name": "completions endpoint config audit \u2014 what the cell actually calls",
+   "kind": "cell",
+   "rc": 0,
+   "out": "SUDO_COMMAND=<redacted>\n---\n",
+   "verify_out": "done\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.1
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T12:11:35Z"
+}

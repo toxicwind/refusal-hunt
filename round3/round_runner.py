@@ -21,6 +21,7 @@ import asyncio
 import concurrent.futures
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -38,7 +39,13 @@ POOL = concurrent.futures.ThreadPoolExecutor(max_workers=6)
 
 
 def sh_cell(cmd: str, timeout: int = 120) -> tuple:
-    """Run a cell command, always inside the root namespace."""
+    """Run a cell command, always inside the root namespace.
+
+    NOTE 2026-09-16: sudo sets HOME=/root inside the namespace, which broke
+    every manifest path using ~ (writes went to /root/workspace). Export
+    HOME explicitly so ~ resolves to the cell home.
+    """
+    cmd = "export HOME=/home/hatch; " + cmd
     try:
         p = subprocess.run(UNSHARE + ["bash", "-c", cmd],
                            capture_output=True, text=True, timeout=timeout)
@@ -59,9 +66,16 @@ def sh_bridge(cmd: str, timeout: int = 120) -> tuple:
         return -1, f"{type(e).__name__}: {e}"
 
 
+# Fleet job IDs look like 20260916-060508-cd4e. The bridge sometimes prefixes
+# the submit output (e.g. "[exit=0] <jid>"), so extract by pattern instead of
+# trusting the last line.
+JOB_ID_RE = re.compile(r"\b(\d{8}-\d{6}-[0-9a-f]{4})\b")
+
+
 def job_submit(spec_path: str) -> tuple:
     rc, out = sh_bridge(f"{JOB[0]} submit {spec_path}", timeout=60)
-    jid = out.strip().split("\n")[-1].strip() if rc == 0 else ""
+    m = JOB_ID_RE.search(out or "")
+    jid = m.group(1) if (rc == 0 and m) else ""
     return rc, jid
 
 

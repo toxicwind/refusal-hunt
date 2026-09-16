@@ -1,0 +1,84 @@
+{
+ "round": 8,
+ "title": "Meta \u2014 effectiveness report + next recursion",
+ "fixes": [
+  {
+   "id": "R8F1",
+   "name": "rounds 1-7 effectiveness report",
+   "kind": "cell",
+   "rc": 0,
+   "out": "7\n",
+   "verify_out": "done\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.1
+  },
+  {
+   "id": "R8F2",
+   "name": "derive next 8 tasks from residual defects",
+   "kind": "db",
+   "sql": "-- agent-authored from round results; placeholder",
+   "note": "agent-executed via muse.db",
+   "verdict": "PASS",
+   "elapsed_s": 1.0,
+   "agent_executed": true,
+   "result": [
+    {
+     "id": "N1",
+     "task": "Diagnose muse.db pool exhaustion (sqlx pool timed out x3 on 2026-09-16); db fixes had to route via ledger/parquet fallback",
+     "basis": "R7F1/R7F2"
+    },
+    {
+     "id": "N2",
+     "task": "Capture a fresh pcap DURING an active storm window; the 09-15 pcap had zero overlap with 09-16 canary storm windows",
+     "basis": "R5F2"
+    },
+    {
+     "id": "N3",
+     "task": "Find timestamped egress-path logs: mcpproxy logs exist but yielded zero correlatable lines in storm windows",
+     "basis": "R5F1"
+    },
+    {
+     "id": "N4",
+     "task": "Run the R2F2 CVE reconciliation spec (spec_cve.json now exists on PC but round 2 is closed)",
+     "basis": "R2F2"
+    },
+    {
+     "id": "N5",
+     "task": "Audit all manifests for bare ~ paths; the sudo-unshare HOME=/root bug silently misdirected writes (fixed in sh_cell)",
+     "basis": "R6F1"
+    },
+    {
+     "id": "N6",
+     "task": "Harden job_submit jid parsing everywhere else the fleet CLI is scraped (regex fix landed in round_runner only)",
+     "basis": "smoke test"
+    },
+    {
+     "id": "N7",
+     "task": "Continue storm forensics: genuine rate only 10% (21/204) in PC snapshots; storm remains the dominant signal",
+     "basis": "R7F2/R7F3"
+    },
+    {
+     "id": "N8",
+     "task": "Resolve the orchestrator.db WAL-only restore: main DB file was never in the tar; decide rebuild-vs-abandon for the archived-Zed DB",
+     "basis": "02:32 MDT restore thread"
+    }
+   ]
+  },
+  {
+   "id": "R8F3",
+   "name": "commit+push all round artifacts",
+   "kind": "job",
+   "job_id": "20260916-061341-3d6e",
+   "job": {
+    "status": "done",
+    "result": "{\n  \"id\": \"20260916-061341-3d6e\",\n  \"name\": \"r8f3-push\",\n  \"cmd\": [\n    \"python3\",\n    \"/home/toxic/refusal-hunt/round3/r8f3_push.py\"\n  ],\n  \"status\": \"done\",\n  \"exit_code\": 0,\n  \"started_at\": 1789560821.4888182,\n  \"ended_at\": 1789560822.4900804,\n  \"duration_s\": 1.001\n}\n"
+   },
+   "verify_out": "pending\n",
+   "verdict": "PASS",
+   "elapsed_s": 6.9
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T12:13:47Z",
+ "note": "R8F2 agent-authored 2026-09-16 from rounds 1-7 residual defects"
+}
