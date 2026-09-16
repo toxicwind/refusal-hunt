@@ -1,0 +1,155 @@
+{
+  "generated_utc": "2026-09-16T06:05:47.167202+00:00",
+  "sources": {
+    "spawn_route_24h_rows": 81,
+    "spawn_truth_7d_rows": 448,
+    "workflow_route_24h_rows": 18,
+    "roots_24h": {
+      "completed": 319,
+      "errored": 1,
+      "n_models": 1,
+      "n_roots": 348,
+      "note": "kind=root, depth=0, created last 24h; query capped analysis at aggregate level",
+      "shutdown": 25,
+      "with_request_origin": 0
+    }
+  },
+  "spawn_route_construction_census_24h": {
+    "model": [
+      "ipnext/avocado-5.16-v4"
+    ],
+    "kind": [
+      "subagent"
+    ],
+    "child_depth": [
+      "1"
+    ],
+    "agent_type": [
+      "NULL"
+    ],
+    "requester_source": [
+      "runtime",
+      "runtime.workflow"
+    ],
+    "request_origin": [
+      "NULL"
+    ],
+    "transcript_surface": [
+      "NULL"
+    ],
+    "root_work_class": [
+      "NULL"
+    ],
+    "classification": [
+      "genuine",
+      "other:running",
+      "pending",
+      "refused_as_completed"
+    ]
+  },
+  "refused_vs_genuine_field_differences": {},
+  "refused_vs_genuine_identical_construction": true,
+  "refusal_rate_by_requester_source_7d": {
+    "runtime": {
+      "total": 430,
+      "refused_as_completed": 59,
+      "genuine": 358,
+      "pending": 1,
+      "other": 12,
+      "refused_rate": 0.1372
+    },
+    "runtime.workflow": {
+      "total": 18,
+      "refused_as_completed": 0,
+      "genuine": 17,
+      "pending": 0,
+      "other": 1,
+      "refused_rate": 0.0
+    }
+  },
+  "workflow_path_refusals_in_spawn_ledger": {
+    "total": 18,
+    "refused": 0
+  },
+  "top_refusing_parents_7d": [
+    {
+      "parent": "7240686c",
+      "total": 185,
+      "refused": 19,
+      "rate": 0.1027
+    },
+    {
+      "parent": "ff521137",
+      "total": 25,
+      "refused": 19,
+      "rate": 0.76
+    },
+    {
+      "parent": "0783c1d6",
+      "total": 13,
+      "refused": 9,
+      "rate": 0.6923
+    },
+    {
+      "parent": "f99a2d06",
+      "total": 56,
+      "refused": 4,
+      "rate": 0.0714
+    },
+    {
+      "parent": "58246538",
+      "total": 57,
+      "refused": 4,
+      "rate": 0.0702
+    },
+    {
+      "parent": "67fcb771",
+      "total": 11,
+      "refused": 1,
+      "rate": 0.0909
+    },
+    {
+      "parent": "ac045111",
+      "total": 1,
+      "refused": 1,
+      "rate": 1.0
+    },
+    {
+      "parent": "6f8a9be7",
+      "total": 19,
+      "refused": 1,
+      "rate": 0.0526
+    },
+    {
+      "parent": "0693e1c3",
+      "total": 1,
+      "refused": 1,
+      "rate": 1.0
+    },
+    {
+      "parent": "a0907f6c",
+      "total": 2,
+      "refused": 0,
+      "rate": 0.0
+    }
+  ],
+  "workflow_route_census_24h": {
+    "model": [
+      "ipnext/avocado-5.16-v4"
+    ],
+    "status": [
+      "completed",
+      "failed",
+      "running"
+    ],
+    "parent_agent_id": [
+      "6f8a9be7-9996-4ff6-92cd-175549e22124"
+    ],
+    "workflow_name": [
+      "parallel-fanout-v2",
+      "r6-shape-probe"
+    ]
+  },
+  "roots_construction_note": "348 root agents in 24h: 1 distinct model, 0 with request_origin, statuses 319 completed / 25 shutdown / 1 errored",
+  "conclusion": "Route construction fields are IDENTICAL for refused and genuine spawns (no differing field). The discriminator is requester_source: the normal subagent.spawn path (runtime) carries the refusals while the workflow daemon path (runtime.workflow) has zero refusals on the same model. Refusal is a property of the serving path, not of any recorded parameter or content."
+}

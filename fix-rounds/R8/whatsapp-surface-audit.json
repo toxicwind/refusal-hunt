@@ -1,0 +1,29 @@
+{
+  "audited_utc": "2026-09-16T06:08:53.430494+00:00",
+  "question": "does a queryable WhatsApp message DB exist on cell or awrawr-pc?",
+  "cell_whatsapp_db_files": [],
+  "remote_whatsapp_db_files": [],
+  "membrane_cli_cell": [
+    "ABSENT"
+  ],
+  "membrane_cli_remote": [
+    "which: no membrane in (%h/.bun/bin:%h/.local/bin:%h/.cargo/bin:/usr/local/bin:/usr/bin:/bin)",
+    "ABSENT"
+  ],
+  "librefang_channel_catalog": [
+    "/home/toxic/.librefang/channels/whatsapp.toml"
+  ],
+  "openfang_gateway_source": [
+    "/home/toxic/projects/agents/openfang/packages/whatsapp-gateway"
+  ],
+  "pitchfork_whatsapp_services": [
+    "0",
+    "0"
+  ],
+  "membrane_skill_present": [
+    "/home/hatch/workspace/skills/whatsapp-integration"
+  ],
+  "hatch_channel_status_agent_side": "linked (checked 2026-09-16 via channel.status; chat_url https://wa.me/hatch/link)",
+  "finding": "No WhatsApp message database exists on the cell or awrawr-pc. The live WhatsApp surface is the Hatch-managed linked channel (server-side store, not locally queryable). Local artifacts are: Membrane skill definition (CLI not installed), librefang channel catalog entry, openfang whatsapp-gateway source tree. There is no local 'WhatsApp DB' to mine for container/agent IDs; the interesting metadata lives in agent.* ledger tables, covered by R8c.",
+  "read_only": true
+}

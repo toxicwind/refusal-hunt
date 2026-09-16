@@ -1,0 +1,25 @@
+{
+ "n": 127,
+ "refused": 58,
+ "success_rate": 0.5433,
+ "bar": 0.9,
+ "verdict": "FAIL",
+ "recent10": {
+  "n": 10,
+  "refused": 2,
+  "success_rate": 0.8,
+  "sids": [
+   "430",
+   "431",
+   "432",
+   "433",
+   "434",
+   "435",
+   "436",
+   "437",
+   "438",
+   "439"
+  ]
+ },
+ "note": "Chris's bar: 'not successful until you can consistently spawn subagents'"
+}

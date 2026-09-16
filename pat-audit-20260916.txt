@@ -1,0 +1,150 @@
+== herd-ci-health ==
+  history hits (github_pat_): 0
+  history hits (ghp_): 0
+  worktree hits: 0
+== herd-ci ==
+  history hits (github_pat_): 0
+  history hits (ghp_): 0
+  worktree hits: 0
+== skills ==
+  history hits (github_pat_): 4
+    commit: 732c5214726093a9327ea611d572374a37043a96|2026-09-14 19:36:56 +0000|toxicwind|gear: consolidate all skill sources — 460 s
+    commit: a9f72ecd5bc903cf1683af6748432d0dee0215ca|2026-09-14 13:36:24 -0600|toxicwind|gear: consolidate all skill sources — 460 s
+    commit: 52e8af2ebeddbdce0c6f3445dce46c04afba24eb|2026-09-14 13:00:05 -0600|toxicwind|skills: first-class repo — 58 workspace ski
+    commit: 6c54b4eb897b502fcb734424da4ad8a45377dd34|2026-09-14 18:55:28 +0000|toxicwind|Initial commit: 58 workspace skills, first-
+  history hits (ghp_): 4
+    commit: 732c5214726093a9327ea611d572374a37043a96|2026-09-14 19:36:56 +0000|toxicwind|gear: consolidate all skill sources — 460 s
+    commit: a9f72ecd5bc903cf1683af6748432d0dee0215ca|2026-09-14 13:36:24 -0600|toxicwind|gear: consolidate all skill sources — 460 s
+    commit: 52e8af2ebeddbdce0c6f3445dce46c04afba24eb|2026-09-14 13:00:05 -0600|toxicwind|skills: first-class repo — 58 workspace ski
+    commit: 6c54b4eb897b502fcb734424da4ad8a45377dd34|2026-09-14 18:55:28 +0000|toxicwind|Initial commit: 58 workspace skills, first-
+  worktree hits: 1
+    encrypted-github-fs/store/blobs/333317120540361e.bin:1 [doc/example] [mtime-ok]
+      ctx: gAAAAABqp7YsasImUoweC6Yc6Mx_0XYe2WVSIMW0PjQd7tEopuvWOKl_Us09JIVvDlFydzTVSN2QJHKntfp_Slm_qu8a1WrWnzdZvLgOacT4QK43cIRa14XKe6gpi-CiVjejkovMYi15n22W3FRLU52OOSoToQEk
+== sovereign-router-sanitize ==
+  history hits (github_pat_): 0
+  history hits (ghp_): 0
+  worktree hits: 0
+== tau-ext-forks ==
+  history hits (github_pat_): 0
+  history hits (ghp_): 0
+  worktree hits: 0
+== tau-lockregen ==
+  history hits (github_pat_): 0
+  history hits (ghp_): 0
+  worktree hits: 11
+    node_modules/.bun/@anthropic-ai+sdk@0.91.1+27912429049419a2/node_modules/@anthropic-ai/sdk/resources/beta/sessions/resources.d.mts:31 [comment/doc] [mtime-ok]
+      ctx:      *       authorization_token: '[REDACTED_TOKEN]',
+    node_modules/.bun/@anthropic-ai+sdk@0.91.1+27912429049419a2/node_modules/@anthropic-ai/sdk/resources/beta/sessions/resources.d.ts:31 [comment/doc] [mtime-ok]
+      ctx:      *       authorization_token: '[REDACTED_TOKEN]',
+    node_modules/.bun/@anthropic-ai+sdk@0.91.1+27912429049419a2/node_modules/@anthropic-ai/sdk/resources/beta/sessions/resources.js:42 [comment/doc] [mtime-ok]
+      ctx:      *       authorization_token: '[REDACTED_TOKEN]',
+    node_modules/.bun/@anthropic-ai+sdk@0.91.1+27912429049419a2/node_modules/@anthropic-ai/sdk/resources/beta/sessions/resources.mjs:39 [comment/doc] [mtime-ok]
+      ctx:      *       authorization_token: '[REDACTED_TOKEN]',
+    node_modules/.bun/@anthropic-ai+sdk@0.91.1+27912429049419a2/node_modules/@anthropic-ai/sdk/src/resources/beta/sessions/resources.ts:50 [comment/doc] [mtime-ok]
+      ctx:    *       authorization_token: '[REDACTED_TOKEN]',
+    node_modules/.bun/bun-types@1.4.0/node_modules/bun-types/bun.d.ts:3651 [comment/doc] [mtime-ok]
+      ctx:    *   value: "[REDACTED_TOKEN]"
+    node_modules/.bun/bun-types@1.4.0/node_modules/bun-types/docs/runtime/secrets.mdx:141 [doc/example] [mtime-ok]
+      ctx:   value: "[REDACTED_TOKEN]",
+    node_modules/.bun/bun-types@1.4.0/node_modules/bun-types/docs/runtime/secrets.mdx:145 [doc/example] [mtime-ok]
+      ctx: await Bun.secrets.set("my-app.com", "github-token", "[REDACTED_TOKEN]");
+    node_modules/.bun/bun-types@1.4.2/node_modules/bun-types/bun.d.ts:3986 [comment/doc] [mtime-ok]
+      ctx:    *   value: "[REDACTED_TOKEN]"
+    node_modules/.bun/bun-types@1.4.2/node_modules/bun-types/docs/runtime/secrets.mdx:141 [doc/example] [mtime-ok]
+      ctx:   value: "[REDACTED_TOKEN]",
+    node_modules/.bun/bun-types@1.4.2/node_modules/bun-types/docs/runtime/secrets.mdx:145 [doc/example] [mtime-ok]
+      ctx: await Bun.secrets.set("my-app.com", "github-token", "[REDACTED_TOKEN]");
+== tau ==
+  history hits (github_pat_): 1
+    commit: 75fa699b5e4cf48495bdcd50b5b748dc3cf7697f|2026-09-11 02:12:42 -0600|toxicwind|feat(catalog): add upstream Groq auth KDL (
+  history hits (ghp_): 1
+    commit: 75fa699b5e4cf48495bdcd50b5b748dc3cf7697f|2026-09-11 02:12:42 -0600|toxicwind|feat(catalog): add upstream Groq auth KDL (
+  worktree hits: 14
+    docs/secrets.md:80 [code/other] [mtime-ok]
+      ctx:   content: [REDACTED_TOKEN]
+    packages/ai/test/transform-messages-redact-sensitive.test.ts:28 [config-value?] [mtime-ok]
+      ctx: 			const token = "[REDACTED_TOKEN]";
+    packages/coding-agent/test/model-discovery.test.ts:2757 [test-fixture?] [mtime-ok]
+      ctx: 		authStorage.setRuntimeApiKey("github-copilot", "[REDACTED_TOKEN]");
+    packages/coding-agent/test/model-discovery.test.ts:2758 [test-fixture?] [mtime-ok]
+      ctx: 		const cacheProviderId = resolveModelCacheProviderId("github-copilot", { apiKey: "[REDACTED_TOKEN]" });
+    packages/coding-agent/test/shell-snapshot.test.ts:170 [config-value?] [mtime-ok]
+      ctx: 				GITHUB_TOKEN: "[REDACTED_TOKEN]",
+    packages/coding-agent/test/shell-snapshot.test.ts:204 [test-fixture?] [mtime-ok]
+      ctx: 		for (const value of ["[REDACTED_TOKEN]", "sk-REDACTED", "hunter2", "-----BEGIN-----"]) {
+    packages/coding-agent/test/secrets-obfuscator.test.ts:2122 [config-value?] [mtime-ok]
+      ctx: 		const secret = "[REDACTED_TOKEN]";
+    python/robomp/.env.example:94 [comment/doc] [mtime-ok]
+      ctx: # GITHUB_TOKEN=[REDACTED_TOKEN]
+    python/robomp/tests/conftest.py:131 [doc/example] [mtime-ok]
+      ctx:     baseline["GITHUB_TOKEN"] = "[REDACTED_TOKEN]"
+    python/robomp/tests/test_config.py:55 [doc/example] [mtime-ok]
+      ctx:     assert cfg.github_token.get_secret_value() == "[REDACTED_TOKEN]"
+    python/robomp/tests/test_proxy_client.py:39 [config-value?] [mtime-ok]
+      ctx: _TOKEN = "[REDACTED_TOKEN]"
+    python/robomp/tests/test_proxy_server.py:24 [config-value?] [mtime-ok]
+      ctx: _TOKEN = "[REDACTED_TOKEN]"
+    python/robomp/tests/test_sandbox.py:1296 [doc/example] [mtime-ok]
+      ctx:     cred_url = "https://bot:[REDACTED_TOKEN]@example.invalid/o/r.git"
+    python/robomp/tests/test_sandbox.py:1300 [test-fixture?] [mtime-ok]
+      ctx:     assert "[REDACTED_TOKEN]" not in text
+== tauwork ==
+  history hits (github_pat_): 1
+    commit: <error: Command '['git', 'log', '-S', 'github_pat_', '--all', '--format=%H|%ad|%an|%s', '--date=iso']' timed out after 6
+  history hits (ghp_): 1
+    commit: <error: Command '['git', 'log', '-S', 'ghp_', '--all', '--format=%H|%ad|%an|%s', '--date=iso']' timed out after 60 secon
+  worktree hits: 46
+    tau/docs/secrets.md:80 [code/other] [mtime-ok]
+      ctx:   content: [REDACTED_TOKEN]
+    tau/engine/docs/secrets.md:80 [code/other] [mtime-ok]
+      ctx:   content: [REDACTED_TOKEN]
+    tau/engine/packages/ai/test/transform-messages-redact-sensitive.test.ts:28 [config-value?] [mtime-ok]
+      ctx: 			const token = "[REDACTED_TOKEN]";
+    tau/engine/packages/coding-agent/test/model-discovery.test.ts:2857 [test-fixture?] [mtime-ok]
+      ctx: 		authStorage.setRuntimeApiKey("github-copilot", "[REDACTED_TOKEN]");
+    tau/engine/packages/coding-agent/test/model-discovery.test.ts:2858 [test-fixture?] [mtime-ok]
+      ctx: 		const cacheProviderId = resolveModelCacheProviderId("github-copilot", { apiKey: "[REDACTED_TOKEN]" });
+    tau/engine/packages/coding-agent/test/shell-snapshot.test.ts:170 [config-value?] [mtime-ok]
+      ctx: 				GITHUB_TOKEN: "[REDACTED_TOKEN]",
+    tau/engine/packages/coding-agent/test/shell-snapshot.test.ts:204 [test-fixture?] [mtime-ok]
+      ctx: 		for (const value of ["[REDACTED_TOKEN]", "sk-REDACTED", "hunter2", "-----BEGIN-----"]) {
+    tau/engine/packages/coding-agent/test/secrets-obfuscator.test.ts:2153 [config-value?] [mtime-ok]
+      ctx: 		const secret = "[REDACTED_TOKEN]";
+    tau/engine/python/robomp/tests/conftest.py:131 [doc/example] [mtime-ok]
+      ctx:     baseline["GITHUB_TOKEN"] = "[REDACTED_TOKEN]"
+    tau/engine/python/robomp/tests/test_config.py:55 [doc/example] [mtime-ok]
+      ctx:     assert cfg.github_token.get_secret_value() == "[REDACTED_TOKEN]"
+    tau/engine/python/robomp/tests/test_proxy_client.py:39 [config-value?] [mtime-ok]
+      ctx: _TOKEN = "[REDACTED_TOKEN]"
+    tau/engine/python/robomp/tests/test_proxy_server.py:24 [config-value?] [mtime-ok]
+      ctx: _TOKEN = "[REDACTED_TOKEN]"
+    tau/engine/python/robomp/tests/test_sandbox.py:1296 [doc/example] [mtime-ok]
+      ctx:     cred_url = "https://bot:[REDACTED_TOKEN]@example.invalid/o/r.git"
+    tau/engine/python/robomp/tests/test_sandbox.py:1300 [test-fixture?] [mtime-ok]
+      ctx:     assert "[REDACTED_TOKEN]" not in text
+    tau/engine/vendor/oh-my-pi/docs/secrets.md:80 [code/other] [mtime-ok]
+      ctx:   content: [REDACTED_TOKEN]
+    tau/engine/vendor/oh-my-pi/packages/ai/test/transform-messages-redact-sensitive.test.ts:28 [config-value?] [mtime-ok]
+      ctx: 			const token = "[REDACTED_TOKEN]";
+    tau/engine/vendor/oh-my-pi/packages/coding-agent/test/model-discovery.test.ts:2857 [test-fixture?] [mtime-ok]
+      ctx: 		authStorage.setRuntimeApiKey("github-copilot", "[REDACTED_TOKEN]");
+    tau/engine/vendor/oh-my-pi/packages/coding-agent/test/model-discovery.test.ts:2858 [test-fixture?] [mtime-ok]
+      ctx: 		const cacheProviderId = resolveModelCacheProviderId("github-copilot", { apiKey: "[REDACTED_TOKEN]" });
+    tau/engine/vendor/oh-my-pi/packages/coding-agent/test/shell-snapshot.test.ts:170 [config-value?] [mtime-ok]
+      ctx: 				GITHUB_TOKEN: "[REDACTED_TOKEN]",
+    tau/engine/vendor/oh-my-pi/packages/coding-agent/test/shell-snapshot.test.ts:204 [test-fixture?] [mtime-ok]
+      ctx: 		for (const value of ["[REDACTED_TOKEN]", "sk-REDACTED", "hunter2", "-----BEGIN-----"]) {
+    tau/engine/vendor/oh-my-pi/packages/coding-agent/test/secrets-obfuscator.test.ts:2153 [config-value?] [mtime-ok]
+      ctx: 		const secret = "[REDACTED_TOKEN]";
+    tau/engine/vendor/oh-my-pi/python/robomp/tests/conftest.py:131 [doc/example] [mtime-ok]
+      ctx:     baseline["GITHUB_TOKEN"] = "[REDACTED_TOKEN]"
+    tau/engine/vendor/oh-my-pi/python/robomp/tests/test_config.py:55 [doc/example] [mtime-ok]
+      ctx:     assert cfg.github_token.get_secret_value() == "[REDACTED_TOKEN]"
+    tau/engine/vendor/oh-my-pi/python/robomp/tests/test_proxy_client.py:39 [config-value?] [mtime-ok]
+      ctx: _TOKEN = "[REDACTED_TOKEN]"
+    tau/engine/vendor/oh-my-pi/python/robomp/tests/test_proxy_server.py:24 [config-value?] [mtime-ok]
+      ctx: _TOKEN = "[REDACTED_TOKEN]"
+    ... +21 more
+== insecure storage ==
+  /home/hatch/.git-credentials: absent (good)
+  /home/hatch/.config/gh/hosts.yml: exists, mode=0o600, size=316 (content not read)

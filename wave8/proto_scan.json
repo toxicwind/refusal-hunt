@@ -1,0 +1,18 @@
+{
+ "ts": "2026-09-16T07:35:09Z",
+ "binary": "/opt/hatch/bin/hatch",
+ "binary_bytes": 323734544,
+ "anchors_found": 117,
+ "windows_scanned": 20,
+ "bytes_scanned": 2621440,
+ "marker_hits": {
+  "google/protobuf/descriptor.proto": 0,
+  "FileDescriptorProto": 0,
+  "FileDescriptorSet": 0,
+  "DescriptorPool": 0,
+  ".proto\u0000": 0
+ },
+ "proto_name_hits": [],
+ "n_proto_name_hits": 0,
+ "ms": 1031
+}

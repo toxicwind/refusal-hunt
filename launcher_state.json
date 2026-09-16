@@ -1,0 +1,50 @@
+{
+ "probes": {
+  "cron.status": {
+   "ok": true,
+   "ms": 40,
+   "note": "44 enabled jobs, scheduler responsive",
+   "at": "2026-09-16T06:14:01Z"
+  },
+  "cron.runs": {
+   "ok": true,
+   "ms": null,
+   "note": "jobs fire on schedule BUT user-task runs all gate-skipped: safety review closed",
+   "at": "2026-09-16T06:14:01Z"
+  },
+  "muse.db": {
+   "ok": true,
+   "ms": 60,
+   "note": "spawn ledger + whatsapp bindings readable",
+   "at": "2026-09-16T06:14:01Z"
+  },
+  "subagent.list": {
+   "ok": true,
+   "ms": null,
+   "note": "sees only own children; fleet ledger is agent.subagent_spawns",
+   "at": "2026-09-16T06:14:01Z"
+  },
+  "hooks.list": {
+   "ok": true,
+   "ms": null,
+   "note": "3 hooks, 2 enabled (squawk-feed, squawk-ws-spool)",
+   "at": "2026-09-16T06:14:01Z"
+  },
+  "systemd --user": {
+   "ok": false,
+   "ms": null,
+   "note": "no user bus in cell; system bus works but /etc is ephemeral",
+   "at": "2026-09-16T06:14:01Z"
+  }
+ },
+ "launches": [
+  {
+   "at": "2026-09-16T06:14:01Z",
+   "path": "subagent.spawn",
+   "task_kind": "pong-canary",
+   "outcome": "refused",
+   "detail": "bd87f04d: spawn ok, worker turn canned-refused"
+  }
+ ],
+ "storm": {}
+}

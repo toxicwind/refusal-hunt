@@ -1,0 +1,26 @@
+{
+ "type": "round_summary",
+ "round": 4,
+ "fixes": [
+  {
+   "id": "w2r4f1",
+   "status": "rolled_back",
+   "ms": 871
+  },
+  {
+   "id": "w2r4f2",
+   "status": "rolled_back",
+   "ms": 7936
+  },
+  {
+   "id": "w2r4f3",
+   "status": "pass",
+   "ms": 463
+  }
+ ],
+ "pass": 1,
+ "rolled_back": 2,
+ "skipped": 0,
+ "blocked": 0,
+ "round_ms": 7963
+}

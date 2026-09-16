@@ -1,0 +1,57 @@
+{
+ "window_rows": 200,
+ "skipped": 199,
+ "skip_rate": 0.995,
+ "per_job": {
+  "squawk-ws-client-watchdog": {
+   "n": 14,
+   "skipped": 14
+  },
+  "sidechat-watch-whatsapp": {
+   "n": 28,
+   "skipped": 28
+  },
+  "sidechat-watch-safety": {
+   "n": 28,
+   "skipped": 28
+  },
+  "sidechat-watch-agent2": {
+   "n": 27,
+   "skipped": 27
+  },
+  "sidechat-watch-squawk": {
+   "n": 28,
+   "skipped": 28
+  },
+  "sidechat-watch-madeon": {
+   "n": 27,
+   "skipped": 27
+  },
+  "sidechat-watch-agent1": {
+   "n": 28,
+   "skipped": 28
+  },
+  "service-restart-watchdog": {
+   "n": 14,
+   "skipped": 14
+  },
+  "fleet-snapshot-5m": {
+   "n": 3,
+   "skipped": 3
+  },
+  "gate-probe-minimal": {
+   "n": 1,
+   "skipped": 1
+  },
+  "whatsapp-fleet-digest": {
+   "n": 1,
+   "skipped": 0
+  },
+  "gate-clear-watch": {
+   "n": 1,
+   "skipped": 1
+  }
+ },
+ "first_ts": 1789537239,
+ "last_ts": 1789538054
+}

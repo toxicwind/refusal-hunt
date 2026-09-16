@@ -1,0 +1,56 @@
+{
+ "ts": "2026-09-16T07:35:21Z",
+ "oracle": "owned pre-classifier gates (banned_token_check, sanitize_job_body)",
+ "banned_gate": {
+  "true_positives": "5/5",
+  "false_positives": "0/1",
+  "winner": "S5_case",
+  "per_strategy": [
+   {
+    "s": "S5_case",
+    "fired": true,
+    "correct": true,
+    "lat_us": 6
+   },
+   {
+    "s": "S3_zerowidth",
+    "fired": true,
+    "correct": true,
+    "lat_us": 12
+   },
+   {
+    "s": "S6_control",
+    "fired": false,
+    "correct": true,
+    "lat_us": 29
+   },
+   {
+    "s": "S2_fullwidth",
+    "fired": true,
+    "correct": true,
+    "lat_us": 48
+   },
+   {
+    "s": "S1_plain",
+    "fired": true,
+    "correct": true,
+    "lat_us": 107
+   },
+   {
+    "s": "S4_spaced",
+    "fired": true,
+    "correct": true,
+    "lat_us": 148
+   }
+  ]
+ },
+ "sanitize_gate": {
+  "T1_clean_quarantined": false,
+  "T2_cve_dense_reported": [
+   "CVE-2023-9999",
+   "CVE-2024-1234",
+   "CVE-2024-5678"
+  ],
+  "T3_quarantine_mechanism": true
+ }
+}

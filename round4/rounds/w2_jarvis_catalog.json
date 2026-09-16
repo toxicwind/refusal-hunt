@@ -1,0 +1,249 @@
+{
+ "note": "key names + value shapes only; values never stored",
+ "vars": {
+  "JARVIS_VM_DATA_REGION": {
+   "len": 3,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_REQUEST_MODE": {
+   "len": 10,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_TRACE_CONTEXT": {
+   "len": 3779,
+   "looks_json": true,
+   "has_uuid": true,
+   "keys": [
+    "agent_depth",
+    "agent_id",
+    "app_id",
+    "app_version",
+    "approval_intent_context",
+    "available_at_utc",
+    "call_server_info_data",
+    "channel",
+    "client_interaction_id",
+    "connection_id",
+    "dequeued_at_ms",
+    "device_family",
+    "device_id",
+    "enqueued_at_ms",
+    "exec_chain",
+    "inference_workload_class",
+    "lane",
+    "max_training_tier",
+    "message_id",
+    "mode",
+    "model",
+    "parent_request_id",
+    "policy_subject",
+    "product_activation_id",
+    "product_entity_id",
+    "product_entity_kind",
+    "product_flow",
+    "product_surface",
+    "request_id",
+    "request_mode",
+    "request_origin",
+    "request_received_at_ms",
+    "requester_source",
+    "requeued_after_restart",
+    "root_agent_id",
+    "root_message_execution_id",
+    "root_request_id",
+    "root_request_origin",
+    "root_session_id",
+    "run_id",
+    "schedule_attempt",
+    "schedule_file_name",
+    "schedule_id",
+    "schedule_key",
+    "scheduled_for_utc",
+    "space_display_name",
+    "space_id",
+    "space_slug",
+    "stream_owner_message_id",
+    "submission_message_id",
+    "thread_id",
+    "timeline_anchor_at_ms",
+    "transcript_surface",
+    "trigger_reason",
+    "ui_control_target_client_id",
+    "user_agent",
+    "workload"
+   ]
+  },
+  "JARVIS_PRESENTATION_LOCALE": {
+   "len": 5,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_FQDN": {
+   "len": 49,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_TIER": {
+   "len": 4,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_EGRESS_APPROVAL_ADMIN_SOCK": {
+   "len": 47,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_INFERENCE_PROXY_SOCK": {
+   "len": 31,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_TELEMETRY_PROXY_SOCK": {
+   "len": 35,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_TOOL_CALL_ID": {
+   "len": 37,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_SESSION_ID": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_RESCUE_SIGNAL_SOCK": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_BIN_DIR": {
+   "len": 14,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_INFERENCE_HOSTNAME": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_SANDBOX_API_SOCK": {
+   "len": 31,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_AUTHD_SOCK": {
+   "len": 26,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_EGRESS_APPROVAL_EVENTS_SOCK": {
+   "len": 46,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_STEFI_PROXY_SOCK": {
+   "len": 27,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_CD_PINNED": {
+   "len": 1,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_IS_ASSIGNED": {
+   "len": 1,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_VM_COMPUTE_REGION": {
+   "len": 3,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_RUNTIME_CONTEXT_TOKEN": {
+   "len": 32,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_AUTHD_INGRESS_ALLOWED_USERS": {
+   "len": 25,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_DAEMON_EGRESS_APPROVAL_SOCK": {
+   "len": 48,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_HATCHLING_ID": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_SECURITY_SOCK": {
+   "len": 31,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_HOME": {
+   "len": 11,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_USER_TIMEZONE": {
+   "len": 14,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_CD_CHANNEL": {
+   "len": 5,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_SENTINEL_HTTP_API_SOCKET": {
+   "len": 33,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_MEMORY_SOCK": {
+   "len": 29,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "watchdog-supervisor.sh": [],
+ "service-health-poller.sh": [
+  {
+   "line": 30,
+   "text": "# Bounded event wait instead of sleep 30: wakes early on FIFO trigger,"
+  }
+ ]
+}

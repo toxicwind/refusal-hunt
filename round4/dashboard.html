@@ -1,0 +1,632 @@
+<html><head><title>round4 dashboard (waves 1+2)</title></head><body>
+<h1>refusal-hunt round4: waves 1+2 (8 rounds x 3 fixes each)</h1>
+<table border=1><tr><th>wave</th><th>round</th><th>fix</th><th>status</th><th>ms</th></tr>
+<tr><td>1</td><td>1</td><td>r1f3</td><td>pass</td><td>189</td></tr>
+<tr><td>1</td><td>1</td><td>r1f2</td><td>rolled_back</td><td>235</td></tr>
+<tr><td>1</td><td>1</td><td>r1f1</td><td>pass</td><td>695</td></tr>
+<tr><td>1</td><td>2</td><td>r2f3</td><td>pass</td><td>173</td></tr>
+<tr><td>1</td><td>2</td><td>r2f2</td><td>rolled_back</td><td>164</td></tr>
+<tr><td>1</td><td>2</td><td>r2f1</td><td>pass</td><td>225</td></tr>
+<tr><td>1</td><td>3</td><td>r3f1</td><td>pass</td><td>129</td></tr>
+<tr><td>1</td><td>3</td><td>r3f3</td><td>pass</td><td>158</td></tr>
+<tr><td>1</td><td>3</td><td>r3f2</td><td>pass</td><td>331</td></tr>
+<tr><td>1</td><td>4</td><td>r4f2</td><td>rolled_back</td><td>234</td></tr>
+<tr><td>1</td><td>4</td><td>r4f1</td><td>rolled_back</td><td>243</td></tr>
+<tr><td>1</td><td>4</td><td>r4f3</td><td>pass</td><td>250</td></tr>
+<tr><td>1</td><td>5</td><td>r5f3</td><td>pass</td><td>127</td></tr>
+<tr><td>1</td><td>5</td><td>r5f1</td><td>pass</td><td>180</td></tr>
+<tr><td>1</td><td>5</td><td>r5f2</td><td>pass</td><td>842</td></tr>
+<tr><td>1</td><td>6</td><td>r6f2</td><td>rolled_back</td><td>196</td></tr>
+<tr><td>1</td><td>6</td><td>r6f1</td><td>pass</td><td>335</td></tr>
+<tr><td>1</td><td>6</td><td>r6f3</td><td>rolled_back</td><td>465</td></tr>
+<tr><td>1</td><td>7</td><td>r7f3</td><td>skipped</td><td>0</td></tr>
+<tr><td>1</td><td>7</td><td>r7f2</td><td>skipped</td><td>0</td></tr>
+<tr><td>1</td><td>7</td><td>r7f1</td><td>rolled_back</td><td>1938</td></tr>
+<tr><td>1</td><td>8</td><td>r8f1</td><td>pass</td><td>178</td></tr>
+<tr><td>1</td><td>8</td><td>r8f3</td><td>rolled_back</td><td>191</td></tr>
+<tr><td>1</td><td>8</td><td>r8f2</td><td>rolled_back</td><td>261</td></tr>
+<tr><td>2</td><td>1</td><td>w2r1f3</td><td>pass</td><td>164</td></tr>
+<tr><td>2</td><td>1</td><td>w2r1f2</td><td>pass</td><td>606</td></tr>
+<tr><td>2</td><td>1</td><td>w2r1f1</td><td>pass</td><td>683</td></tr>
+<tr><td>2</td><td>2</td><td>w2r2f3</td><td>pass</td><td>124</td></tr>
+<tr><td>2</td><td>2</td><td>w2r2f1</td><td>pass</td><td>149</td></tr>
+<tr><td>2</td><td>2</td><td>w2r2f2</td><td>pass</td><td>117</td></tr>
+<tr><td>2</td><td>3</td><td>w2r3f2</td><td>pass</td><td>4290</td></tr>
+<tr><td>2</td><td>3</td><td>w2r3f1</td><td>pass</td><td>39816</td></tr>
+<tr><td>2</td><td>3</td><td>w2r3f3</td><td>pass</td><td>17200</td></tr>
+<tr><td>2</td><td>4</td><td>w2r4f3</td><td>pass</td><td>463</td></tr>
+<tr><td>2</td><td>4</td><td>w2r4f1</td><td>rolled_back</td><td>871</td></tr>
+<tr><td>2</td><td>4</td><td>w2r4f2</td><td>rolled_back</td><td>7936</td></tr>
+<tr><td>2</td><td>5</td><td>w2r5f3</td><td>rolled_back</td><td>38</td></tr>
+<tr><td>2</td><td>5</td><td>w2r5f2</td><td>pass</td><td>89</td></tr>
+<tr><td>2</td><td>5</td><td>w2r5f1</td><td>pass</td><td>115</td></tr>
+<tr><td>2</td><td>6</td><td>w2r6f2</td><td>pass</td><td>281</td></tr>
+<tr><td>2</td><td>6</td><td>w2r6f1</td><td>pass</td><td>299</td></tr>
+<tr><td>2</td><td>6</td><td>w2r6f3</td><td>pass</td><td>1615</td></tr>
+<tr><td>2</td><td>7</td><td>w2r7f1</td><td>pass</td><td>78</td></tr>
+<tr><td>2</td><td>7</td><td>w2r7f2</td><td>pass</td><td>91</td></tr>
+<tr><td>2</td><td>7</td><td>w2r7f3</td><td>pass</td><td>345</td></tr>
+<tr><td>2</td><td>8</td><td>w2r8f1</td><td>pass</td><td>99</td></tr>
+<tr><td>2</td><td>8</td><td>w2r8f2</td><td>pass</td><td>106</td></tr>
+<tr><td>2</td><td>8</td><td>w2r8f3</td><td>rolled_back</td><td>102</td></tr>
+</table>
+<h2>w2_aggregates.json</h2><pre>{
+ "window": "spawn_id>312",
+ "n": 127,
+ "refused": 58,
+ "refusal_rate": 0.4567,
+ "by_parent": [
+  {
+   "parent": "0693e1c3",
+   "n": 1,
+   "refused": 1,
+   "rate": 1.0
+  },
+  {
+   "parent": "0783c1d6",
+   "n": 11,
+   "refused": 9,
+   "rate": 0.818
+  },
+  {
+   "parent": "1184c81b",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "2d41aaae",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "58246538",
+   "n": 12,
+   "refused": 4,
+   "rate": 0.333
+  },
+  {
+   "parent": "67fcb771",
+   "n": 1,
+   "refused": 1,
+   "rate": 1.0
+  },
+  {
+   "parent": "6c2fa1f6",
+   "n": 1,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "6f8a9be7",
+   "n": 8,
+   "refused": 1,
+   "rate": 0.125
+  },
+  {
+   "parent": "7240686c",
+   "n": 41,
+   "refused": 19,
+   "rate": 0.463
+  },
+  {
+   "parent": "ac045111",
+   "n": 1,
+   "refused": 1,
+   "rate": 1.0
+  },
+  {
+   "parent": "ae250498",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "cda9e346",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "f99a2d06",
+   "n": 14,
+   "refused": 3,
+   "rate": 0.214
+  },
+  {
+   "parent": "ff521137",
+   "n": 25,
+   "refused": 19,
+   "rate": 0.76
+  }
+ ],
+ "fresh_tail_sids": [
+  "433",
+  "434",
+  "435",
+  "436",
+  "437",
+  "438",
+  "439"
+ ],
+ "fresh_genuine_sids": [
+  "433",
+  "434",
+  "435",
+  "436",
+  "437",
+  "438",
+  "439"
+ ],
+ "source": "muse.db 2026-09-16, programmatic rebuild (wave-1 hand transcription had an error)"
+}</pre>
+<h2>w2_gate.json</h2><pre>{
+ "window_rows": 200,
+ "skipped": 199,
+ "skip_rate": 0.995,
+ "per_job": {
+  "squawk-ws-client-watchdog": {
+   "n": 14,
+   "skipped": 14
+  },
+  "sidechat-watch-whatsapp": {
+   "n": 28,
+   "skipped": 28
+  },
+  "sidechat-watch-safety": {
+   "n": 28,
+   "skipped": 28
+  },
+  "sidechat-watch-agent2": {
+   "n": 27,
+   "skipped": 27
+  },
+  "sidechat-watch-squawk": {
+   "n": 28,
+   "skipped": 28
+  },
+  "sidechat-watch-madeon": {
+   "n": 27,
+   "skipped": 27
+  },
+  "sidechat-watch-agent1": {
+   "n": 28,
+   "skipped": 28
+  },
+  "service-restart-watchdog": {
+   "n": 14,
+   "skipped": 14
+  },
+  "fleet-snapshot-5m": {
+   "n": 3,
+   "skipped": 3
+  },
+  "gate-probe-minimal": {
+   "n": 1,
+   "skipped": 1
+  },
+  "whatsapp-fleet-digest": {
+   "n": 1,
+   "skipped": 0
+  },
+  "gate-clear-watch": {
+   "n": 1,
+   "skipped": 1
+  }
+ },
+ "first_ts": 1789537239,
+ "last_ts": 1789538054
+}</pre>
+<h2>w2_gate_timeline.json</h2><pre>{
+ "skip_fraction": 0.995,
+ "non_skip_count": 1,
+ "non_skip_jobs": [
+  "whatsapp-fleet-digest"
+ ],
+ "first_ts": 1789537239,
+ "last_ts": 1789538054,
+ "window_rows": 200
+}</pre>
+<h2>w2_coverage.json</h2><pre>{
+ "squawk-ws-client-watchdog": {
+  "skipped_n": 14,
+  "total_n": 14,
+  "covered_by": "cell supervisor watchdog-supervisor.sh section 1",
+  "risk": "covered"
+ },
+ "sidechat-watch-whatsapp": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-safety": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-agent2": {
+  "skipped_n": 27,
+  "total_n": 27,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-squawk": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-madeon": {
+  "skipped_n": 27,
+  "total_n": 27,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-agent1": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "service-restart-watchdog": {
+  "skipped_n": 14,
+  "total_n": 14,
+  "covered_by": "cell supervisor watchdog-supervisor.sh section 1",
+  "risk": "covered"
+ },
+ "fleet-snapshot-5m": {
+  "skipped_n": 3,
+  "total_n": 3,
+  "covered_by": "NONE - accepted risk (no gate-proof cover)",
+  "risk": "accepted"
+ },
+ "gate-probe-minimal": {
+  "skipped_n": 1,
+  "total_n": 1,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "whatsapp-fleet-digest": {
+  "skipped_n": 0,
+  "total_n": 1,
+  "covered_by": "NONE - accepted risk (no gate-proof cover)",
+  "risk": "accepted"
+ },
+ "gate-clear-watch": {
+  "skipped_n": 1,
+  "total_n": 1,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ }
+}</pre>
+<h2>w2_acceptance.json</h2><pre>{
+ "n": 127,
+ "refused": 58,
+ "success_rate": 0.5433,
+ "bar": 0.9,
+ "verdict": "FAIL",
+ "recent10": {
+  "n": 10,
+  "refused": 2,
+  "success_rate": 0.8,
+  "sids": [
+   "430",
+   "431",
+   "432",
+   "433",
+   "434",
+   "435",
+   "436",
+   "437",
+   "438",
+   "439"
+  ]
+ },
+ "note": "Chris's bar: 'not successful until you can consistently spawn subagents'"
+}</pre>
+<h2>w2_rollback_audit.json</h2><pre>{
+ "residues": [],
+ "clean": true
+}</pre>
+<h2>w2_hatch_surface.json</h2><pre>{
+ "verdict": "hatch_daemon_surface_unreachable_from_cell",
+ "evidence": {
+  "run_hatch_exists": true,
+  "probe__proc_1_root_run_hatch": false,
+  "probe__run_hatch_daemon_http-api.sock": false,
+  "probe__run_hatch_sentinel_egress-approvals-admin.sock": false,
+  "nsenter": {
+   "rc": 1,
+   "out": "nsenter: cannot open /proc/1/ns/mnt: Permission denied\n"
+  },
+  "listeners": []
+ },
+ "note": "/run/hatch sockets live in the host mount ns; the cell has no CAP_SYS_ADMIN over the init ns"
+}</pre>
+<h2>w2_jarvis_catalog.json</h2><pre>{
+ "note": "key names + value shapes only; values never stored",
+ "vars": {
+  "JARVIS_VM_DATA_REGION": {
+   "len": 3,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_REQUEST_MODE": {
+   "len": 10,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_TRACE_CONTEXT": {
+   "len": 3779,
+   "looks_json": true,
+   "has_uuid": true,
+   "keys": [
+    "agent_depth",
+    "agent_id",
+    "app_id",
+    "app_version",
+    "approval_intent_context",
+    "available_at_utc",
+    "call_server_info_data",
+    "channel",
+    "client_interaction_id",
+    "connection_id",
+    "dequeued_at_ms",
+    "device_family",
+    "device_id",
+    "enqueued_at_ms",
+    "exec_chain",
+    "inference_workload_class",
+    "lane",
+    "max_training_tier",
+    "message_id",
+    "mode",
+    "model",
+    "parent_request_id",
+    "policy_subject",
+    "product_activation_id",
+    "product_entity_id",
+    "product_entity_kind",
+    "product_flow",
+    "product_surface",
+    "request_id",
+    "request_mode",
+    "request_origin",
+    "request_received_at_ms",
+    "requester_source",
+    "requeued_after_restart",
+    "root_agent_id",
+    "root_message_execution_id",
+    "root_request_id",
+    "root_request_origin",
+    "root_session_id",
+    "run_id",
+    "schedule_attempt",
+    "schedule_file_name",
+    "schedule_id",
+    "schedule_key",
+    "scheduled_for_utc",
+    "space_display_name",
+    "space_id",
+    "space_slug",
+    "stream_owner_message_id",
+    "submission_message_id",
+    "thread_id",
+    "timeline_anchor_at_ms",
+    "transcript_surface",
+    "trigger_reason",
+    "ui_control_target_client_id",
+    "user_agent",
+    "workload"
+   ]
+  },
+  "JARVIS_PRESENTATION_LOCALE": {
+   "len": 5,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_FQDN": {
+   "len": 49,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_TIER": {
+   "len": 4,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_EGRESS_APPROVAL_ADMIN_SOCK": {
+   "len": 47,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_INFERENCE_PROXY_SOCK": {
+   "len": 31,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_TELEMETRY_PROXY_SOCK": {
+   "len": 35,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_TOOL_CALL_ID": {
+   "len": 37,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_SESSION_ID": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_RESCUE_SIGNAL_SOCK": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_BIN_DIR": {
+   "len": 14,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_INFERENCE_HOSTNAME": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_SANDBOX_API_SOCK": {
+   "len": 31,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_AUTHD_SOCK": {
+   "len": 26,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_EGRESS_APPROVAL_EVENTS_SOCK": {
+   "len": 46,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_STEFI_PROXY_SOCK": {
+   "len": 27,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_CD_PINNED": {
+   "len": 1,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_IS_ASSIGNED": {
+   "len": 1,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_VM_COMPUTE_REGION": {
+   "len": 3,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_RUNTIME_CONTEXT_TOKEN": {
+   "len": 32,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_AUTHD_INGRESS_ALLOWED_USERS": {
+   "len": 25,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_DAEMON_EGRESS_APPROVAL_SOCK": {
+   "len": 48,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_HATCHLING_ID": {
+   "len": 36,
+   "looks_json": false,
+   "has_uuid": true,
+   "keys": null
+  },
+  "JARVIS_SECURITY_SOCK": {
+   "len": 31,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_HOME": {
+   "len": 11,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_USER_TIMEZONE": {
+   "len": 14,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_CD_CHANNEL": {
+   "len": 5,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_SENTINEL_HTTP_API_SOCKET": {
+   "len": 33,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  },
+  "JARVIS_MEMORY_SOCK": {
+   "len": 29,
+   "looks_json": false,
+   "has_uuid": false,
+   "keys": null
+  }
+ }
+}</pre>
+<h2>w2_tools.json</h2><pre>{
+ "fdfind": {
+  "path": "/usr/bin/fdfind",
+  "version": "fdfind 9.0.0"
+ },
+ "fd": {
+  "path": null,
+  "version": ""
+ },
+ "rg": {
+  "path": "/usr/bin/rg",
+  "version": "ripgrep 14.1.0"
+ },
+ "python3": {
+  "path": "/usr/bin/python3",
+  "version": "Python 3.12.3"
+ },
+ "node": {
+  "path": "/usr/bin/node",
+  "version": "v24.20.0"
+ },
+ "ctags": {
+  "path": null,
+  "version": ""
+ },
+ "tree": {
+  "path": "/usr/bin/tree",
+  "version": "tree v2.1.1 \u00a9 1996 - 2023 by Steve Baker, Thomas Moore, Francesc Rocher, Florian"
+ },
+ "go_toolchain": {
+  "path": "/home/hatch/sdk/go/bin/go",
+  "present": true
+ }
+}</pre>
+</body></html>

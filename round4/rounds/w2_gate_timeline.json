@@ -1,0 +1,10 @@
+{
+ "skip_fraction": 0.995,
+ "non_skip_count": 1,
+ "non_skip_jobs": [
+  "whatsapp-fleet-digest"
+ ],
+ "first_ts": 1789537239,
+ "last_ts": 1789538054,
+ "window_rows": 200
+}

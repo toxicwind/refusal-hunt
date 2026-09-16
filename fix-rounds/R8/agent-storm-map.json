@@ -1,0 +1,77 @@
+{
+  "mapped_utc": "2026-09-16T06:08:50.291020+00:00",
+  "live_agent_impact": [
+    {
+      "agent_id": "5d2964f0-699a-4372-bc2f-ba1df3389266",
+      "kind": "root",
+      "status": "running",
+      "spawns_parented_7d": 0,
+      "spawns_parented_refused": 0,
+      "parent_refusal_rate": null,
+      "appears_as_child": []
+    },
+    {
+      "agent_id": "802811a3-2226-42dd-b347-9754def28d22",
+      "kind": "root",
+      "status": "running",
+      "spawns_parented_7d": 0,
+      "spawns_parented_refused": 0,
+      "parent_refusal_rate": null,
+      "appears_as_child": []
+    },
+    {
+      "agent_id": "cee558b1-9455-4240-abfd-7beb75c16209",
+      "kind": "subagent",
+      "status": "pending_init",
+      "spawns_parented_7d": 0,
+      "spawns_parented_refused": 0,
+      "parent_refusal_rate": null,
+      "appears_as_child": [
+        {
+          "status": "pending_init",
+          "classification": "pending"
+        }
+      ]
+    },
+    {
+      "agent_id": "46c16644-1034-4213-afe6-2c63294bf2f3",
+      "kind": "root",
+      "status": "errored",
+      "spawns_parented_7d": 0,
+      "spawns_parented_refused": 0,
+      "parent_refusal_rate": null,
+      "appears_as_child": []
+    },
+    {
+      "agent_id": "ff521137-c3c1-4121-9f11-8bbc2420ff24",
+      "kind": "root",
+      "status": "running",
+      "spawns_parented_7d": 25,
+      "spawns_parented_refused": 19,
+      "parent_refusal_rate": 0.76,
+      "appears_as_child": []
+    },
+    {
+      "agent_id": "0693e1c3-6054-49ab-a712-95a94748017e",
+      "kind": "root",
+      "status": "running",
+      "spawns_parented_7d": 1,
+      "spawns_parented_refused": 1,
+      "parent_refusal_rate": 1.0,
+      "appears_as_child": []
+    }
+  ],
+  "stuck_spawns": [
+    {
+      "agent_id": "cee558b1-9455-4240-abfd-7beb75c16209",
+      "status": "pending_init",
+      "note": "spawn 430 child, pending_init since ~05:55 UTC; only non-terminal spawn in 7d window"
+    }
+  ],
+  "totals_7d": {
+    "spawns": 448,
+    "refused_as_completed": 59
+  },
+  "targeting_note": "Per-agent map enables targeted mitigation: parents with the highest refused counts are the ones to reroute through the workflow daemon path (requester_source=runtime.workflow, 0% refusal) instead of subagent.spawn. No agent was disabled or removed by this audit.",
+  "read_only": true
+}

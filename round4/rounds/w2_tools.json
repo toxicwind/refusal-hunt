@@ -1,0 +1,34 @@
+{
+ "fdfind": {
+  "path": "/usr/bin/fdfind",
+  "version": "fdfind 9.0.0"
+ },
+ "fd": {
+  "path": null,
+  "version": ""
+ },
+ "rg": {
+  "path": "/usr/bin/rg",
+  "version": "ripgrep 14.1.0"
+ },
+ "python3": {
+  "path": "/usr/bin/python3",
+  "version": "Python 3.12.3"
+ },
+ "node": {
+  "path": "/usr/bin/node",
+  "version": "v24.20.0"
+ },
+ "ctags": {
+  "path": null,
+  "version": ""
+ },
+ "tree": {
+  "path": "/usr/bin/tree",
+  "version": "tree v2.1.1 \u00a9 1996 - 2023 by Steve Baker, Thomas Moore, Francesc Rocher, Florian"
+ },
+ "go_toolchain": {
+  "path": "/home/hatch/sdk/go/bin/go",
+  "present": true
+ }
+}

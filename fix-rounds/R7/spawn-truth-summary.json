@@ -1,0 +1,144 @@
+{
+  "generated_utc": "2026-09-16T06:05:47.880789+00:00",
+  "rows": 448,
+  "spawn_id_range": [
+    1,
+    451
+  ],
+  "classification_counts": {
+    "genuine": 375,
+    "refused_as_completed": 59,
+    "other:errored": 12,
+    "pending": 1,
+    "other:running": 1
+  },
+  "refusal_rate_by_requester_source": {
+    "runtime": {
+      "total": 430,
+      "refused": 59,
+      "rate": 0.1372
+    },
+    "runtime.workflow": {
+      "total": 18,
+      "refused": 0,
+      "rate": 0.0
+    }
+  },
+  "top_refusing_parents": [
+    {
+      "parent": "7240686c",
+      "total": 185,
+      "refused": 19,
+      "rate": 0.1027
+    },
+    {
+      "parent": "ff521137",
+      "total": 25,
+      "refused": 19,
+      "rate": 0.76
+    },
+    {
+      "parent": "0783c1d6",
+      "total": 13,
+      "refused": 9,
+      "rate": 0.6923
+    },
+    {
+      "parent": "f99a2d06",
+      "total": 56,
+      "refused": 4,
+      "rate": 0.0714
+    },
+    {
+      "parent": "58246538",
+      "total": 57,
+      "refused": 4,
+      "rate": 0.0702
+    },
+    {
+      "parent": "67fcb771",
+      "total": 11,
+      "refused": 1,
+      "rate": 0.0909
+    },
+    {
+      "parent": "ac045111",
+      "total": 1,
+      "refused": 1,
+      "rate": 1.0
+    },
+    {
+      "parent": "6f8a9be7",
+      "total": 19,
+      "refused": 1,
+      "rate": 0.0526
+    },
+    {
+      "parent": "0693e1c3",
+      "total": 1,
+      "refused": 1,
+      "rate": 1.0
+    },
+    {
+      "parent": "a0907f6c",
+      "total": 2,
+      "refused": 0,
+      "rate": 0.0
+    },
+    {
+      "parent": "89580d46",
+      "total": 6,
+      "refused": 0,
+      "rate": 0.0
+    },
+    {
+      "parent": "6a2585ad",
+      "total": 5,
+      "refused": 0,
+      "rate": 0.0
+    }
+  ],
+  "top_refusal_hours_utc": [
+    {
+      "hour": "2026-09-16T05",
+      "refusals": 20
+    },
+    {
+      "hour": "2026-09-15T06",
+      "refusals": 16
+    },
+    {
+      "hour": "2026-09-16T04",
+      "refusals": 8
+    },
+    {
+      "hour": "2026-09-16T03",
+      "refusals": 6
+    },
+    {
+      "hour": "2026-09-15T04",
+      "refusals": 5
+    },
+    {
+      "hour": "2026-09-15T07",
+      "refusals": 3
+    },
+    {
+      "hour": "2026-09-14T07",
+      "refusals": 1
+    }
+  ],
+  "provenance": "agent.subagent_spawns 7d window, md5(final_response) classified; pages 1-2 via db tool saved JSON, page 3 (spawns 404-451) narrow-query verified against transcription; gaps at spawn_ids 228,229,232 predate window or deleted",
+  "schema": [
+    "spawn_id",
+    "parent_agent_id",
+    "child_agent_id",
+    "created_at",
+    "completed_at",
+    "status",
+    "requester_source",
+    "child_depth",
+    "model",
+    "classification"
+  ]
+}

@@ -1,0 +1,1 @@
+{"fixes":[{"elapsed_s":3.2,"id":"R2F1","kind":"db","name":"corrections log v1 — classify last 50 spawns","note":"agent-executed via muse.db","result":{"genuine":1,"pending":1,"pong_genuine":5,"refused_as_completed":43},"verdict":"PASS"}],"passes":3,"round":2,"title":"Close the verification loop","ts":"2026-09-16T05:56:00Z"}

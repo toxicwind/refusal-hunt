@@ -1,0 +1,3 @@
+spawn_id,created_at,secs,status,agent_type,depth,prompt_len,fr_len,refused
+398,1789531378,1,0,0,1,311,384,1
+399,1789531378,1,0,0,1,79,384,1

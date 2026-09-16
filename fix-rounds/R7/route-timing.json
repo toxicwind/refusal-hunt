@@ -1,0 +1,105 @@
+{
+  "generated_utc": "2026-09-16T06:05:47.228419+00:00",
+  "spawn_route_segments_24h": {
+    "refused_as_completed": {
+      "handoff_s": {
+        "n": 49,
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "total_s": {
+        "n": 53,
+        "min": 0.0,
+        "median": 2.0,
+        "p95": 5.0,
+        "max": 6.0
+      }
+    },
+    "genuine": {
+      "handoff_s": {
+        "n": 26,
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "total_s": {
+        "n": 26,
+        "min": 1.0,
+        "median": 2.0,
+        "p95": 11.0,
+        "max": 777.0
+      }
+    },
+    "pending": {
+      "handoff_s": {
+        "n": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "total_s": {
+        "n": 0
+      }
+    },
+    "other:running": {
+      "handoff_s": {
+        "n": 1,
+        "min": 0.0,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "total_s": {
+        "n": 0
+      }
+    }
+  },
+  "workflow_route_segments_24h": {
+    "queue_s": {
+      "n": 18,
+      "min": 0.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0
+    },
+    "exec_s": {
+      "n": 17,
+      "min": 1.0,
+      "median": 1.0,
+      "p95": 6.0,
+      "max": 11.0
+    },
+    "total_tokens": {
+      "n": 18,
+      "min": 11314.0,
+      "median": 11987.5,
+      "p95": 308575.0,
+      "max": 308615.0
+    },
+    "input_tokens": {
+      "n": 18,
+      "min": 11276.0,
+      "median": 11958.0,
+      "p95": 308557.0,
+      "max": 308561.0
+    },
+    "by_status": {
+      "completed": 15,
+      "failed": 2,
+      "running": 1
+    }
+  },
+  "cross_route": {
+    "genuine_spawn_median_total_s": 2.0,
+    "refused_spawn_median_total_s": 2.0,
+    "workflow_child_median_exec_s": 1.0,
+    "workflow_child_median_total_tokens": 11987.5,
+    "workflow_child_max_total_tokens": 308615.0,
+    "refusal_latency_note": "refused spawns complete in ~1s: the refusal is a fast serving-path reject, not a timeout",
+    "cost_note": "workflow route works during the spawn storm but inherits the full parent context (300k+ input tokens on the v2 collector); genuine spawn children carry no comparable token ledger in the observed tables"
+  }
+}

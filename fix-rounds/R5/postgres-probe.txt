@@ -1,0 +1,1 @@
+ tcp5432=closed pg_isready=absent

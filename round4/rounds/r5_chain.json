@@ -1,0 +1,22 @@
+{
+ "canary-feed.sh": {
+  "exists": true,
+  "executable": true
+ },
+ "bridge-xfer": {
+  "exists": true,
+  "executable": true
+ },
+ "bridge-exec": {
+  "exists": true,
+  "executable": true
+ },
+ "spawn_guard": {
+  "exists": true,
+  "executable": false
+ },
+ "supervisor": {
+  "exists": true,
+  "executable": true
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "min_interval_s": 90,
+ "max_parallel": 2,
+ "measured_rate": 0.4567,
+ "reason": "moderate rate, standard throttle",
+ "wave": 2
+}

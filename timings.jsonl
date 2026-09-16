@@ -1,0 +1,15 @@
+{"t0_us": 4181502118, "t1_us": 4181546614, "elapsed_us": 44496, "op": "parquet_read_verify", "detail": "spawns.parquet", "wall_us": 1789531386880852}
+{"t0_us": 4191573059, "t1_us": 4191615757, "elapsed_us": 42698, "op": "parquet_read", "detail": "/home/hatch/workspace/refusal-hunt/spawns.parquet", "wall_us": 1789531396949994}
+{"t0_us": 4191615907, "t1_us": 4191618397, "elapsed_us": 2490, "op": "csv_read", "detail": "new_rows.csv", "wall_us": 1789531396952634}
+{"t0_us": 4191618512, "t1_us": 4191621960, "elapsed_us": 3448, "op": "merge_dedupe_sort", "detail": "base=394 new=2", "wall_us": 1789531396956194}
+{"t0_us": 4191622106, "t1_us": 4191625880, "elapsed_us": 3774, "op": "parquet_write_snappy", "detail": "/home/hatch/workspace/refusal-hunt/spawns.parquet", "wall_us": 1789531396960115}
+{"op": "refresh_done", "detail": "rows 394->396 (+2)", "wall_us": 1789531396960360, "refused_total": 33}
+{"op": "experiment_dual_probe", "detail": "direct pong (399) + coordinator->pong (398); both refused sig-hash in 1s; storm ON", "wall_us": 1789531397059957, "elapsed_us": 3080747, "t0_wall_ns": 1789531376898773275, "t1_wall_ns": 1789531379979520550, "spawn_ids": [398, 399]}
+{"t0_us": 4198088446, "t1_us": 4198393308, "elapsed_us": 304862, "op": "api_enum_pyarrow", "detail": "module surface", "wall_us": 1789531403727546}
+{"t0_us": 4206648050, "t1_us": 4206680590, "elapsed_us": 32540, "op": "analyze.parquet_read", "detail": "/home/hatch/workspace/refusal-hunt/spawns.parquet", "wall_us": 1789531412014828}
+{"t0_us": 4206685083, "t1_us": 4206686459, "elapsed_us": 1376, "op": "analyze.timing_split", "detail": "rows=396", "wall_us": 1789531412020695}
+{"t0_us": 4206686668, "t1_us": 4206693703, "elapsed_us": 7035, "op": "analyze.hourly", "detail": "last 48h", "wall_us": 1789531412027938}
+{"t0_us": 4206682808, "t1_us": 4206695514, "elapsed_us": 12706, "op": "analyze.build_report", "detail": "", "wall_us": 1789531412029749}
+{"op": "analyze.done", "detail": "rows=396 storm=True", "wall_us": 1789531412031004}
+{"t0_us": 4207266971, "t1_us": 4207267150, "elapsed_us": 179, "op": "timings.jsonl_read", "detail": "timings.jsonl", "wall_us": 1789531412601387}
+{"t0_us": 4207268369, "t1_us": 4207290887, "elapsed_us": 22518, "op": "timings.parquet_write", "detail": "timings.parquet", "wall_us": 1789531412625125}

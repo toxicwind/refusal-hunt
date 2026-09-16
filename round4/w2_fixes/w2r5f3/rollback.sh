@@ -1,0 +1,3 @@
+#!/bin/bash
+set -uo pipefail
+rm -f "$ROUND4_ROOT/rounds/w2_lsns.txt" "$ROUND4_ROOT/rounds/w2_netns.txt"; echo "rm"

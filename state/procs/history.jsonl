@@ -1,0 +1,6 @@
+{"ts": "2026-09-16T07:34:47Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": true, "ms": 1}
+{"ts": "2026-09-16T07:34:47Z", "n_procs": 12, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T07:34:49Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [706], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T07:34:49Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T07:34:52Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}
+{"ts": "2026-09-16T07:34:53Z", "n_procs": 11, "ppid0_count": 3, "ppid0_pids": [1, 67, 706], "new_ppid0": [], "cold_start": false, "ms": 1}

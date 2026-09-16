@@ -1,0 +1,209 @@
+[
+ {
+  "file": "DEBUG_STATE.md",
+  "chars": 2873,
+  "headings": 6,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "inline-meta-finding-20260915.md",
+  "chars": 3828,
+  "headings": 6,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "canary-log-20260915.md",
+  "chars": 2918,
+  "headings": 3,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "context-hygiene.md",
+  "chars": 1685,
+  "headings": 1,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "deep-dive-2-embedded-directive-20260916.md",
+  "chars": 5886,
+  "headings": 8,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "common-cause-onset-20260916.md",
+  "chars": 1479,
+  "headings": 1,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "false-constructs-ignore-list-20260916.md",
+  "chars": 3441,
+  "headings": 3,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "that-one-stands-deep-dig-20260916.md",
+  "chars": 2467,
+  "headings": 5,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "round3-20260916.md",
+  "chars": 5108,
+  "headings": 11,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "8task-run-20260915-2344.md",
+  "chars": 5687,
+  "headings": 11,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "recursive-8round-plan.md",
+  "chars": 3846,
+  "headings": 10,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/ROUNDLOG.md",
+  "chars": 5803,
+  "headings": 14,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/ROUNDSUMMARY.md",
+  "chars": 217,
+  "headings": 1,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/PLAN.md",
+  "chars": 3066,
+  "headings": 5,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/EIGHT_ROUND_REPORT.md",
+  "chars": 7274,
+  "headings": 9,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/R1/backoff-block.md",
+  "chars": 863,
+  "headings": 1,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 2,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/R2/R2-backoff-block.md",
+  "chars": 892,
+  "headings": 1,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/R2/directives.snapshot-20260916T055423Z.md",
+  "chars": 20000,
+  "headings": 24,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/R6/FANOUT_EVIDENCE.md",
+  "chars": 3342,
+  "headings": 6,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/R7/ROUTE_CONSTRUCTION.md",
+  "chars": 1668,
+  "headings": 5,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "fix-rounds/R7/ROUTE_TIMING.md",
+  "chars": 1052,
+  "headings": 4,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "round4/ROUNDS_SUMMARY.md",
+  "chars": 1296,
+  "headings": 2,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ },
+ {
+  "file": "round4/w2_rollback/w2r1f3/abs__home_hatch_workspace_refusal-hunt_round4_ROUNDS_SUMMARY.md",
+  "chars": 669,
+  "headings": 1,
+  "code_blocks": 0,
+  "blockquotes": 0,
+  "html_comments": 0,
+  "frontmatter": false
+ }
+]

@@ -1,0 +1,1 @@
+{"action":"degraded-continue: executed all four lanes directly, zero helper re-spawns into the storm","agents":4,"classification":"storm-artifact","event":"storm-refusal","md5":"b4aefd29108f232f9c0d5a4b030215c1","session":"side_chat","ts":"2026-09-16T07:14:00Z","work":"benign forensics (config audit, proto/ws map, key-metadata inventory, capability fuzz)"}

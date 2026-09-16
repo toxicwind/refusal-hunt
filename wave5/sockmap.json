@@ -1,0 +1,638 @@
+{
+ "ts": "2026-09-16T06:32:14Z",
+ "own_netns": "net:[4026532272]",
+ "pids_other_netns": [
+  1
+ ],
+ "tcp_listeners_via_proc": [
+  {
+   "ip_hex": "0100007F",
+   "port": 3129,
+   "inode": "112397",
+   "seen_via_pid": 1,
+   "pids": [
+    4730
+   ],
+   "netns": "net:[4026532272]"
+  }
+ ],
+ "unix_sockets": [
+  {
+   "path": "/run/hatch/sandbox/space-media.sock",
+   "inode": "139",
+   "mode": "0o666",
+   "uid": 0,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/sandbox/space-privileged.sock",
+   "inode": "138",
+   "mode": "0o666",
+   "uid": 0,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/sandbox/space-web-search.sock",
+   "inode": "137",
+   "mode": "0o666",
+   "uid": 0,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/sandbox/space-inference.sock",
+   "inode": "136",
+   "mode": "0o666",
+   "uid": 0,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/sandbox-api/api.sock",
+   "inode": "140",
+   "mode": "0o666",
+   "uid": 0,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/telemetry/bugreport.sock",
+   "inode": "2716",
+   "mode": "0o666",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "inode": "1261",
+   "mode": "0o666",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/withings.sock",
+   "inode": "2333",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/web-search.sock",
+   "inode": "2330",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/wearables-display.sock",
+   "inode": "2329",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/wai-privsep.sock",
+   "inode": "2328",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/tts.sock",
+   "inode": "2327",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/ticketmaster.sock",
+   "inode": "2326",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/threads-messages-cli.sock",
+   "inode": "2325",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/threads-cli.sock",
+   "inode": "2324",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/tessie-api.sock",
+   "inode": "2323",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/tessie-api-verify.sock",
+   "inode": "2322",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/tailscale.sock",
+   "inode": "2321",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/subscription-status.sock",
+   "inode": "2318",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/stripe-link.sock",
+   "inode": "2317",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/stripe-link-checkout-card.sock",
+   "inode": "2316",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/spotify-api.sock",
+   "inode": "2315",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/shopping.sock",
+   "inode": "2314",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/shopify-ucp-cli.sock",
+   "inode": "2313",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/share.sock",
+   "inode": "2312",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/save-to-spotify.sock",
+   "inode": "2307",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/ring-cli.sock",
+   "inode": "2306",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/remote-storage.sock",
+   "inode": "2305",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/privsep-test-fully-isolated.sock",
+   "inode": "2304",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/printify.sock",
+   "inode": "2303",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/printify-verify.sock",
+   "inode": "2302",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/polymarket-api.sock",
+   "inode": "2301",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/platform-search.sock",
+   "inode": "2300",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/platform-search-stdout-search.sock",
+   "inode": "2299",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/plaid.sock",
+   "inode": "2298",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/places.sock",
+   "inode": "2297",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/philips-hue.sock",
+   "inode": "2296",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/peloton.sock",
+   "inode": "2295",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/outlook-mail.sock",
+   "inode": "2294",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/outlook-contacts.sock",
+   "inode": "2293",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/outlook-calendar.sock",
+   "inode": "2292",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/opentable.sock",
+   "inode": "2291",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/notion-cli.sock",
+   "inode": "2290",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/navigation.sock",
+   "inode": "2289",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/muse-mail.sock",
+   "inode": "2288",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/meta-catalog-search.sock",
+   "inode": "2287",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/messenger.sock",
+   "inode": "2286",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/media-library.sock",
+   "inode": "2285",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/media-generation.sock",
+   "inode": "2284",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/local-search.sock",
+   "inode": "2283",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/instagram-messages-cli.sock",
+   "inode": "2280",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/instagram-cli.sock",
+   "inode": "2279",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/image-search.sock",
+   "inode": "2277",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/healthkit-cli.sock",
+   "inode": "2276",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/healthex.sock",
+   "inode": "2275",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/health-cli.sock",
+   "inode": "2274",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/hatch-gws-cli-fully-isolated.sock",
+   "inode": "2273",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/hatch-gws-auth.sock",
+   "inode": "2272",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/granola-cli.sock",
+   "inode": "2271",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/geocode.sock",
+   "inode": "2270",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/genui-display-render.sock",
+   "inode": "2269",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/function-health.sock",
+   "inode": "2268",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/flightaware.sock",
+   "inode": "2267",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/feature-request.sock",
+   "inode": "2266",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/facebook-cli.sock",
+   "inode": "2265",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/edits.sock",
+   "inode": "2263",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/duffel.sock",
+   "inode": "2262",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/device-data.sock",
+   "inode": "2258",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/calendly.sock",
+   "inode": "2253",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/browser-service.sock",
+   "inode": "2250",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/audio-notes-read.sock",
+   "inode": "2247",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/privsep/ads-mcp.sock",
+   "inode": "2246",
+   "mode": "0o660",
+   "uid": 65534,
+   "gid": 0,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/noded/control.sock",
+   "inode": "1284",
+   "mode": "0o666",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/noded/http-api.sock",
+   "inode": "1283",
+   "mode": "0o666",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/noded/ephemeral.sock",
+   "inode": "1281",
+   "mode": "0o666",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/run/hatch/auth/authd.sock",
+   "inode": "1273",
+   "mode": "0o666",
+   "uid": 65534,
+   "gid": 65534,
+   "pids": []
+  },
+  {
+   "path": "/home/hatch/.cache/awrawr-ws-bridge.sock",
+   "inode": "3404795",
+   "mode": "0o600",
+   "uid": 0,
+   "gid": 65534,
+   "pids": []
+  }
+ ],
+ "inode_pid_coverage": 19
+}

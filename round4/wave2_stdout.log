@@ -1,0 +1,12 @@
+W2 ROUND 1: pass=3 rolled_back=0 skipped=0 blocked=0 ms=687
+W2 ROUND 2: pass=3 rolled_back=0 skipped=0 blocked=0 ms=269
+W2 ROUND 3: pass=3 rolled_back=0 skipped=0 blocked=0 ms=57051
+W2 ROUND 4: pass=1 rolled_back=2 skipped=0 blocked=0 ms=7963
+W2 ROUND 5: pass=2 rolled_back=1 skipped=0 blocked=0 ms=116
+W2 ROUND 6: pass=3 rolled_back=0 skipped=0 blocked=0 ms=1619
+W2 ROUND 7: pass=3 rolled_back=0 skipped=0 blocked=0 ms=352
+W2 ROUND 8: pass=2 rolled_back=1 skipped=0 blocked=0 ms=220
+dashboard: 48 fix rows
+runbook wave2 appended
+WAVE2 DONE
+WAVE2_EXIT:0

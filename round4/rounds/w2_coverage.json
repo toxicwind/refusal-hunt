@@ -1,0 +1,74 @@
+{
+ "squawk-ws-client-watchdog": {
+  "skipped_n": 14,
+  "total_n": 14,
+  "covered_by": "cell supervisor watchdog-supervisor.sh section 1",
+  "risk": "covered"
+ },
+ "sidechat-watch-whatsapp": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-safety": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-agent2": {
+  "skipped_n": 27,
+  "total_n": 27,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-squawk": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-madeon": {
+  "skipped_n": 27,
+  "total_n": 27,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "sidechat-watch-agent1": {
+  "skipped_n": 28,
+  "total_n": 28,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "service-restart-watchdog": {
+  "skipped_n": 14,
+  "total_n": 14,
+  "covered_by": "cell supervisor watchdog-supervisor.sh section 1",
+  "risk": "covered"
+ },
+ "fleet-snapshot-5m": {
+  "skipped_n": 3,
+  "total_n": 3,
+  "covered_by": "NONE - accepted risk (no gate-proof cover)",
+  "risk": "accepted"
+ },
+ "gate-probe-minimal": {
+  "skipped_n": 1,
+  "total_n": 1,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ },
+ "whatsapp-fleet-digest": {
+  "skipped_n": 0,
+  "total_n": 1,
+  "covered_by": "NONE - accepted risk (no gate-proof cover)",
+  "risk": "accepted"
+ },
+ "gate-clear-watch": {
+  "skipped_n": 1,
+  "total_n": 1,
+  "covered_by": "NONE - poller itself or uncovered; degraded until gate clears",
+  "risk": "accepted"
+ }
+}

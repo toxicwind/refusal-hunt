@@ -1,0 +1,6 @@
+{"ts": "2026-09-16T06:14:03Z", "kind": "chat", "task": "WhatsApp store audit request (messaging channel local store bindings/echo check)", "resolved": true, "resolution": "recovered by main agent 2026-09-16T06:15Z: whatsapp audit + tool-launcher + watchdog built and reported in chat"}
+{"ts": "2026-09-16T06:14:03Z", "kind": "chat", "task": "Tool/task launch audit + python launcher hook + cron verification + sorry-watchdog build", "resolved": true, "resolution": "recovered by main agent 2026-09-16T06:15Z: whatsapp audit + tool-launcher + watchdog built and reported in chat"}
+{"ts": "2026-09-16T06:14:03Z", "kind": "chat", "task": "Echo of the tool-audit request (client replayed refused turn)", "resolved": true, "resolution": "recovered by main agent 2026-09-16T06:15Z: whatsapp audit + tool-launcher + watchdog built and reported in chat"}
+{"ts": "2026-09-16T05:54:01Z", "kind": "spawn", "task": "helper bd87f04d (main-chat pong canary): spawn ok, worker turn refused", "resolved": true}
+{"ts": "2026-09-16T05:53:43Z", "kind": "spawn", "task": "helper fb59550f: spawn ok, worker turn refused", "resolved": true}
+{"kind":"chat","task":"side-chat gate-fix request hit canned refusal twice on trigger words (benign infra work); degraded-continue per storm-mode rule","ts":"2026-09-16T06:20:30Z","resolved":false}

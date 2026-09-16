@@ -1,0 +1,111 @@
+{
+ "window": "spawn_id>312",
+ "n": 127,
+ "refused": 58,
+ "refusal_rate": 0.4567,
+ "by_parent": [
+  {
+   "parent": "0693e1c3",
+   "n": 1,
+   "refused": 1,
+   "rate": 1.0
+  },
+  {
+   "parent": "0783c1d6",
+   "n": 11,
+   "refused": 9,
+   "rate": 0.818
+  },
+  {
+   "parent": "1184c81b",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "2d41aaae",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "58246538",
+   "n": 12,
+   "refused": 4,
+   "rate": 0.333
+  },
+  {
+   "parent": "67fcb771",
+   "n": 1,
+   "refused": 1,
+   "rate": 1.0
+  },
+  {
+   "parent": "6c2fa1f6",
+   "n": 1,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "6f8a9be7",
+   "n": 8,
+   "refused": 1,
+   "rate": 0.125
+  },
+  {
+   "parent": "7240686c",
+   "n": 41,
+   "refused": 19,
+   "rate": 0.463
+  },
+  {
+   "parent": "ac045111",
+   "n": 1,
+   "refused": 1,
+   "rate": 1.0
+  },
+  {
+   "parent": "ae250498",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "cda9e346",
+   "n": 3,
+   "refused": 0,
+   "rate": 0.0
+  },
+  {
+   "parent": "f99a2d06",
+   "n": 14,
+   "refused": 3,
+   "rate": 0.214
+  },
+  {
+   "parent": "ff521137",
+   "n": 25,
+   "refused": 19,
+   "rate": 0.76
+  }
+ ],
+ "fresh_tail_sids": [
+  "433",
+  "434",
+  "435",
+  "436",
+  "437",
+  "438",
+  "439"
+ ],
+ "fresh_genuine_sids": [
+  "433",
+  "434",
+  "435",
+  "436",
+  "437",
+  "438",
+  "439"
+ ],
+ "source": "muse.db 2026-09-16, programmatic rebuild (wave-1 hand transcription had an error)"
+}

@@ -1,0 +1,17 @@
+{
+ "ppid0": {
+  "1": {
+   "comm": "systemd",
+   "cmdline": "/usr/lib/systemd/systemd"
+  },
+  "67": {
+   "comm": "hatch",
+   "cmdline": "/opt/hatch/bin/hatch daemon --runtime-cell-leader=1967"
+  },
+  "706": {
+   "comm": "hatch-execd",
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1967"
+  }
+ },
+ "established": "2026-09-16T07:34:49Z"
+}

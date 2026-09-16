@@ -1,0 +1,8 @@
+[daemons.sorry-watchdog]
+run = "exec python3 /home/toxic/refusal-hunt/sorry-watchdog.py"
+dir = "/home/toxic/refusal-hunt"
+mise = false
+retry = true
+boot_start = true
+ready_cmd = "pgrep -f sorry-watchdog.py >/dev/null"
+auto = ["start"]

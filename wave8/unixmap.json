@@ -1,0 +1,3303 @@
+{
+ "summary": {
+  "ts": "2026-09-16T07:34:59Z",
+  "n_sockets_total": 346,
+  "n_named": 175,
+  "n_abstract": 0,
+  "n_unnamed": 171,
+  "n_with_holders": 15,
+  "inode_proc_coverage": 18,
+  "env_sockets": [
+   {
+    "env": "HATCH_API_SOCKET",
+    "path": "/run/hatch/daemon/http-api.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/daemon/http-api.sock'"
+   },
+   {
+    "env": "JARVIS_AUTHD_SOCK",
+    "path": "/run/hatch/auth/authd.sock",
+    "inode": "1283",
+    "holders": []
+   },
+   {
+    "env": "JARVIS_DAEMON_EGRESS_APPROVAL_SOCK",
+    "path": "/run/hatch/sentinel/daemon-egress-approvals.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/sentinel/daemon-egress-approval"
+   },
+   {
+    "env": "JARVIS_EGRESS_APPROVAL_ADMIN_SOCK",
+    "path": "/run/hatch/sentinel/egress-approvals-admin.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/sentinel/egress-approvals-admin"
+   },
+   {
+    "env": "JARVIS_EGRESS_APPROVAL_EVENTS_SOCK",
+    "path": "/run/hatch/daemon/egress-approvals-events.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/daemon/egress-approvals-events."
+   },
+   {
+    "env": "JARVIS_INFERENCE_PROXY_SOCK",
+    "path": "/run/hatch/proxy/inference.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/proxy/inference.sock'"
+   },
+   {
+    "env": "JARVIS_MEMORY_SOCK",
+    "path": "/run/hatch/memory/memory.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/memory/memory.sock'"
+   },
+   {
+    "env": "JARVIS_RESCUE_SIGNAL_SOCK",
+    "path": "/run/hatch/rescue/rescue-signal.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/rescue/rescue-signal.sock'"
+   },
+   {
+    "env": "JARVIS_SANDBOX_API_SOCK",
+    "path": "/run/hatch/sandbox-api/api.sock",
+    "inode": "140",
+    "holders": []
+   },
+   {
+    "env": "JARVIS_SECURITY_SOCK",
+    "path": "/run/hatch/safety/security.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/safety/security.sock'"
+   },
+   {
+    "env": "JARVIS_SENTINEL_HTTP_API_SOCKET",
+    "path": "/run/hatch/sentinel/http-api.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/sentinel/http-api.sock'"
+   },
+   {
+    "env": "JARVIS_STEFI_PROXY_SOCK",
+    "path": "/run/hatch/proxy/stefi.sock",
+    "error": "[Errno 2] No such file or directory: '/run/hatch/proxy/stefi.sock'"
+   },
+   {
+    "env": "JARVIS_TELEMETRY_PROXY_SOCK",
+    "path": "/run/hatch/telemetry/telemetry.sock",
+    "inode": "1263",
+    "holders": []
+   }
+  ],
+  "ms": 4
+ },
+ "sockets": [
+  {
+   "inode": "49618",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54359",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29617",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "18107",
+   "type": "DGRAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    }
+   ]
+  },
+  {
+   "inode": "155457",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "79663",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "139252",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53889",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49629",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "20052",
+   "type": "DGRAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": [
+    {
+     "pid": 17,
+     "comm": "systemd-journal",
+     "cmdline": "/usr/lib/systemd/systemd-journald"
+    }
+   ]
+  },
+  {
+   "inode": "53861",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53863",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29805",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "329037",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "286974",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/stefi.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53888",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29636",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "238558",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "63526",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54402",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "414007",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "31789",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54365",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "155464",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242845",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53896",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50056",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50048",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50033",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "155468",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53854",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "321067",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29729",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30420",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54391",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "46614",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50351",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "49634",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53874",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53906",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54353",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54384",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50069",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29594",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "155463",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50353",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "101009",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53869",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "30651",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29604",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50037",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54356",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49633",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "144436",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50077",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "286942",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54400",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53862",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "145658",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53910",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "31155",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/cron-store/control.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "43856",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "32547",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": [
+    {
+     "pid": 1765,
+     "comm": "python3",
+     "cmdline": "/usr/bin/python3 /home/hatch/workspace/skills/awrawr-mcp/bin/ws_daemon.py"
+    }
+   ]
+  },
+  {
+   "inode": "238153",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53872",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "48088",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54350",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29700",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49621",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49615",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "42183",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29705",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "310431",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "145655",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "66907",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "49610",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "18106",
+   "type": "DGRAM",
+   "state": "CONNECTED",
+   "path": "/run/systemd/notify",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    }
+   ]
+  },
+  {
+   "inode": "18109",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/systemd/private",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    }
+   ]
+  },
+  {
+   "inode": "53858",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49626",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "98800",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53902",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29042",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "18111",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/systemd/userdb/io.systemd.DynamicUser",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    }
+   ]
+  },
+  {
+   "inode": "242966",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "18112",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/systemd/io.systemd.ManagedOOM",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    }
+   ]
+  },
+  {
+   "inode": "50066",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242145",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242945",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "19944",
+   "type": "DGRAM",
+   "state": "CONNECTED",
+   "path": "/run/systemd/journal/dev-log",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    },
+    {
+     "pid": 17,
+     "comm": "systemd-journal",
+     "cmdline": "/usr/lib/systemd/systemd-journald"
+    }
+   ]
+  },
+  {
+   "inode": "242714",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53900",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50347",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "19946",
+   "type": "DGRAM",
+   "state": "CONNECTED",
+   "path": "/run/systemd/journal/socket",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    },
+    {
+     "pid": 17,
+     "comm": "systemd-journal",
+     "cmdline": "/usr/lib/systemd/systemd-journald"
+    }
+   ]
+  },
+  {
+   "inode": "50356",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "19948",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/systemd/journal/stdout",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    },
+    {
+     "pid": 17,
+     "comm": "systemd-journal",
+     "cmdline": "/usr/lib/systemd/systemd-journald"
+    }
+   ]
+  },
+  {
+   "inode": "32539",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "238560",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "238554",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50075",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49616",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "45750",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "18244",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "286462",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54371",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "246531",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "20049",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/systemd/journal/io.systemd.journal",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 17,
+     "comm": "systemd-journal",
+     "cmdline": "/usr/lib/systemd/systemd-journald"
+    }
+   ]
+  },
+  {
+   "inode": "242922",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "61049",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53901",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29618",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "238555",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30423",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50070",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "412542",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54397",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50397",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/whatsapp-keyd/keyd.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242708",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "74799",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/whatsapp-keyd/keyd.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49611",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30056",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242709",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53914",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53878",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242844",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54375",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "286973",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/stefi.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30890",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29811",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/auth/authd.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "325491",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "74630",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242843",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "325492",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "310430",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "145259",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54389",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50038",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "414230",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/exec/execd.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242940",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "30029",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "241172",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242968",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50346",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242715",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242713",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242951",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53881",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "325490",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "48089",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/stefi.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "41379",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "238559",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "238551",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "139251",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "313180",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/credit-watcher/credit-watcher.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "101008",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "30421",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50350",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29789",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/safety/security.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "155458",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "79757",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29010",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53880",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "414189",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "145659",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "31470",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "308839",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53887",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50354",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "158678",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29728",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29704",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "20075",
+   "type": "DGRAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    }
+   ]
+  },
+  {
+   "inode": "238550",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "66277",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53897",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50067",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "79758",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54385",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29011",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/hatch/sandbox/space-inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "27495",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "286943",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50074",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29012",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/hatch/sandbox/space-web-search.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "80345",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29013",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/hatch/sandbox/space-privileged.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "241744",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53898",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "31790",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29014",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/hatch/sandbox/space-media.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29015",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/run/hatch/sandbox-api/api.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50034",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50349",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "43855",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "30887",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/cron-store/control.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "321068",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49642",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54390",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53883",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "31869",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "88033",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/credit-watcher/credit-watcher.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50054",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29779",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/noded/control.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53850",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50072",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242173",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "155459",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54396",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50358",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "79664",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "154591",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "32193",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29606",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "250757",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29810",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "414008",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/exec/execd.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50053",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "412697",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "324910",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30422",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53904",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "49624",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29597",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "324909",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "238571",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29637",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50076",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50396",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29712",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54399",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53875",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54347",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49632",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50035",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "31868",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29614",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "158675",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53907",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54368",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53855",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29803",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "18108",
+   "type": "DGRAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": [
+    {
+     "pid": 1,
+     "comm": "systemd",
+     "cmdline": "/usr/lib/systemd/systemd"
+    }
+   ]
+  },
+  {
+   "inode": "53866",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "49640",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "324067",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29621",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242842",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "238562",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "63525",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53871",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53868",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "413471",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "413158",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53853",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53852",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "139246",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "139195",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50036",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "88032",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "32548",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": [
+    {
+     "pid": 1765,
+     "comm": "python3",
+     "cmdline": "/usr/bin/python3 /home/hatch/workspace/skills/awrawr-mcp/bin/ws_daemon.py"
+    }
+   ]
+  },
+  {
+   "inode": "53849",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29635",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "238557",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29041",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29612",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30891",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53857",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "18245",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50352",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "413978",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54414",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53882",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242935",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29611",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "60244",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50341",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "250887",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "413384",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242946",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "238570",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54388",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "313179",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50055",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29605",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242716",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29607",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "158670",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29698",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "327966",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/cron-store/control.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "32549",
+   "type": "STREAM",
+   "state": "UNCONNECTED",
+   "path": "/home/hatch/.cache/awrawr-ws-bridge.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": [
+    {
+     "pid": 1765,
+     "comm": "python3",
+     "cmdline": "/usr/bin/python3 /home/hatch/workspace/skills/awrawr-mcp/bin/ws_daemon.py"
+    }
+   ]
+  },
+  {
+   "inode": "29713",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53911",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53899",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "238561",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29613",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53870",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "30886",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242939",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29619",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "29600",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "53873",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "155467",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "144435",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "49613",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29788",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242923",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "241747",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "54398",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30032",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/stefi.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242938",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "286999",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/stefi.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "144434",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53885",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "49637",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "27496",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242967",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29714",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242941",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "50071",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "98801",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29620",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "30055",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "413868",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "155460",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29711",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "242934",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "63527",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "413300",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50355",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "246900",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242920",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53886",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242950",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "241167",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "63524",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53867",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "53884",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "308840",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242921",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "238154",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "54362",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29622",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "242969",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "79765",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/proxy/inference.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "29610",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/postgres/.s.PGSQL.5432",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  },
+  {
+   "inode": "158672",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "",
+   "abstract": false,
+   "unnamed": true,
+   "holders": []
+  },
+  {
+   "inode": "50068",
+   "type": "STREAM",
+   "state": "CONNECTED",
+   "path": "/run/hatch/telemetry/telemetry.sock",
+   "abstract": false,
+   "unnamed": false,
+   "holders": []
+  }
+ ]
+}

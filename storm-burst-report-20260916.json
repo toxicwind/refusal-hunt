@@ -1,0 +1,73 @@
+{
+  "window_utc": [
+    "2026-09-14T05:00:00+00:00",
+    "2026-09-16T05:00:00+00:00"
+  ],
+  "total_spawns_48h": 418,
+  "refused_n": 49,
+  "refused_share": 0.1172,
+  "burst_hours": [
+    {
+      "utc": "09-14 07:00",
+      "mdt": "09-14 01:00",
+      "n": 1
+    },
+    {
+      "utc": "09-15 04:00",
+      "mdt": "09-14 22:00",
+      "n": 5
+    },
+    {
+      "utc": "09-15 06:00",
+      "mdt": "09-15 00:00",
+      "n": 16
+    },
+    {
+      "utc": "09-15 07:00",
+      "mdt": "09-15 01:00",
+      "n": 3
+    },
+    {
+      "utc": "09-16 03:00",
+      "mdt": "09-15 21:00",
+      "n": 6
+    },
+    {
+      "utc": "09-16 04:00",
+      "mdt": "09-15 22:00",
+      "n": 8
+    },
+    {
+      "utc": "09-16 05:00",
+      "mdt": "09-15 23:00",
+      "n": 10
+    }
+  ],
+  "inter_burst_gaps_h": [
+    21.0,
+    2.0,
+    1.0,
+    20.0,
+    1.0,
+    1.0
+  ],
+  "burstiness_cv_48h": 3.37,
+  "refusal_latency_s": {
+    "avg": 2,
+    "max": 6,
+    "distinct_parents": 7
+  },
+  "genuine_latency_s": {
+    "avg": 838,
+    "max": 10940,
+    "distinct_parents": 29
+  },
+  "latency_separation_ratio": 419.0,
+  "live": {
+    "boot_id": "95984a77-f8d1-4ef4-af2d-b9ec515b1e44",
+    "stored_boot_id": "95984a77-f8d1-4ef4-af2d-b9ec515b1e44",
+    "boot_changed": false,
+    "poller_procs": "3263       03:43 /bin/bash /home/hatch/workspace/service-health-poller.sh",
+    "poller_log_tail": "2026-09-16T05:08:58Z boot=95984a77-f8d1-4ef4-af2d-b9ec515b1e44 mem=3916M_used/7935M_total/4019M_avail disk=1% load=7.22 hatch_rss=1321M\n2026-09-16T05:09:28Z boot=95984a77-f8d1-4ef4-af2d-b9ec515b1e44 mem=3966M_used/7935M_total/3969M_avail disk=1% load=8.55 hatch_rss=1335M\n2026-09-16T05:09:58Z boot=95984a77-f8d1-4ef4-af2d-b9ec515b1e44 mem=4075M_used/7935M_total/3860M_avail disk=1% load=8.48 hatch_rss=1329M"
+  }
+}

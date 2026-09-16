@@ -1,0 +1,59 @@
+{
+ "fixes": 24,
+ "by_round": {
+  "1": {
+   "pass": 3,
+   "rolled_back": 0,
+   "skipped": 0,
+   "blocked": 0
+  },
+  "2": {
+   "pass": 3,
+   "rolled_back": 0,
+   "skipped": 0,
+   "blocked": 0
+  },
+  "3": {
+   "pass": 3,
+   "rolled_back": 0,
+   "skipped": 0,
+   "blocked": 0
+  },
+  "4": {
+   "pass": 1,
+   "rolled_back": 2,
+   "skipped": 0,
+   "blocked": 0
+  },
+  "5": {
+   "pass": 2,
+   "rolled_back": 1,
+   "skipped": 0,
+   "blocked": 0
+  },
+  "6": {
+   "pass": 3,
+   "rolled_back": 0,
+   "skipped": 0,
+   "blocked": 0
+  },
+  "7": {
+   "pass": 3,
+   "rolled_back": 0,
+   "skipped": 0,
+   "blocked": 0
+  },
+  "8": {
+   "pass": 3,
+   "rolled_back": 0,
+   "skipped": 0,
+   "blocked": 0
+  }
+ },
+ "totals": {
+  "pass": 21,
+  "rolled_back": 3,
+  "skipped": 0,
+  "blocked": 0
+ }
+}

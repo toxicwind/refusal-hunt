@@ -1,0 +1,23 @@
+{
+ "asyncio": {
+  "secs": 1.715,
+  "ok": true
+ },
+ "threads": {
+  "secs": 1.535,
+  "ok": true
+ },
+ "processes": {
+  "secs": 1.657,
+  "ok": true
+ },
+ "fanout": {
+  "secs": 1.986,
+  "ok": true,
+  "legs": [
+   "leg=0 rc=0 ms=1932 cmd=/home/hatch/workspace/refusal-hunt/fix-rounds/R6/leg.sh",
+   "leg=1 rc=0 ms=1985 cmd=/home/hatch/workspace/refusal-hunt/fix-rounds/R6/leg.sh",
+   "leg=2 rc=0 ms=1880 cmd=/home/hatch/workspace/refusal-hunt/fix-rounds/R6/leg.sh"
+  ]
+ }
+}

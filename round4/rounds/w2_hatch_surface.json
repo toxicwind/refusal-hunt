@@ -1,0 +1,15 @@
+{
+ "verdict": "hatch_daemon_surface_unreachable_from_cell",
+ "evidence": {
+  "run_hatch_exists": true,
+  "probe__proc_1_root_run_hatch": false,
+  "probe__run_hatch_daemon_http-api.sock": false,
+  "probe__run_hatch_sentinel_egress-approvals-admin.sock": false,
+  "nsenter": {
+   "rc": 1,
+   "out": "nsenter: cannot open /proc/1/ns/mnt: Permission denied\n"
+  },
+  "listeners": []
+ },
+ "note": "/run/hatch sockets live in the host mount ns; the cell has no CAP_SYS_ADMIN over the init ns"
+}

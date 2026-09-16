@@ -1,0 +1,4 @@
+{"event": "selftest", "path": "local", "ok": true, "rc": 0, "latency_ms": 5, "output_tail": "hook-alive\n", "refusal": {"hit": false}, "ts": "2026-09-16T06:15:52.437614+00:00"}
+{"event": "selftest", "path": "fleet", "ok": false, "rc": "id:         20260916-001553-dc0e", "latency_ms": 62070, "refusal": {"hit": false}, "job_id": "20260916-001553-dc0e", "ts": "2026-09-16T06:16:54.510090+00:00"}
+{"event": "selftest", "path": "local", "ok": true, "rc": 0, "latency_ms": 14, "output_tail": "hook-alive\n", "refusal": {"hit": false}, "ts": "2026-09-16T06:17:03.280472+00:00"}
+{"event": "selftest", "path": "fleet", "ok": true, "rc": "done", "latency_ms": 3905, "refusal": {"hit": false}, "job_id": "20260916-001704-b476", "ts": "2026-09-16T06:17:07.186501+00:00"}

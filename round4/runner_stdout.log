@@ -1,0 +1,9 @@
+ROUND 1: pass=2 rolled_back=1 skipped=0 ms=697
+ROUND 2: pass=2 rolled_back=1 skipped=0 ms=231
+ROUND 3: pass=3 rolled_back=0 skipped=0 ms=340
+ROUND 4: pass=1 rolled_back=2 skipped=0 ms=260
+ROUND 5: pass=3 rolled_back=0 skipped=0 ms=851
+ROUND 6: pass=1 rolled_back=2 skipped=0 ms=482
+ROUND 7: pass=0 rolled_back=1 skipped=2 ms=1965
+ROUND 8: pass=1 rolled_back=2 skipped=0 ms=283
+ALL ROUNDS DONE
