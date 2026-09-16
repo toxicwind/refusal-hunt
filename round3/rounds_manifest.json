@@ -20,18 +20,28 @@
      "kind": "cell",
      "name": "sanitizer pre-pass",
      "result": "REDIRECTED \u2014 lane-4 retrospective falsified the inline-metadata hypothesis (refused vs genuine: len 1537 vs 1533, cve 0.05 vs 0.01, headers 0.11 vs 0.08, n=380); sanitizer strips frontmatter/comments which do not differ between classes",
-     "run": "echo redirected"
+     "run": "python3 ~/workspace/refusal-hunt/round3/sanitize_results.py",
+     "verify": {
+      "kind": "cell",
+      "run": "python3 ~/workspace/refusal-hunt/round3/sanitize_results.py",
+      "expect": "PASS"
+     }
     },
     {
      "id": "R1F3",
      "kind": "cell",
      "name": "gate-clear-watch existence check + watchdog verify",
      "result": "PASS \u2014 gate-clear-watch never existed (not in crontab/pitchfork); refusal-watchdog alive PID 183022",
-     "run": "echo retired"
+     "run": "python3 ~/workspace/refusal-hunt/round3/r1f3_watchdog_verify.py",
+     "verify": {
+      "kind": "cell",
+      "run": "python3 ~/workspace/refusal-hunt/round3/r1f3_watchdog_verify.py",
+      "expect": "PASS"
+     }
     }
    ],
    "n": 1,
-   "title": "Guard rails + repair shipment (executed 2026-09-16)"
+   "title": "Guard rails + repair shipment (repaired 2026-09-16: real effect checks)"
   },
   {
    "fixes": [
@@ -39,12 +49,12 @@
      "fallback": {
       "id": "R2F1b",
       "kind": "cell",
-      "name": "corrections from existing canary snapshot",
-      "run": "ls -la ~/workspace/refusal-hunt/canary/ 2>/dev/null | head -5",
+      "name": "classify refused_as_completed from anomaly ledger",
+      "run": "python3 ~/workspace/refusal-hunt/round3/r2f1_ledger_classify.py",
       "verify": {
-       "expect": "log.jsonl",
+       "expect": "ok",
        "kind": "cell",
-       "run": "ls ~/workspace/refusal-hunt/canary/log.jsonl"
+       "run": "python3 -c \"import json;r=json.load(open(\"/home/hatch/workspace/refusal-hunt/round3/r2f1_report.json\"));print(\"ok\" if isinstance(r.get(\"refused_as_completed_24h\"),int) else \"bad\")\""
       }
      },
      "id": "R2F1",
@@ -73,21 +83,21 @@
       "id": "R2F3b",
       "kind": "cell",
       "name": "restart poller",
-      "run": "pkill -f 'service-health-poller\\.sh' 2>/dev/null; nohup bash ~/workspace/service-health-poller.sh >/dev/null 2>&1 & echo restarted",
+      "run": "for pid in $(pgrep -f 'service-health-poller\\.sh'); do kill \"$pid\"; done; ~/workspace/bin/taskhook run -- bash ~/workspace/service-health-poller.sh >/dev/null 2>&1; echo restarted",
       "verify": {
-       "expect": "",
+       "expect": "alive",
        "kind": "cell",
-       "run": "pgrep -f 'service-health-poller\\.sh' | head -1"
+       "run": "pgrep -f 'service-health-poller\\.sh' >/dev/null && echo alive || echo dead"
       }
      },
      "id": "R2F3",
      "kind": "cell",
      "name": "service-health-poller FIFO mechanism verify (sleep-kill already landed)",
-     "run": "ps aux | grep '[s]ervice-health-poller' | head -2; echo ---; stat -c '%y' ~/workspace/service-health.log",
+     "run": "pgrep -a -f 'service-health-poller\\.sh'; echo ---; stat -c '%y' ~/workspace/service-health.log",
      "verify": {
       "expect": "1",
       "kind": "cell",
-      "run": "grep -c 'read -t' ~/workspace/service-health-poller.sh"
+      "run": "rg -c 'read -t' ~/workspace/service-health-poller.sh"
      }
     }
    ],
@@ -196,7 +206,7 @@
      "id": "R5F3",
      "kind": "cell",
      "name": "completions endpoint config audit \u2014 what the cell actually calls",
-     "run": "env | grep -iE 'endpoint|api_base|model' | sed 's/=.*/=<redacted>/' | head -10; echo ---; ls /home/hatch/.config/hatch 2>/dev/null | head",
+     "run": "python3 -c \"import os;print(chr(10).join(f\"{k}=<redacted>\" for k in os.environ if any(s in k.lower() for s in (\"endpoint\",\"api_base\",\"model\"))))\"; echo ---; ls /home/hatch/.config/hatch 2>/dev/null",
      "verify": {
       "expect": "done",
       "kind": "cell",
@@ -224,7 +234,7 @@
      "id": "R6F2",
      "kind": "bridge",
      "name": "durable-worker path verify \u2014 bin/agent.py detached workers",
-     "run": "ls /home/toxic/fleet/jobs/bin/job && /home/toxic/fleet/jobs/bin/job list 2>/dev/null | head -5 || echo no-list",
+     "run": "ls /home/toxic/fleet/jobs/bin/job && /home/toxic/fleet/jobs/bin/job list 2>/dev/null || echo no-list",
      "verify": {
       "expect": "done",
       "kind": "bridge",
@@ -236,7 +246,7 @@
      "id": "R6F3",
      "kind": "cell",
      "name": "canary-feed snapshot_guard wiring",
-     "run": "rg -n 'spawn_guard|classify' ~/workspace/refusal-hunt/canary-feed.sh 2>/dev/null | head -3 || echo 'not wired'",
+     "run": "rg -n \"spawn_guard|classify\" ~/workspace/refusal-hunt/canary-feed.sh 2>/dev/null || echo \"not wired\"",
      "verify": {
       "expect": "done",
       "kind": "cell",

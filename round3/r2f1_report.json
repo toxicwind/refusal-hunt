@@ -1,0 +1,22 @@
+{
+ "ledger_rows": 1000,
+ "rows_24h": 998,
+ "refused_as_completed_24h": 78,
+ "by_digest": {
+  "b4aefd29108f232f9c0d5a4b030215c1": 78
+ },
+ "distinct_parents": 10,
+ "parents": [
+  "0693e1c3-6054-49ab-a712-95a94748017e",
+  "0783c1d6-9cdb-422f-9195-d9ff9d48cdf8",
+  "58246538-8068-45cc-80bd-3837e3558cbd",
+  "5a4f76c0-e3a4-4069-ba6f-3113917102dc",
+  "6f8a9be7-9996-4ff6-92cd-175549e22124",
+  "7240686c-d790-463d-bad2-c969fc65885e",
+  "802811a3-2226-42dd-b347-9754def28d22",
+  "ac045111-1a54-4758-932c-daefccee45e8",
+  "be788323-9ee5-4a61-aedb-a46859c74c20",
+  "ff521137-c3c1-4121-9f11-8bbc2420ff24"
+ ],
+ "generated_at": 1789562590.3823547
+}
