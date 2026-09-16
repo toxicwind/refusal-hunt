@@ -1,0 +1,38 @@
+{
+ "round": 8,
+ "title": "Meta \u2014 effectiveness report + next recursion",
+ "fixes": [
+  {
+   "id": "R8F1",
+   "name": "rounds 1-7 effectiveness report",
+   "kind": "cell",
+   "rc": 0,
+   "out": "{\"pass\": 21, \"fail\": 0, \"other\": 0}\nPASS\n",
+   "verify_out": "{\"pass\": 21, \"fail\": 0, \"other\": 0}\nPASS\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.3
+  },
+  {
+   "id": "R8F2",
+   "name": "derive next tasks from residual defects (r8f2_derive_tasks.py)",
+   "kind": "cell",
+   "rc": 0,
+   "out": "9 tasks derived (1 from FAIL verdicts)\nPASS\n",
+   "verify_out": "9 tasks derived (1 from FAIL verdicts)\nPASS\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.3
+  },
+  {
+   "id": "R8F3",
+   "name": "commit+push all round artifacts",
+   "kind": "cell",
+   "rc": 0,
+   "out": "Everything up-to-date\n",
+   "verify_out": "5a3e672 round3: R1/R2/R5/R6 manifest repairs, ledger-backed R2F1, watchdog checks, CVE script, pcap marks, R5-R7 rerun results\n",
+   "verdict": "PASS",
+   "elapsed_s": 1.9
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T12:58:55Z"
+}

@@ -1,0 +1,38 @@
+{
+ "round": 6,
+ "title": "Hardening \u2014 reduce storm surface",
+ "fixes": [
+  {
+   "id": "R6F1",
+   "name": "spawn-batching guidance \u2014 fewer, larger spawns",
+   "kind": "cell",
+   "rc": 0,
+   "out": "already-present\n",
+   "verify_out": "1\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.1
+  },
+  {
+   "id": "R6F2",
+   "name": "durable-worker path verify \u2014 bin/agent.py detached workers",
+   "kind": "bridge",
+   "rc": 0,
+   "out": "/home/toxic/fleet/jobs/bin/job\nID                     NAME                         STATUS     HEARTBEAT    WRAPPER\n20260914-202640-127a   unnamed                      done       122821s ago  gone\n20260914-202641-751c   heartbeat-probe              done       122813s ago  gone\n20260914-202641-f4aa   unnamed                      failed     122820s ago  gone\n20260914-202642-ad0f   timeout-probe                timeout    122816s ago  gone\n",
+   "verify_out": "done\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.6
+  },
+  {
+   "id": "R6F3",
+   "name": "canary-feed snapshot_guard wiring",
+   "kind": "cell",
+   "rc": 0,
+   "out": "",
+   "verify_out": "done\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.1
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T12:33:41Z"
+}

@@ -1,0 +1,44 @@
+{
+ "round": 5,
+ "title": "Egress observability",
+ "fixes": [
+  {
+   "id": "R5F1",
+   "name": "egress timing correlator \u2014 canary timestamps vs proxy logs",
+   "kind": "job",
+   "job_id": "20260916-070100-001d",
+   "job": {
+    "status": "done",
+    "result": "{\n  \"id\": \"20260916-070100-001d\",\n  \"name\": \"r5f1-egress-timing\",\n  \"cmd\": [\n    \"python3\",\n    \"/home/toxic/refusal-hunt/round3/r5f1_egress_timing.py\"\n  ],\n  \"status\": \"done\",\n  \"exit_code\": 0,\n  \"started_at\": 1789563660.5796459,\n  \"ended_at\": 1789563661.580904,\n  \"duration_s\": 1.001\n}\n"
+   },
+   "verify_out": "egress-report-ok keys=['canary_events', 'correlations', 'notes', 'proxy_candidates', 'storm_windows']\n",
+   "verdict": "PASS",
+   "elapsed_s": 2.4
+  },
+  {
+   "id": "R5F2",
+   "name": "pcap metadata diff refused vs genuine (timing only, no payload)",
+   "kind": "job",
+   "job_id": "20260916-070100-e742",
+   "job": {
+    "status": "done",
+    "result": "{\n  \"id\": \"20260916-070100-e742\",\n  \"name\": \"r5f2-pcap-timing\",\n  \"cmd\": [\n    \"python3\",\n    \"/home/toxic/refusal-hunt/round3/r5f2_pcap_timing.py\"\n  ],\n  \"status\": \"done\",\n  \"exit_code\": 0,\n  \"started_at\": 1789563660.5115578,\n  \"ended_at\": 1789563661.512332,\n  \"duration_s\": 1.001\n}\n"
+   },
+   "verify_out": "pcap-report-ok keys=['notes', 'packets', 'pcap', 'quiet_iat', 'quiet_packets', 'storm_iat', 'storm_packets']\n",
+   "verdict": "PASS",
+   "elapsed_s": 2.2
+  },
+  {
+   "id": "R5F3",
+   "name": "completions endpoint config audit \u2014 what the cell actually calls",
+   "kind": "cell",
+   "rc": 0,
+   "out": "(no matching env vars)\n---\nconfig dir: absent\nPASS\n",
+   "verify_out": "(no matching env vars)\n---\nconfig dir: absent\nPASS\n",
+   "verdict": "PASS",
+   "elapsed_s": 0.3
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T13:01:01Z"
+}

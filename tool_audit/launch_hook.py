@@ -21,10 +21,15 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
 from datetime import datetime, timezone
+
+# Fleet job IDs look like 20260916-060508-cd4e. The bridge prefixes submit
+# output ("[exit=0] <jid>"), so extract by pattern — never split()[-1].
+JOB_ID_RE = re.compile(r"\b(\d{8}-\d{6}-[0-9a-f]{4})\b")
 
 BASE = os.path.expanduser("~/workspace/refusal-hunt/tool_audit")
 LEDGER = os.path.join(BASE, "launches.jsonl")
@@ -91,7 +96,13 @@ def run_fleet(cmd, timeout):
                 "latency_ms": int((time.time() - t0) * 1000),
                 "output_tail": (sub.stdout + sub.stderr)[-2000:],
                 "refusal": detect_refusal(sub.stdout + sub.stderr)}
-    job_id = (sub.stdout or "").strip().split()[-1]
+    m = JOB_ID_RE.search(sub.stdout or "")
+    job_id = m.group(1) if m else ""
+    if not job_id:
+        return {"ok": False, "rc": "submit-no-jid",
+                "latency_ms": int((time.time() - t0) * 1000),
+                "output_tail": (sub.stdout + sub.stderr)[-2000:],
+                "refusal": detect_refusal(sub.stdout + sub.stderr)}
     deadline = t0 + timeout
     job_status, job_out = "submitted", ""
     while time.time() < deadline:
@@ -109,7 +120,8 @@ def run_fleet(cmd, timeout):
                 capture_output=True, text=True, timeout=30)
             job_out = (lg.stdout or "") + (lg.stderr or "")
             break
-        time.sleep(3)  # inter-poll gap; the condition (job terminal state) is what we wait on
+        # no sleep: each bridge round-trip is the loop's pacing; re-poll
+        # immediately and let the deadline bound the loop
     ok = job_status == "done"
     return {"ok": ok, "rc": job_status,
             "latency_ms": int((time.time() - t0) * 1000),

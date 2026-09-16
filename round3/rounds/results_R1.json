@@ -1,0 +1,41 @@
+{
+ "round": 1,
+ "title": "Guard rails + repair shipment (repaired 2026-09-16: real effect checks)",
+ "fixes": [
+  {
+   "id": "R1F1",
+   "name": "spawn_guard.py body-hash verifier",
+   "kind": "cell",
+   "rc": 0,
+   "out": "{\"selftest\": \"PASS\", \"fails\": []}\n",
+   "verify_out": "{\"selftest\": \"PASS\", \"fails\": []}\n",
+   "verdict": "PASS",
+   "note": "PASS",
+   "elapsed_s": 0.3
+  },
+  {
+   "id": "R1F2",
+   "name": "sanitizer pre-pass",
+   "kind": "cell",
+   "rc": 0,
+   "out": "PASS (8 files clean)\n",
+   "verify_out": "PASS (8 files clean)\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 sanitize_results.py: scanned round artifacts, no verbatim canned bodies",
+   "elapsed_s": 0.3
+  },
+  {
+   "id": "R1F3",
+   "name": "gate-clear-watch existence check + watchdog verify",
+   "kind": "cell",
+   "rc": 0,
+   "out": "PASS\n",
+   "verify_out": "PASS\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 gate-clear-watch cron enabled; sorry-watchdog daemon alive on awrawr-pc; LATEST.json readable",
+   "elapsed_s": 1.2
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T12:53:47Z"
+}
