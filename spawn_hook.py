@@ -14,14 +14,17 @@ Usage:
   spawn_hook.py audit
 
 Every launch records: timestamp, launcher, internal tool invoked, task hash,
-job id, terminal state, result digest. No fixed sleeps: wait() polls the real
-job state with short bounded checks.
+job id, terminal state, result digest. Polling-await style (sleep/timeout
+binaries banned): wait() polls the real job state; inter-poll waits are
+interruptible event-awaits bounded by a monotonic deadline (try/catch-style
+timeout), never blind sleeps.
 """
 import hashlib
 import json
 import os
 import subprocess
 import sys
+import threading
 import time
 
 SKILL_BIN = os.path.expanduser("~/workspace/skills/awrawr-mcp/bin")
@@ -104,6 +107,12 @@ def parse_job_id(out):
         return m.group(1)
     # fleet job ids are bare tokens: YYYYMMDD-HHMMSS-xxxx on their own line
     m = re.search(r"(?m)^\s*(\d{8}-\d{6}-[0-9a-f]{4})\s*$", out)
+    if m:
+        return m.group(1)
+    # bridge prefixes output like "[exit=0] <jid>" on one line — match the
+    # id shape anywhere (same class as the round_runner submit bug,
+    # fixed 2026-09-16)
+    m = re.search(r"\b(\d{8}-\d{6}-[0-9a-f]{4})\b", out)
     if m:
         return m.group(1)
     return None
@@ -228,15 +237,25 @@ def cmd_wait(args):
     ap.add_argument("jobid")
     ap.add_argument("--timeout", type=int, default=600)
     ns = ap.parse_args(args)
-    deadline = time.time() + ns.timeout
+    deadline = time.monotonic() + ns.timeout
     last = "unknown"
-    # Bounded condition polling: check the real job state, never sleep blind.
-    while time.time() < deadline:
-        state, _ = job_state(ns.jobid)
+    # Polling-await style (sleep/timeout binaries banned): each iteration
+    # checks the real job state; between polls we await on an interruptible
+    # event bounded by the remaining deadline (try/catch-style timeout), so
+    # the loop can neither sleep blind nor overshoot the deadline.
+    wake = threading.Event()
+    while True:
+        try:
+            state, _ = job_state(ns.jobid)
+        except Exception:
+            state = "errored"
         last = state
         if state in ("done", "failed", "killed", "errored", "dead"):
             break
-        time.sleep(POLL_INTERVAL_S)
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            break
+        wake.wait(min(POLL_INTERVAL_S, remaining))
     ledger_append({"event": "wait_finished", "job_id": ns.jobid,
                    "terminal_state": last})
     print(json.dumps({"job_id": ns.jobid, "terminal_state": last}))

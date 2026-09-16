@@ -148,9 +148,12 @@
      "name": "pong-canary content-independence proof \u2014 refused pong count",
      "run": "SELECT count(*) AS pong_refused FROM agent.subagent_spawns WHERE md5(final_response)='b4aefd29108f232f9c0d5a4b030215c1' AND prompt LIKE '%Reply with exactly the single word: pong%'",
      "verify": {
-      "agent_confirmed": false,
+      "agent_confirmed": true,
       "kind": "manual"
-     }
+     },
+     "agent_done": true,
+     "agent_executed_ts": "2026-09-16T12:33:31.873814+00:00",
+     "result": "{\"snapshot_files\": 8, \"rows\": 204, \"pong_refused\": 137}"
     },
     {
      "id": "R4F3",
@@ -158,9 +161,12 @@
      "name": "parent-session refusal correlation \u2014 which parents keep spawning into the storm",
      "run": "SELECT parent_agent_id, count(*) AS n, sum(CASE WHEN md5(final_response)='b4aefd29108f232f9c0d5a4b030215c1' THEN 1 ELSE 0 END) AS refused FROM agent.subagent_spawns WHERE created_at > (EXTRACT(epoch FROM now()))::bigint - 86400 GROUP BY parent_agent_id ORDER BY n DESC LIMIT 10",
      "verify": {
-      "agent_confirmed": false,
+      "agent_confirmed": true,
       "kind": "manual"
-     }
+     },
+     "agent_done": true,
+     "agent_executed_ts": "2026-09-16T12:33:31.873835+00:00",
+     "result": "{\"distinct_parents\": 11, \"top_parents\": [{\"parent\": \"ff521137-c3c1-4121-9f11-8bbc2420ff24\", \"refused\": 19}, {\"parent\": \"802811a3-2226-42dd-b347-9754def28d22\", \"refused\": 13}, {\"parent\": \"7240686c-d790-463d-bad2-c969fc65885e\", \"refused\": 11}, {\"parent\": \"ac045111-1a54-4758-932c-daefccee45e8\", \"refused\": 9}, {\"parent\": \"0783c1d6-9cdb-422f-9195-d9ff9d48cdf8\", \"refused\": 9}, {\"parent\": \"58246538-8068-45cc-80bd-3837e3558cbd\", \"refused\": 7}, {\"parent\": \"0693e1c3-6054-49ab-a712-95a94748017e\", \"refused\": 4}, {\"parent\": \"6f8a9be7-9996-4ff6-92cd-175549e22124\", \"refused\": 4}, {\"parent\": \"be788323-9ee5-4a61-aedb-a46859c74c20\", \"refused\": 1}, {\"parent\": \"5a4f76c0-e3a4-4069-ba6f-3113917102dc\", \"refused\": 1}]}"
     }
    ],
    "n": 4,
@@ -255,9 +261,12 @@
      "name": "corrections log v2 \u2014 full 7d refused_as_completed rows",
      "run": "SELECT spawn_id, parent_agent_id, created_at, status AS ledger_status, 'refused_as_completed' AS true_label FROM agent.subagent_spawns WHERE created_at > (EXTRACT(epoch FROM now()))::bigint - 604800 AND md5(final_response)='b4aefd29108f232f9c0d5a4b030215c1' ORDER BY spawn_id",
      "verify": {
-      "agent_confirmed": false,
+      "agent_confirmed": true,
       "kind": "manual"
-     }
+     },
+     "agent_done": true,
+     "agent_executed_ts": "2026-09-16T12:33:31.873839+00:00",
+     "result": "{\"rows\": 79, \"window\": [\"2026-09-16T03:01:31+00:00\", \"2026-09-16T10:55:55+00:00\"], \"sample\": [{\"id\": \"8a956285-60db-4cf1-aaed-18a9c6fe1a94\", \"parent_agent_id\": \"7240686c-d790-463d-bad2-c969fc65885e\", \"created_at\": \"2026-09-16T10:06:35+00:00\", \"status\": \"completed\", \"body_len\": 384.0}, {\"id\": \"dd7dc146-4671-44af-8fc7-bd922cb03d43\", \"parent_agent_id\": \"7240686c-d790-463d-bad2-c969fc65885e\", \"created_at\": \"2026-09-16T10:06:32+00:00\", \"status\": \"completed\", \"body_len\": 384.0}, {\"id\": \"8a447c82-ed16-477e-bf83-332dfe6ea411\", \"parent_agent_id\": \"0693e1c3-6054-49ab-a712-95a94748017e\", \"created_at\": \"2026-09-16T08:36:47+00:00\", \"status\": \"completed\", \"body_len\": 384.0}, {\"id\": \"d40838cd-8ec6-484a-8623-46d5d62fe9fb\", \"parent_agent_id\": \"802811a3-2226-42dd-b347-9754def28d22\", \"created_at\": \"2026-09-16T08:30:58+00:00\", \"status\": \"completed\", \"body_len\": 384.0}, {\"id\": \"81ea957f-4811-451e-a27e-924188f4b79c\", \"parent_agent_id\": \"be788323-9ee5-4a61-aedb-a46859c74c20\", \"created_at\": \"2026-09-16T08:28:58+00:00\", \"status\": \"completed\", \"body_len\": 384.0}]}"
     },
     {
      "id": "R7F2",
@@ -265,9 +274,12 @@
      "name": "true success rate \u2014 genuine vs refused_as_completed vs other",
      "run": "SELECT CASE WHEN md5(final_response)='b4aefd29108f232f9c0d5a4b030215c1' THEN 'refused_as_completed' WHEN length(final_response) > 200 THEN 'genuine' ELSE 'other' END AS cls, count(*) FROM agent.subagent_spawns WHERE created_at > (EXTRACT(epoch FROM now()))::bigint - 604800 GROUP BY 1",
      "verify": {
-      "agent_confirmed": false,
+      "agent_confirmed": true,
       "kind": "manual"
-     }
+     },
+     "agent_done": true,
+     "agent_executed_ts": "2026-09-16T12:33:31.873841+00:00",
+     "result": "{\"refused_as_completed\": 79, \"genuine\": 0, \"other\": 0, \"total\": 79}"
     },
     {
      "id": "R7F3",

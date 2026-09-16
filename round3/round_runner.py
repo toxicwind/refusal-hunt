@@ -31,7 +31,11 @@ MANIFEST = os.path.join(HERE, "rounds_manifest.json")
 RESULTS_DIR = os.path.join(HERE, "rounds")
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
-UNSHARE = ["sudo", "unshare", "--mount", "--fork", "--propagation", "private"]
+UNSHARE_BASE = ["unshare", "--mount", "--fork", "--propagation", "private"]
+# taskhook launches as root (uid 0); there sudo is unnecessary and its
+# audit plugin breaks inside some namespaces ("unable to open
+# /etc/sudoers: Invalid argument"). Skip sudo when already root.
+UNSHARE = (UNSHARE_BASE if os.geteuid() == 0 else ["sudo"] + UNSHARE_BASE)
 BRIDGE = [os.path.expanduser("~/workspace/skills/awrawr-mcp/bin/exec.py")]
 JOB = ["/home/toxic/fleet/jobs/bin/job"]
 
@@ -89,12 +93,16 @@ def _job_result_legacy_blocking(jid: str, timeout_s: int = 600) -> dict:
 
 
 async def job_result_async(jid: str, timeout_s: int = 600) -> dict:
-    """Poll-await a fleet job: cooperative waits, bounded by wait_for.
+    """Poll-await a fleet job: NO backoff, NO sleep anywhere.
 
-    No time.sleep, no sleep/timeout binaries. Every bridge round-trip is
-    wrapped in asyncio.wait_for (try/catch timeout); the inter-poll wait is
-    a cooperative asyncio.sleep inside wait_for so the loop stays live and
-    the deadline is enforced by exception, not by a timer process.
+    Per standing order 2026-09-16: sleep/timeout binaries are banned and
+    even asyncio.sleep intervals are banned — poll-await style with
+    try/catch timeouts. Each loop iteration is: poll status via the bridge
+    (itself a bounded blocking round-trip, which paces the loop
+    naturally), branch on the observed state, or loop again immediately.
+    The outer deadline is enforced by comparing loop.time() each
+    iteration; every bridge round-trip is wrapped in asyncio.wait_for
+    (try/catch timeout). No sleep of any kind on the hot path.
     """
     loop = asyncio.get_event_loop()
     deadline = loop.time() + timeout_s
@@ -116,19 +124,29 @@ async def job_result_async(jid: str, timeout_s: int = 600) -> dict:
         if rc == -2:
             return {"status": "bridge-timeout"}
         if "status:     done" in out:
-            rc2, res = await bridge(f"{JOB[0]} result {jid}")
-            if rc2 == -2:
+            # terminal: result collection gets its own hard timeout
+            try:
+                rc2, res = await asyncio.wait_for(
+                    loop.run_in_executor(
+                        POOL, sh_bridge, f"{JOB[0]} result {jid}", 120),
+                    timeout=125)
+            except asyncio.TimeoutError:
                 return {"status": "result-timeout"}
-            return {"status": "done", "result": res}
+            if rc2 == 0:
+                return {"status": "done", "result": res}
+            return {"status": "result-error", "rc": rc2, "result": res}
         if "status:     failed" in out:
-            rc2, log = await bridge(f"{JOB[0]} log {jid}")
-            if rc2 == -2:
+            try:
+                rc2, log = await asyncio.wait_for(
+                    loop.run_in_executor(
+                        POOL, sh_bridge, f"{JOB[0]} log {jid}", 120),
+                    timeout=125)
+            except asyncio.TimeoutError:
                 return {"status": "log-timeout"}
-            return {"status": "failed", "log": log[-2000:]}
-        try:
-            await asyncio.wait_for(asyncio.sleep(5), timeout=deadline - loop.time())
-        except asyncio.TimeoutError:
-            return {"status": "timeout"}
+            return {"status": "failed", "log": (log or "")[-2000:]}
+        # no backoff, no sleep: the blocking bridge round-trip inside the
+        # awaited executor call is the loop's only pacing; each iteration
+        # polls status again immediately after the await resolves.
 
 
 async def run_fix(fix: dict, sem: asyncio.Semaphore) -> dict:
@@ -181,6 +199,10 @@ async def run_fix(fix: dict, sem: asyncio.Semaphore) -> dict:
                 elif vkind == "manual":
                     ok = fix["verify"].get("agent_confirmed", False)
             rec["verdict"] = "PASS" if ok else "FAIL"
+            # Preserve manifest-authored outcome notes (e.g. R1F2's
+            # REDIRECTED rationale) on the record alongside the real verdict.
+            if isinstance(fix.get("result"), str):
+                rec["note"] = fix["result"][:500]
             # cascade: on FAIL, run the fallback fix
             if not ok and fix.get("fallback"):
                 rec["fallback_triggered"] = fix["fallback"]["id"]
@@ -209,9 +231,16 @@ async def run_round(n: int, manifest: dict) -> dict:
 
 
 def main(argv):
-    with open(MANIFEST) as f:
+    manifest_path = MANIFEST
+    rest = []
+    for a in argv[1:]:
+        if a.startswith("--manifest="):
+            manifest_path = a.split("=", 1)[1]
+        else:
+            rest.append(a)
+    with open(manifest_path) as f:
         manifest = json.load(f)
-    rounds = [int(x) for x in argv[1:]] or [1]
+    rounds = [int(x) for x in rest] or [1]
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     for n in rounds:
