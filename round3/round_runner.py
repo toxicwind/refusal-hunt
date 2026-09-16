@@ -241,10 +241,13 @@ def main(argv):
     with open(manifest_path) as f:
         manifest = json.load(f)
     rounds = [int(x) for x in rest] or [1]
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    for n in rounds:
-        summary = loop.run_until_complete(run_round(n, manifest))
+    async def _drive():
+        out = []
+        for n in rounds:
+            out.append(await run_round(n, manifest))
+        return out
+    summaries = asyncio.run(_drive())
+    for n, summary in zip(rounds, summaries):
         print(json.dumps(
             {"round": n, "passes": summary["passes"], "total": len(summary["fixes"]),
              "verdicts": [(r["id"], r["verdict"]) for r in summary["fixes"]]}, indent=1))

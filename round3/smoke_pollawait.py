@@ -46,4 +46,4 @@ async def main():
     print("result tail:", str(res.get("result", res.get("log", "")))[-200:])
 
 
-asyncio.get_event_loop().run_until_complete(main())
+asyncio.run(main())

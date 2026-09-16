@@ -1,0 +1,12 @@
+{
+  "capture": "/home/toxic/refusal-hunt/storm-capture-marked-20260916.pcap",
+  "interface": "enp12s0",
+  "filter": "tcp port 443",
+  "packets": 3589,
+  "span_s": 237.1,
+  "marks": 8,
+  "packets_near_marks_pm1_5s": 150,
+  "bridge_path": "cell -> egress proxy -> internet -> awrawr-pc public funnel endpoint (NOT tailscale0)",
+  "tailscale0_verdict": "zero TCP packets in 60s+ — bridge does not traverse tailscale0; tailnet FQDN resolves to 198.18.137.254 via egress proxy",
+  "generated_at": "2026-09-16T13:00:00Z"
+}

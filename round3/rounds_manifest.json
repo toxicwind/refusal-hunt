@@ -223,11 +223,11 @@
      "id": "R5F3",
      "kind": "cell",
      "name": "completions endpoint config audit \u2014 what the cell actually calls",
-     "run": "python3 -c \"import os;print(chr(10).join(f\"{k}=<redacted>\" for k in os.environ if any(s in k.lower() for s in (\"endpoint\",\"api_base\",\"model\"))))\"; echo ---; ls /home/hatch/.config/hatch 2>/dev/null",
+     "run": "python3 ~/workspace/refusal-hunt/round3/r5f3_env_audit.py",
      "verify": {
-      "expect": "done",
       "kind": "cell",
-      "run": "echo done"
+      "run": "python3 ~/workspace/refusal-hunt/round3/r5f3_env_audit.py",
+      "expect": "PASS"
      }
     }
    ],
