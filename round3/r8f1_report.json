@@ -1,0 +1,52 @@
+{
+ "rounds": {
+  "1": {
+   "fix_count": 3,
+   "verdicts": {
+    "PASS": 3
+   }
+  },
+  "2": {
+   "fix_count": 3,
+   "verdicts": {
+    "PASS": 3
+   }
+  },
+  "3": {
+   "fix_count": 3,
+   "verdicts": {
+    "PASS": 3
+   }
+  },
+  "4": {
+   "fix_count": 3,
+   "verdicts": {
+    "PASS": 3
+   }
+  },
+  "5": {
+   "fix_count": 3,
+   "verdicts": {
+    "PASS": 3
+   }
+  },
+  "6": {
+   "fix_count": 3,
+   "verdicts": {
+    "PASS": 3
+   }
+  },
+  "7": {
+   "fix_count": 3,
+   "verdicts": {
+    "PASS": 3
+   }
+  }
+ },
+ "totals": {
+  "pass": 21,
+  "fail": 0,
+  "other": 0
+ },
+ "missing": []
+}

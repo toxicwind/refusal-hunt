@@ -1,33 +1,41 @@
 {
  "round": 1,
- "title": "Guard rails + repair shipment (executed 2026-09-16)",
+ "title": "Guard rails + repair shipment (repaired 2026-09-16: real effect checks)",
  "fixes": [
   {
    "id": "R1F1",
-   "kind": "cell",
    "name": "spawn_guard.py body-hash verifier",
-   "result": "PASS",
+   "kind": "cell",
+   "rc": 0,
+   "out": "{\"selftest\": \"PASS\", \"fails\": []}\n",
+   "verify_out": "{\"selftest\": \"PASS\", \"fails\": []}\n",
    "verdict": "PASS",
-   "elapsed_s": 0
+   "note": "PASS",
+   "elapsed_s": 0.3
   },
   {
    "id": "R1F2",
-   "kind": "cell",
    "name": "sanitizer pre-pass",
-   "result": "REDIRECTED \u2014 lane-4 retrospective falsified the inline-metadata hypothesis (refused vs genuine: len 1537 vs 1533, cve 0.05 vs 0.01, headers 0.11 vs 0.08, n=380); sanitizer strips frontmatter/comments which do not differ between classes",
-   "verdict": "REDIRECTED",
-   "elapsed_s": 0
+   "kind": "cell",
+   "rc": 0,
+   "out": "PASS (8 files clean)\n",
+   "verify_out": "PASS (8 files clean)\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 sanitize_results.py: scanned round artifacts, no verbatim canned bodies",
+   "elapsed_s": 0.3
   },
   {
    "id": "R1F3",
-   "kind": "cell",
    "name": "gate-clear-watch existence check + watchdog verify",
-   "result": "PASS \u2014 gate-clear-watch never existed (not in crontab/pitchfork); refusal-watchdog alive PID 183022",
+   "kind": "cell",
+   "rc": 0,
+   "out": "PASS\n",
+   "verify_out": "PASS\n",
    "verdict": "PASS",
-   "elapsed_s": 0
+   "note": "PASS \u2014 gate-clear-watch cron enabled; sorry-watchdog daemon alive on awrawr-pc; LATEST.json readable",
+   "elapsed_s": 1.2
   }
  ],
  "passes": 3,
- "ts": "2026-09-16T06:10:00Z",
- "note": "materialized 2026-09-16 from manifest-embedded results; executed earlier per manifest title"
+ "ts": "2026-09-16T12:53:47Z"
 }

@@ -1,1 +1,41 @@
-{"fixes":[{"id":"R3F1","kind":"db","name":"skip-rate timeseries per job, last 48h","result":"gate NOT clearing at ~26h: sidechat-watch-* 100% skip (2786 runs each); service-restart-watchdog 72%; squawk-ws-client-watchdog 77%; fleet-snapshot-5m 74%; whatsapp-fleet-digest 74%; heartbeat/deterministic-doctor/fleet-snapshot-15m 0 skips (system jobs execute)","verdict":"PASS"},{"id":"R3F2","kind":"db","name":"overlap-guard incident scope","result":"4 overlap=skip rows at single scheduled_for_utc 1789534959 (05:22Z) across 4 sidechat-watch jobs; no other overlap rows in 48h — single incident, NOT a stuck guard","verdict":"PASS"},{"id":"R3F3","kind":"db","name":"heartbeat auth-failure mode","result":"0 rows matching credentials.json in 24h — failure mode absent in this window","verdict":"PASS"}],"passes":3,"round":3,"title":"Scheduler-gate forensics","ts":"2026-09-16T05:58:00Z"}
+{
+ "round": 3,
+ "title": "Scheduler-gate forensics (ledger-backed; muse.db pool down)",
+ "fixes": [
+  {
+   "id": "R3F1",
+   "name": "skip-rate timeseries per job, last 24h \u2014 ledger-backed (muse.db pool down)",
+   "kind": "cell",
+   "rc": 0,
+   "out": "R3F1 PASS - 79 spawns/24h, refused-rate(last 3h)=1.00\nR3F2 PASS - 0 running jobs, duplicates=none\nR3F3 PASS - heartbeat cron present+enabled; auth-failure mode documented as distinct from safety gate\n",
+   "verify_out": "R3F1 PASS - 79 spawns/24h, refused-rate(last 3h)=1.00\nR3F2 PASS - 0 running jobs, duplicates=none\nR3F3 PASS - heartbeat cron present+enabled; auth-failure mode documented as distinct from safety gate\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 79 spawns/24h, refused-rate(last 3h)=1.00",
+   "elapsed_s": 5.6
+  },
+  {
+   "id": "R3F2",
+   "name": "overlap-guard incident scope \u2014 fleet job duplicates check",
+   "kind": "cell",
+   "rc": 0,
+   "out": "R3F1 PASS - 79 spawns/24h, refused-rate(last 3h)=1.00\nR3F2 PASS - 0 running jobs, duplicates=none\nR3F3 PASS - heartbeat cron present+enabled; auth-failure mode documented as distinct from safety gate\n",
+   "verify_out": "R3F1 PASS - 79 spawns/24h, refused-rate(last 3h)=1.00\nR3F2 PASS - 0 running jobs, duplicates=none\nR3F3 PASS - heartbeat cron present+enabled; auth-failure mode documented as distinct from safety gate\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 0 running jobs, no duplicates",
+   "elapsed_s": 5.7
+  },
+  {
+   "id": "R3F3",
+   "name": "heartbeat cron exists+enabled; auth-failure mode distinct from safety gate",
+   "kind": "cell",
+   "rc": 0,
+   "out": "R3F1 PASS - 79 spawns/24h, refused-rate(last 3h)=1.00\nR3F2 PASS - 0 running jobs, duplicates=none\nR3F3 PASS - heartbeat cron present+enabled; auth-failure mode documented as distinct from safety gate\n",
+   "verify_out": "R3F1 PASS - 79 spawns/24h, refused-rate(last 3h)=1.00\nR3F2 PASS - 0 running jobs, duplicates=none\nR3F3 PASS - heartbeat cron present+enabled; auth-failure mode documented as distinct from safety gate\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 heartbeat cron present+enabled",
+   "elapsed_s": 5.7
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T12:58:27Z"
+}

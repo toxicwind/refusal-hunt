@@ -1,0 +1,14 @@
+{
+ "R3F1": {
+  "ok": true,
+  "note": "79 spawns/24h, refused-rate(last 3h)=1.00"
+ },
+ "R3F2": {
+  "ok": true,
+  "note": "0 running jobs, duplicates=none"
+ },
+ "R3F3": {
+  "ok": true,
+  "note": "heartbeat cron present+enabled; auth-failure mode documented as distinct from safety gate"
+ }
+}

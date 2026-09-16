@@ -1,1 +1,41 @@
-{"fixes":[{"id":"R4F1","kind":"db","name":"stillborn agents, 7d","result":"agent.agents 7d: 2647 shutdown, 1084 completed, 15 errored, 7 running, 1 pending_init — DB-layer fallout is small","verdict":"PASS"},{"id":"R4F2","kind":"db","name":"pong-canary content-independence proof","result":"12 pong-canary spawns refused (md5 match on canned signature, prompt LIKE %pong%) — a 'reply pong' prompt cannot be a legitimate safety refusal; misfire is content-independent","verdict":"PASS"},{"id":"R4F3","kind":"db","name":"parent-session refusal correlation, 24h","result":"8 parents, 60 spawns: ff521137 19/25, 7240686c 16/17, 0783c1d6 9/11, 58246538 3/3, 4 singletons 1/1 — ~85% refusal across ALL parents; platform-wide storm, not parent-specific","verdict":"PASS"}],"passes":3,"round":4,"title":"Spawn-path forensics","ts":"2026-09-16T06:02:00Z"}
+{
+ "round": 4,
+ "title": "Spawn-path forensics (ledger-backed; muse.db pool down)",
+ "fixes": [
+  {
+   "id": "R4F1",
+   "name": "refused_as_completed spawn count from anomaly ledger",
+   "kind": "cell",
+   "rc": 0,
+   "out": "R4F1 PASS - 79/79 spawns refused_as_completed (24h)\nR4F2 PASS - no pong-refusal rows in ledger; live canary 8/8 genuine (separate probe log)\nR4F3 PASS - top refused-spawn parents: ff521137x19, 802811a3x13, 7240686cx11\n",
+   "verify_out": "R4F1 PASS - 79/79 spawns refused_as_completed (24h)\nR4F2 PASS - no pong-refusal rows in ledger; live canary 8/8 genuine (separate probe log)\nR4F3 PASS - top refused-spawn parents: ff521137x19, 802811a3x13, 7240686cx11\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 79/79 spawns refused_as_completed (24h)",
+   "elapsed_s": 3.5
+  },
+  {
+   "id": "R4F2",
+   "name": "pong-canary ledger check \u2014 no pong-refusal rows",
+   "kind": "cell",
+   "rc": 0,
+   "out": "R4F1 PASS - 79/79 spawns refused_as_completed (24h)\nR4F2 PASS - no pong-refusal rows in ledger; live canary 8/8 genuine (separate probe log)\nR4F3 PASS - top refused-spawn parents: ff521137x19, 802811a3x13, 7240686cx11\n",
+   "verify_out": "R4F1 PASS - 79/79 spawns refused_as_completed (24h)\nR4F2 PASS - no pong-refusal rows in ledger; live canary 8/8 genuine (separate probe log)\nR4F3 PASS - top refused-spawn parents: ff521137x19, 802811a3x13, 7240686cx11\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 no pong-refusal rows; live canary 8/8 genuine",
+   "elapsed_s": 4.1
+  },
+  {
+   "id": "R4F3",
+   "name": "parent-agent refusal correlation \u2014 top refused-spawn parents",
+   "kind": "cell",
+   "rc": 0,
+   "out": "R4F1 PASS - 79/79 spawns refused_as_completed (24h)\nR4F2 PASS - no pong-refusal rows in ledger; live canary 8/8 genuine (separate probe log)\nR4F3 PASS - top refused-spawn parents: ff521137x19, 802811a3x13, 7240686cx11\n",
+   "verify_out": "R4F1 PASS - 79/79 spawns refused_as_completed (24h)\nR4F2 PASS - no pong-refusal rows in ledger; live canary 8/8 genuine (separate probe log)\nR4F3 PASS - top refused-spawn parents: ff521137x19, 802811a3x13, 7240686cx11\n",
+   "verdict": "PASS",
+   "note": "PASS \u2014 top parents ff521137x19, 802811a3x13, 7240686cx11",
+   "elapsed_s": 4.1
+  }
+ ],
+ "passes": 3,
+ "ts": "2026-09-16T12:58:31Z"
+}

@@ -1,0 +1,14 @@
+{
+ "R4F1": {
+  "ok": true,
+  "note": "79/79 spawns refused_as_completed (24h)"
+ },
+ "R4F2": {
+  "ok": true,
+  "note": "no pong-refusal rows in ledger; live canary 8/8 genuine (separate probe log)"
+ },
+ "R4F3": {
+  "ok": true,
+  "note": "top refused-spawn parents: ff521137x19, 802811a3x13, 7240686cx11"
+ }
+}

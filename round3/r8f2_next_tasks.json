@@ -1,0 +1,50 @@
+{
+ "tasks": [
+  {
+   "id": "T1",
+   "task": "Diagnose muse.db pool exhaustion (persistent ~2h, all agents incl. audit cron affected); escalate platform-side if no in-cell lever exists",
+   "source": "R4F1 blocked; pool timed out on every probe since ~10:30Z"
+  },
+  {
+   "id": "T2",
+   "task": "Run R2F2 CVE reconciliation through the orchestrator and verify cve_reconciliation.json body",
+   "source": "r2f2_cve.py rewritten pure-python; report exists on awrawr-pc but never ran as an orchestrated fix"
+  },
+  {
+   "id": "T3",
+   "task": "Complete clean 24-fix campaign: rerun rounds 1-4 and 8 with repaired manifest, verify 24 independent records + bodies",
+   "source": "R1/R2 repaired 2026-09-16; R5-R7 9/9 PASS; R3/R4/R8 results stale or missing"
+  },
+  {
+   "id": "T4",
+   "task": "Recover archived-Zed orchestrator.db (separate from round3 restore)",
+   "source": "standing open item; never resolved"
+  },
+  {
+   "id": "T5",
+   "task": "Implement persistent connector (append-only intake, taskhook execution state, clean vompl, replay correlation, Parquet snapshots, health APIs, local spool)",
+   "source": "architecture 'persistent there, effect here' still unimplemented"
+  },
+  {
+   "id": "T6",
+   "task": "Verify smoke-test event-loop entrypoint modernization (deprecated asyncio entrypoint may still be in use)",
+   "source": "no explicit edit proving replacement in transcript"
+  },
+  {
+   "id": "T7",
+   "task": "Audit redacted GITHUB_TOKEN source in nvidia-swarm-lens without exposing credentials",
+   "source": "tectonic PR #1 merged; audit still pending"
+  },
+  {
+   "id": "T8",
+   "task": "Correlate marked enp12s0 pcap with bridge egress timing; confirm bridge traffic path (198.18.137.254 via egress proxy, not tailscale0)",
+   "source": "storm-capture-marked-20260916.pcap + pcap_marked_marks.json"
+  },
+  {
+   "id": "X-R8F3",
+   "task": "Re-drive failed fix R8F3",
+   "source": "verdict FAIL in results_R8.json"
+  }
+ ],
+ "count": 9
+}
