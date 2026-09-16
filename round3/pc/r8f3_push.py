@@ -19,6 +19,11 @@ def run(*args):
 
 def main():
     out = {}
+    rc, gitdir = run('git', 'rev-parse', '--git-dir')
+    if rc != 0:
+        out['action'] = 'not a git repository — refusing to fake-push'
+        print(json.dumps(out))
+        raise SystemExit(2)
     rc, branch = run('git', 'branch', '--show-current')
     out['branch'] = branch.strip()
     rc, status = run('git', 'status', '--porcelain')
@@ -33,11 +38,15 @@ def main():
                          'round3 orchestrator artifacts: R5/R7 worker outputs')
     out['commit_rc'] = rc
     out['commit_out'] = commit_out[-300:]
-    if rc == 0:
-        rc, push_out = run('git', 'push', 'origin', out['branch'] or 'main')
-        out['push_rc'] = rc
-        out['push_out'] = push_out[-300:]
+    if rc != 0:
+        print(json.dumps(out))
+        raise SystemExit(3)
+    rc, push_out = run('git', 'push', 'origin', out['branch'] or 'main')
+    out['push_rc'] = rc
+    out['push_out'] = push_out[-300:]
     print(json.dumps(out))
+    if rc != 0:
+        raise SystemExit(4)
 
 
 if __name__ == '__main__':
