@@ -75,10 +75,11 @@
    },
    "verify_out": "pending\n",
    "verdict": "PASS",
-   "elapsed_s": 6.9
+   "elapsed_s": 6.9,
+   "correction_20260916": "PC-side push FAILED: /home/toxic/refusal-hunt is not a git repo (no .git; no local clone carries the refusal-hunt origin). Remediated cell-side: cloned toxicwind/refusal-hunt, synced round3 artifacts, pushed as 37c478f on main. r8f3_push.py should exit non-zero on git failure (currently exits 0) \u2014 filed as N9."
   }
  ],
  "passes": 3,
  "ts": "2026-09-16T12:13:47Z",
- "note": "R8F2 agent-authored 2026-09-16 from rounds 1-7 residual defects"
+ "note": "R8F2 agent-authored 2026-09-16 from rounds 1-7 residual defects; R8F3 corrected: PC push failed (not a git repo), cell-side push 37c478f landed"
 }
