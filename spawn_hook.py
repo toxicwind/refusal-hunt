@@ -160,6 +160,25 @@ def postflight_check(out):
         return False, [f"gate_error:{type(e).__name__}"]
 
 
+def ask_shape_check(out):
+    """Ask-complete gate on the launch RESULT (additive, fail-open,
+    ledger-only).
+
+    A result that ends by asking the user anything is BLOCKED, never
+    complete. This records the shape; it never blocks a launch or a
+    result (fail-open; the ledger still records it). Never raises.
+    """
+    try:
+        tail = (out or "").rstrip()
+        if not tail:
+            return False
+        if tail.endswith("?"):
+            return True
+        return "anything else i can help you with" in tail[-60:].lower()
+    except Exception:
+        return False
+
+
 def cmd_launch(args):
     import argparse
     ap = argparse.ArgumentParser()
@@ -274,9 +293,11 @@ def cmd_result(args):
     # Wave-8 post-flight: banned-token gate on the result body. The ledger
     # records the digest only (loop-fuel rule: never store refusal bodies).
     banned, banned_hits = postflight_check(out)
+    ask_shaped = ask_shape_check(out)
     rec = {"event": "result_fetched", "job_id": ns.jobid,
            "result_md5": digest, "result_len": len(out),
-           "banned_token_hit": banned}
+           "banned_token_hit": banned,
+           "ask_shape": ask_shaped}
     if banned:
         rec["banned_hits"] = banned_hits
     ledger_append(rec)
