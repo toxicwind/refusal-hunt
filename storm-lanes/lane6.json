@@ -1,0 +1,844 @@
+{
+  "lane": 6,
+  "title": "spindle/hatch anomaly hunt: filesystem/config census + storm correlation",
+  "generated_at_utc": "2026-09-16T14:05:00Z",
+  "census": [
+    {
+      "location_type": "path",
+      "full_path_or_name": "/etc/hatch/",
+      "hit_context": "installer-managed platform config dir",
+      "mtime": "2026-09-16T13:04:42Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "contains env, env.override, credentials/"
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/hatch/env",
+      "hit_context": "socket paths, hatchling identity, feature flags; header: managed by installer",
+      "mtime": "2026-09-16T13:04:49Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "read full body; no spindle refs"
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/hatch/env.override",
+      "hit_context": "manual-override slot; EMPTY (1 byte)",
+      "mtime": "2026-09-16T13:04:49Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "proves no manual override was set here"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/etc/hatch/credentials/",
+      "hit_context": "mode 0700/nobody; not opened (secrets)",
+      "mtime": "2026-09-16T13:04:42Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "not read per secrets policy"
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/hatch-ca-trust.path",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/hatch-ca-trust.service",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/hatch-execd.socket",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/hatch-execd.service",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/systemd-tmpfiles-clean.timer.d/10-hatch-runtime-cell.conf",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/apt-daily-upgrade.timer.d/99hatch-spread.conf",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/default.target.wants/hatch-ca-trust.path",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/default.target.wants/hatch-ca-trust.service",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/systemd/system/sockets.target.wants/hatch-execd.socket",
+      "hit_context": "platform service/socket/timer drop-in",
+      "mtime": "1970-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/ssl/certs/hatch-egress-ca.pem",
+      "hit_context": "egress CA cert",
+      "mtime": "2026-09-16T13:04:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/ssl/certs/hatch-ingress-ca.pem",
+      "hit_context": "ingress CA cert",
+      "mtime": "2026-09-16T13:04:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/profile.d/hatch-egress.sh",
+      "hit_context": "shell egress proxy setup",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/environment.d/80-hatch-egress.conf",
+      "hit_context": "environment.d egress vars",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/apt/apt.conf.d/80hatch-egress-proxy",
+      "hit_context": "apt proxy config",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/apt/apt.conf.d/90hatch-intent-ledger",
+      "hit_context": "apt intent ledger config",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/hosts",
+      "hit_context": "content ref: hatch-egress-proxy host entry",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/gitconfig",
+      "hit_context": "content ref",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/environment",
+      "hit_context": "content ref",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/tmpfiles.d/tmp.conf",
+      "hit_context": "content ref",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/matplotlibrc",
+      "hit_context": "content ref (chart 'hatch' pattern setting)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "config",
+      "full_path_or_name": "/etc/pki/nssdb/pkcs11.txt",
+      "hit_context": "content ref",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/",
+      "hit_context": "platform vendor tree",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "binaries dated 1980-01-01: image build stamp"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-execd",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-healthd",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch_messenger_cli",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch_gws_cli",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch_gws_auth",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-zeitgeist",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-ws-client",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-vault",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-slide-style",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-shopping-present",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-rescuectl",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-rescue-systemctl",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-rescue",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-multicall",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-doctor",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/bin/hatch-browser-lease-helper",
+      "hit_context": "platform binary",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch/runtime-cell/hatch-preflight-opportunistic",
+      "hit_context": "runtime-cell preflight",
+      "mtime": "1980-01-01T00:00:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch-image/",
+      "hit_context": "image tooling dir",
+      "mtime": "2026-09-16T13:04:00Z",
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch-image/bin/hatch-prewarm",
+      "hit_context": "prewarm helper",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/opt/hatch-image/bin/hatch-manifest",
+      "hit_context": "manifest helper",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "content",
+      "full_path_or_name": "/opt/hatch/skills/* (withings, voice-selector, tts, ticketmaster, threads, tailscale, spaces, ...)",
+      "hit_context": "bundled skill docs referencing 'hatch'",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "representative of many content hits"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/hooks/runtime/hatch_hook_runtime.sh",
+      "hit_context": "platform hook runtime",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/.hatch-db-change-signals/",
+      "hit_context": "platform db-change signal dir",
+      "mtime": null,
+      "is_dotversion": true,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/.hatch-browser/",
+      "hit_context": "platform browser profile dir",
+      "mtime": null,
+      "is_dotversion": true,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/.cache/hatch-thumbnails/",
+      "hit_context": "platform thumbnail cache",
+      "mtime": null,
+      "is_dotversion": true,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/cell-backup-staging-20260916b/.hatch-db-change-signals.tar.gz",
+      "hit_context": "backup tarball of the above",
+      "mtime": null,
+      "is_dotversion": true,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "process",
+      "full_path_or_name": "PID 67 /opt/hatch/bin/hatch daemon --runtime-cell-leader=1968",
+      "hit_context": "platform runtime daemon",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "process",
+      "full_path_or_name": "PID 705 /opt/hatch/bin/hatch-execd --runtime-cell-leader=1968",
+      "hit_context": "platform exec daemon",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "JARVIS_HATCHLING_ID",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "JARVIS_HOME",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "JARVIS_BIN_DIR",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "HATCH_API_SOCKET",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "JARVIS_AUTHD_SOCK",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "JARVIS_INFERENCE_PROXY_SOCK",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "JARVIS_SENTINEL_HTTP_API_SOCKET",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "JARVIS_AUTHD_INGRESS_ALLOWED_USERS",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "env",
+      "full_path_or_name": "PATH (includes /opt/hatch/bin, /opt/hatch-image/bin)",
+      "hit_context": "platform env var (value redacted)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": ""
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/.cache/uv/.../matplotlib/hatch.py",
+      "hit_context": "matplotlib chart-pattern module (unrelated word)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "also in ~/workspace/venvs/forensics venv"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/wave7/hatch-review-symbols.txt",
+      "hit_context": "review symbols list",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/wave5/hatch-safety-strings.txt",
+      "hit_context": "safety strings list",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/round4/rounds/w2_hatch_surface.json",
+      "hit_context": "hatch surface inventory",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/round4/w2_rollback/w2r6f2/abs__home_hatch_workspace_refusal-hunt_round4_spawn_throttle.json",
+      "hit_context": "rollback artifact",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/round4/w2_rollback/w2r6f1/abs__home_hatch_workspace_refusal-hunt_round4_bin_spawn_queue.py",
+      "hit_context": "rollback artifact",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/round4/w2_rollback/w2r1f3/abs__home_hatch_workspace_refusal-hunt_round4_ROUNDS_SUMMARY.md",
+      "hit_context": "rollback summary",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/round4/w2_rollback/w2r1f2/abs__home_hatch_bin_pkill-guard",
+      "hit_context": "rollback guard script",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/round4/rollback/r6f2/abs__home_hatch_workspace_refusal-hunt_round3_spawn_guard.py",
+      "hit_context": "rollback artifact",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/round4/rollback/r5f1/abs__home_hatch_workspace_watchdog-supervisor.sh",
+      "hit_context": "rollback artifact",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/.jarvis/workflow-runs/workflow-run-08b8b8f2cf6f4c6bbbacfcffa2d3f558/work/lane3_spindle_hatch.py",
+      "hit_context": "lane-3 keyword-scan script (contains 'spindle' literal)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/.jarvis/workflow-runs/workflow-run-1f87bf17052b435a87477d533607d112/work/hatch_inode_path.txt",
+      "hit_context": "prior lane scratch",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/.jarvis/workflow-runs/workflow-run-1f87bf17052b435a87477d533607d112/work/hatch_sockets.txt",
+      "hit_context": "prior lane scratch",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/evidence/filesystem-spindle-hatch-20260916.parquet",
+      "hit_context": "lane-3 evidence ('spindle' in filename only)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/workspace/refusal-hunt/evidence/correlation-spindle-hatch-20260916.parquet",
+      "hit_context": "lane-3 evidence ('spindle' in filename only)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "path",
+      "full_path_or_name": "/home/hatch/assets/avatar/reference/hatch_working.mp4 + hatch_milestone_level_up.mp4 + hatch_making_something.mp4 + hatch.mp4 + hatch.jpg",
+      "hit_context": "assistant avatar assets (assistant's name is Hatch)",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "USER-PROJECT",
+      "notes": "the user's own storm-hunt project; references are investigative, not infrastructure"
+    },
+    {
+      "location_type": "negative",
+      "full_path_or_name": "spindle: no process on cell",
+      "hit_context": "ps aux | rg -i spindle -> zero rows",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "N/A-VERIFIED-ABSENCE",
+      "notes": "absence verified 2026-09-16 ~08:02 MDT"
+    },
+    {
+      "location_type": "negative",
+      "full_path_or_name": "spindle: no env var on cell",
+      "hit_context": "env | rg -i spindle -> zero rows",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "N/A-VERIFIED-ABSENCE",
+      "notes": "absence verified 2026-09-16 ~08:02 MDT"
+    },
+    {
+      "location_type": "negative",
+      "full_path_or_name": "spindle: no file/content in /etc /opt /root /home/hatch",
+      "hit_context": "fdfind + rg -i 'spindle' -> zero file hits, zero content hits",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "N/A-VERIFIED-ABSENCE",
+      "notes": "absence verified 2026-09-16 ~08:02 MDT"
+    },
+    {
+      "location_type": "negative",
+      "full_path_or_name": "spindle: no process on awrawr-pc",
+      "hit_context": "bridge: ps aux | grep -i spindle -> zero rows",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "N/A-VERIFIED-ABSENCE",
+      "notes": "absence verified 2026-09-16 ~08:02 MDT"
+    },
+    {
+      "location_type": "negative",
+      "full_path_or_name": "spindle: no file in /home/toxic /root /etc /opt (awrawr-pc)",
+      "hit_context": "bridge: fd -H -i spindle -> zero rows",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "N/A-VERIFIED-ABSENCE",
+      "notes": "absence verified 2026-09-16 ~08:02 MDT"
+    },
+    {
+      "location_type": "negative",
+      "full_path_or_name": "spindle: no .spindle/.spindle-dir dot-versions",
+      "hit_context": "cell + awrawr-pc: /home/hatch/.spindle, /home/toxic/.spindle, /root/.spindle -> all absent",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "N/A-VERIFIED-ABSENCE",
+      "notes": "absence verified 2026-09-16 ~08:02 MDT"
+    },
+    {
+      "location_type": "negative",
+      "full_path_or_name": "spindle: no corpus mention",
+      "hit_context": "rg -i spindle over ~/workspace/refusal-hunt, ~/docs, AGENTS/SOUL/MEMORY/IDENTITY/SORRY-WATCHDOG -> zero content hits",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "N/A-VERIFIED-ABSENCE",
+      "notes": "absence verified 2026-09-16 ~08:02 MDT"
+    },
+    {
+      "location_type": "content",
+      "full_path_or_name": "/opt/wine-cachyos/share/wine/gecko/wine-gecko-2.47.4-*/dictionaries/en-US.dic",
+      "hit_context": "'spindle' as an English dictionary word only",
+      "mtime": null,
+      "is_dotversion": false,
+      "classification": "LEGITIMATE-PLATFORM",
+      "notes": "NOT an artifact: 'spindle' is a normal English word; bridge rg found only these dict files"
+    }
+  ],
+  "anomalous": [],
+  "manually_set_verdict": {
+    "claim": "The only thing Chris is recorded as having manually set is the 09:00 Android alarm — NOT anything spindle/hatch.",
+    "evidence": "memory/2026-09-16.md:1977: alarm.list returned empty and no alarm.set invocation occurred; Chris stated he had manually set the 09:00 alarm in the phone Clock app.",
+    "spindle_hatch_note": "No spindle artifact exists anywhere to have been manually set (verified absences on cell and awrawr-pc). The designated manual-override slot /etc/hatch/env.override is empty (1 byte). /etc/hatch/env header says 'Managed by the installer -- do not edit manually' but shows no hand edits.",
+    "confidence_0_100": 90
+  },
+  "spindle_verdict": {
+    "claim": "'spindle' is not a process, file, config key, or binary in this environment. It is only a keyword from Chris's own investigation request (composite turn ~07:52 MDT asking to correlate 'spindle'/'hatch' references) plus lane-3's investigation artifacts that carry the keyword in filenames/code.",
+    "confidence_0_100": 95
+  },
+  "hatch_verdict": {
+    "claim": "'hatch' = (a) the platform vendor tree (/opt/hatch, /opt/hatch-image, /etc/hatch, systemd units, CAs, JARVIS_* env, hatch daemon/execd processes), (b) the assistant's own name (Hatch; avatar assets), (c) the user's refusal-hunt project files investigating it, (d) unrelated third-party word usage (matplotlib chart 'hatch' pattern). All legitimate.",
+    "confidence_0_100": 95
+  },
+  "storm_correlation_verdict": {
+    "claim": "No spindle/hatch artifact plausibly causes or correlates with storm activity. All hatch artifacts are benign infrastructure or investigation outputs. Platform mtimes are image-build/boot stamps (1980-01-01, 1970-01-01, 2026-09-16 13:04 UTC) — none within 60 min of any burst start; the 13:04 UTC (07:04 MDT) stamp is container build time, ~1h45m after the storm window ended (05:19 MDT). Zero anomalous hits to correlate.",
+    "storm_bursts_5min_MDT": [
+      "2026-09-15 20:55 MDT (21)",
+      "2026-09-15 21:00 MDT (27)",
+      "2026-09-15 23:00 MDT (28)",
+      "2026-09-15 23:05 MDT (22)",
+      "2026-09-15 23:55 MDT (43)",
+      "2026-09-16 00:00 MDT (23)",
+      "2026-09-16 00:10 MDT (25)",
+      "2026-09-16 00:15 MDT (39)",
+      "2026-09-16 00:25 MDT (23)",
+      "2026-09-16 00:30 MDT (20)",
+      "2026-09-16 01:25 MDT (27)",
+      "2026-09-16 01:35 MDT (50)",
+      "2026-09-16 01:40 MDT (24)",
+      "2026-09-16 02:20 MDT (26)",
+      "2026-09-16 04:50 MDT (22)"
+    ],
+    "storm_window": "2026-09-15 10:46 UTC -> 2026-09-16 11:19 UTC",
+    "confidence_0_100": 90
+  },
+  "methods": [
+    "fdfind -H -i 'spindle|hatch' on /root /opt /etc /home/hatch (cell)",
+    "rg -i 'spindle' content sweep on /etc /opt /root /home/hatch (cell): zero hits",
+    "awrawr-mcp bridge: ps/fd/rg/env spindle sweep on awrawr-pc (/home/toxic,/root,/etc,/opt): zero artifact hits",
+    "corpus rg -i 'spindle' over refusal-hunt, docs, standing files: zero content hits",
+    "stat mtimes on /etc/hatch/* and /opt/hatch/bin/hatch",
+    "storm bursts from ~/workspace/refusal-hunt/parquet-20260916/storm_full.parquet (1006 rows, 5-min buckets)"
+  ]
+}

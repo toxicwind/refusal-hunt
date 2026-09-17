@@ -12,7 +12,7 @@ Fast to read (32ms for 396 rows), typed, versioned, replayable.
 | `timings.parquet` | every operation timed at **microsecond** resolution (`utime.py`) |
 | `timings.jsonl` | append log feeding `timings.parquet` |
 | `utime.py` | `now_us()`, `span(name, detail)` context manager, `log_event()` |
-| `refresh.py` | `python3 refresh.py new_rows.csv` — dedupe/merge/rewrite `spawns.parquet` (snappy) |
+| `refresh.py` | `python3 refresh.py new_rows.csv` — keyed merge on `spawn_id` / rewrite `spawns.parquet` (snappy). Row identity only; echo is never suppressed |
 | `analyze.py` | `python3 analyze.py [--report DIR]` — refusal stats, storm status, timing split, hourly table |
 | `new_rows.csv` | staging for the next refresh (overwritten each cycle) |
 | `nightly/` | dated reports from the nightly cron |

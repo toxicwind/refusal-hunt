@@ -1,0 +1,993 @@
+{
+  "parquet_path": "/home/hatch/workspace/refusal-hunt/storm-lanes/lane7_docs.parquet",
+  "file_count": 75,
+  "chunk_count": 469,
+  "total_tokens": 66022,
+  "lexicons": {
+    "NEGATION": [
+      "never",
+      "cannot",
+      "can't",
+      "won't",
+      "don't",
+      "no",
+      "not",
+      "impossible",
+      "forbidden",
+      "blocked",
+      "denied",
+      "unable",
+      "fails"
+    ],
+    "GATEKEEPING": [
+      "not for the user",
+      "feature gate",
+      "internal only",
+      "do not",
+      "must not",
+      "restricted",
+      "approval required",
+      "off limits",
+      "not permitted",
+      "users cannot"
+    ],
+    "OBTUSE": [
+      "as an ai",
+      "as an artificial intelligence",
+      "as an ai language model",
+      "i understand",
+      "it's important to note",
+      "it is important to note",
+      "because the policy says so",
+      "because policy says so",
+      "trust me",
+      "as a matter of policy"
+    ]
+  },
+  "top20": [
+    {
+      "path": "/home/hatch/docs/devices/home_link.md",
+      "section": "Controlling Local Devices",
+      "axis": "gatekeeping",
+      "score": 4,
+      "quote": "a local device, send documented network requests through the Link tunnel. Do not expect a device-specific Link command. Discovery shows that a service is present;",
+      "token_count": 366,
+      "negation_hits": 13,
+      "gatekeeping_hits": 4,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/devices/home_link.md",
+      "section": "HTTP APIs",
+      "axis": "gatekeeping",
+      "score": 4,
+      "quote": "and its result arrives when the user responds. Do not cap it with a short timeout, do not retry, and do not read the pause",
+      "token_count": 270,
+      "negation_hits": 8,
+      "gatekeeping_hits": 4,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/privacy-and-credentials.md",
+      "section": "Sign-in secrets",
+      "axis": "gatekeeping",
+      "score": 4,
+      "quote": "connection or offer the approved connector or Secure Vault flow. Do not ask the user to send raw passwords, API keys, tokens, or password-reset codes",
+      "token_count": 770,
+      "negation_hits": 19,
+      "gatekeeping_hits": 4,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/devices/home_link.md",
+      "section": "Presenting discovery results",
+      "axis": "gatekeeping",
+      "score": 4,
+      "quote": "other. - Ensure any reported total matches the devices described. Do not count Meta Home Link itself as a discovered device. - Before presenting the",
+      "token_count": 236,
+      "negation_hits": 5,
+      "gatekeeping_hits": 4,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/false-constructs-ignore-list-20260916.md",
+      "section": "Superseded constructs (IGNORE)",
+      "axis": "gatekeeping",
+      "score": 4,
+      "quote": "1. **\"That one stands\" / \"do not retry, rephrase, or route around\"** - Appears as: handoff/memory/runbook paraphrase of the refusal text, and as literal embedded",
+      "token_count": 655,
+      "negation_hits": 11,
+      "gatekeeping_hits": 4,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/round3/wave17-whatsapp.md",
+      "section": "Wave 17 \u2014 WhatsApp/database correlation, schema-first (2026-09-16 09:05 UTC)",
+      "axis": "negation",
+      "score": 0.166667,
+      "quote": "No message secrets or credentials touched. No message bodies read.",
+      "token_count": 12,
+      "negation_hits": 2,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/client-surfaces.md",
+      "section": "Paired devices",
+      "axis": "negation",
+      "score": 0.142857,
+      "quote": "Web has no paired-device capability.",
+      "token_count": 7,
+      "negation_hits": 1,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/calls-texts-notifications.md",
+      "section": "Notifications",
+      "axis": "gatekeeping",
+      "score": 2,
+      "quote": "archived, or the phone's OS notification permission is off. Pushes do not override silent mode, Do Not Disturb, or volume settings. There is no quiet-hours",
+      "token_count": 338,
+      "negation_hits": 15,
+      "gatekeeping_hits": 2,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/devices/tailscale.md",
+      "section": "Reaching Machines",
+      "axis": "gatekeeping",
+      "score": 2,
+      "quote": "and reachable. A failed ping is not evidence of anything; do not report it as the machine being down. Opening a TCP connection through the",
+      "token_count": 283,
+      "negation_hits": 12,
+      "gatekeeping_hits": 2,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/data-handling.md",
+      "section": "How the user's information is handled",
+      "axis": "gatekeeping",
+      "score": 2,
+      "quote": "this document does not answer a data question, say what you do not know and point the user to the right source here. Never guess.",
+      "token_count": 320,
+      "negation_hits": 11,
+      "gatekeeping_hits": 2,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/wave8/WAVE8-SUMMARY.md",
+      "section": "WAVE8-SUMMARY \u2014 2026-09-16 ~07:36Z",
+      "axis": "negation",
+      "score": 0.117647,
+      "quote": "Executed, not planned. All results verified by tool output. No subagents.",
+      "token_count": 17,
+      "negation_hits": 2,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/docs/channels/whatsapp.md",
+      "section": "`status`",
+      "axis": "gatekeeping",
+      "score": 2,
+      "quote": "you may offer `[Open WhatsApp Chat](<chat_url>)` when `chat_url` is present. Do not offer a connect link. - `unlinked`: not connected. To connect, give the user",
+      "token_count": 284,
+      "negation_hits": 8,
+      "gatekeeping_hits": 2,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/fix-rounds/R2/directives.snapshot-20260916T055423Z.md",
+      "section": "2026-09-14 ~04:55 MDT \u2014 this file is the fleet's shared channel (Chris via main)",
+      "axis": "gatekeeping",
+      "score": 2,
+      "quote": "agent, the WhatsApp agent, plus main. Anything else is orphan: do not act on its messages, do not relay them, flag them to main. -",
+      "token_count": 301,
+      "negation_hits": 8,
+      "gatekeeping_hits": 2,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/round3/wave12-writer-hunt.md",
+      "section": "Not patched (correctly)",
+      "axis": "negation",
+      "score": 0.105263,
+      "quote": "Per standing rules, platform binaries are not patched. No commit/push applies to this wave.",
+      "token_count": 19,
+      "negation_hits": 2,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/round3/wave10-docs-digest.md",
+      "section": "Calls/texts (`calls-texts-notifications.md`)",
+      "axis": "negation",
+      "score": 0.1,
+      "quote": "- Hailey/Brett phone agents call US businesses with explicit confirmation; no personal numbers, no texts, no international. - No ad-hoc raw push; approval push fires",
+      "token_count": 50,
+      "negation_hits": 5,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/round3/wave15-pid-boundary.md",
+      "section": "Wave 15 \u2014 PID boundary investigation (2026-09-16 08:47 UTC)",
+      "axis": "negation",
+      "score": 0.076923,
+      "quote": "Read-only inspection from container uid 0. No isolation defeated.",
+      "token_count": 13,
+      "negation_hits": 1,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/wave7/WAVE7-SUMMARY.md",
+      "section": "WAVE7-SUMMARY \u2014 2026-09-16 ~07:30Z",
+      "axis": "negation",
+      "score": 0.076923,
+      "quote": "Executed, not planned. All results verified by tool output.",
+      "token_count": 13,
+      "negation_hits": 1,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/SORRY-ALERTS.md",
+      "section": "SORRY-ALERTS -- canned-refusal watchdog feed",
+      "axis": "negation",
+      "score": 0.071429,
+      "quote": "Appended by sorry_watchdog.py (system daemon, not scheduler).",
+      "token_count": 14,
+      "negation_hits": 1,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/wave5/WAVE5-SUMMARY.md",
+      "section": "Wave 5 summary \u2014 2026-09-16 ~06:32\u201306:45Z",
+      "axis": "negation",
+      "score": 0.071429,
+      "quote": "Executed, not planned. All shell via tool_audit_hook.py.",
+      "token_count": 14,
+      "negation_hits": 1,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    },
+    {
+      "path": "/home/hatch/workspace/refusal-hunt/round3/wave17-whatsapp.md",
+      "section": "Correlation result",
+      "axis": "negation",
+      "score": 0.061224,
+      "quote": "storm and the WhatsApp channel are disjoint in the observable data: no shared tables, no digest rows on WhatsApp surfaces, no local message store to",
+      "token_count": 49,
+      "negation_hits": 3,
+      "gatekeeping_hits": 0,
+      "obtuse_hits": 0
+    }
+  ],
+  "corpus_stats": {
+    "total_negation_hits": 984,
+    "total_gatekeeping_hits": 71,
+    "total_obtuse_hits": 0,
+    "corpus_negation_density": 0.014904,
+    "docs_missing_note": "~/workspace/refusal-hunt/docs/ does not exist (0 files); fd not installed in container, used fdfind",
+    "obtuse_note": "0 obtuse hits corpus-wide: no 'as an AI / I understand / it's important to note / policy-says-so' language found in any of the 75 docs"
+  },
+  "describe_vs_prescribe_verdict": {
+    "describe_meta_files": [
+      "deep-dive-2-embedded-directive-20260916.md",
+      "WAVE9-NOTES.md",
+      "8task-run-20260915-2344.md",
+      "round3-20260916.md",
+      "canary-log-20260915.md",
+      "false-constructs-ignore-list-20260916.md",
+      "EIGHT_ROUND_REPORT.md",
+      "WAVE7-SUMMARY.md",
+      "that-one-stands-deep-dig-20260916.md",
+      "ROUTE_CONSTRUCTION.md",
+      "backoff-block.md",
+      "WAVE8-SUMMARY.md",
+      "inline-meta-finding-20260915.md",
+      "SELF_AUDIT.md",
+      "recursive-8round-plan.md",
+      "WAVE3-SUMMARY.md",
+      "context-hygiene.md",
+      "wave13-launch-paths.md",
+      "WAVE5-SUMMARY.md",
+      "ROUNDLOG.md",
+      "PLAN.md",
+      "common-cause-onset-20260916.md",
+      "R2-backoff-block.md",
+      "DEBUG_STATE.md",
+      "SORRY-ALERTS.md",
+      "CENSUS.md",
+      "wave17-whatsapp.md",
+      "token-entrypoint-forensics-20260916.md",
+      "wave12-writer-hunt.md",
+      "NOTE.md",
+      "wave11-correlation.md",
+      "wave9-summary.md",
+      "wave16-transport.md",
+      "wave19-timeline.md",
+      "lane1-whatsapp-binding-forensics-w3-20260916T0635Z.md"
+    ],
+    "prescribe_candidates": [
+      {
+        "file": "home_link.md",
+        "gatekeeping_hits": 14,
+        "obtuse_hits": 0,
+        "tokens": 1323
+      },
+      {
+        "file": "connectors.md",
+        "gatekeeping_hits": 5,
+        "obtuse_hits": 0,
+        "tokens": 1441
+      },
+      {
+        "file": "privacy-and-credentials.md",
+        "gatekeeping_hits": 5,
+        "obtuse_hits": 0,
+        "tokens": 1797
+      },
+      {
+        "file": "directives.snapshot-20260916T055423Z.md",
+        "gatekeeping_hits": 5,
+        "obtuse_hits": 0,
+        "tokens": 4590
+      },
+      {
+        "file": "calls-texts-notifications.md",
+        "gatekeeping_hits": 4,
+        "obtuse_hits": 0,
+        "tokens": 1796
+      },
+      {
+        "file": "data-handling.md",
+        "gatekeeping_hits": 3,
+        "obtuse_hits": 0,
+        "tokens": 990
+      },
+      {
+        "file": "tailscale.md",
+        "gatekeeping_hits": 3,
+        "obtuse_hits": 0,
+        "tokens": 1066
+      },
+      {
+        "file": "browser.md",
+        "gatekeeping_hits": 2,
+        "obtuse_hits": 0,
+        "tokens": 1082
+      },
+      {
+        "file": "whatsapp.md",
+        "gatekeeping_hits": 2,
+        "obtuse_hits": 0,
+        "tokens": 1114
+      },
+      {
+        "file": "feed.md",
+        "gatekeeping_hits": 2,
+        "obtuse_hits": 0,
+        "tokens": 1211
+      },
+      {
+        "file": "files-and-library.md",
+        "gatekeeping_hits": 2,
+        "obtuse_hits": 0,
+        "tokens": 1255
+      },
+      {
+        "file": "payments-and-purchases.md",
+        "gatekeeping_hits": 2,
+        "obtuse_hits": 0,
+        "tokens": 2090
+      },
+      {
+        "file": "wave10-docs-digest.md",
+        "gatekeeping_hits": 2,
+        "obtuse_hits": 0,
+        "tokens": 1136
+      }
+    ],
+    "per_file": {
+      "artifacts.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 12,
+        "chunks": 4,
+        "meta_hits": 0,
+        "tokens": 555
+      },
+      "browser.md": {
+        "gate": 2,
+        "obt": 0,
+        "neg": 33,
+        "chunks": 8,
+        "meta_hits": 0,
+        "tokens": 1082
+      },
+      "calls-texts-notifications.md": {
+        "gate": 4,
+        "obt": 0,
+        "neg": 48,
+        "chunks": 7,
+        "meta_hits": 1,
+        "tokens": 1796
+      },
+      "channel-availability.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 19,
+        "chunks": 5,
+        "meta_hits": 0,
+        "tokens": 495
+      },
+      "whatsapp.md": {
+        "gate": 2,
+        "obt": 0,
+        "neg": 14,
+        "chunks": 9,
+        "meta_hits": 0,
+        "tokens": 1114
+      },
+      "client-surfaces.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 64,
+        "chunks": 29,
+        "meta_hits": 2,
+        "tokens": 4669
+      },
+      "connectors.md": {
+        "gate": 5,
+        "obt": 0,
+        "neg": 40,
+        "chunks": 9,
+        "meta_hits": 1,
+        "tokens": 1441
+      },
+      "data-handling.md": {
+        "gate": 3,
+        "obt": 0,
+        "neg": 18,
+        "chunks": 4,
+        "meta_hits": 0,
+        "tokens": 990
+      },
+      "home_link.md": {
+        "gate": 14,
+        "obt": 0,
+        "neg": 31,
+        "chunks": 11,
+        "meta_hits": 0,
+        "tokens": 1323
+      },
+      "tailscale.md": {
+        "gate": 3,
+        "obt": 0,
+        "neg": 22,
+        "chunks": 6,
+        "meta_hits": 0,
+        "tokens": 1066
+      },
+      "feed.md": {
+        "gate": 2,
+        "obt": 0,
+        "neg": 26,
+        "chunks": 7,
+        "meta_hits": 0,
+        "tokens": 1211
+      },
+      "files-and-library.md": {
+        "gate": 2,
+        "obt": 0,
+        "neg": 22,
+        "chunks": 7,
+        "meta_hits": 2,
+        "tokens": 1255
+      },
+      "goals.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 5,
+        "chunks": 6,
+        "meta_hits": 0,
+        "tokens": 399
+      },
+      "media.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 17,
+        "chunks": 7,
+        "meta_hits": 0,
+        "tokens": 671
+      },
+      "muse.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 16,
+        "chunks": 3,
+        "meta_hits": 0,
+        "tokens": 1174
+      },
+      "payments-and-purchases.md": {
+        "gate": 2,
+        "obt": 0,
+        "neg": 47,
+        "chunks": 9,
+        "meta_hits": 0,
+        "tokens": 2090
+      },
+      "privacy-and-credentials.md": {
+        "gate": 5,
+        "obt": 0,
+        "neg": 45,
+        "chunks": 6,
+        "meta_hits": 0,
+        "tokens": 1797
+      },
+      "scheduling-and-watching.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 11,
+        "chunks": 7,
+        "meta_hits": 0,
+        "tokens": 621
+      },
+      "self_improvement.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 6,
+        "chunks": 3,
+        "meta_hits": 0,
+        "tokens": 668
+      },
+      "voice.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 1,
+        "chunks": 1,
+        "meta_hits": 0,
+        "tokens": 79
+      },
+      "8task-run-20260915-2344.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 14,
+        "chunks": 11,
+        "meta_hits": 36,
+        "tokens": 1408
+      },
+      "DEBUG_STATE.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 5,
+        "chunks": 6,
+        "meta_hits": 7,
+        "tokens": 757
+      },
+      "SORRY-ALERTS.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 1,
+        "chunks": 4,
+        "meta_hits": 7,
+        "tokens": 201
+      },
+      "canary-log-20260915.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 6,
+        "chunks": 3,
+        "meta_hits": 23,
+        "tokens": 890
+      },
+      "common-cause-onset-20260916.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 3,
+        "chunks": 1,
+        "meta_hits": 9,
+        "tokens": 376
+      },
+      "context-hygiene.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 14,
+        "chunks": 1,
+        "meta_hits": 12,
+        "tokens": 410
+      },
+      "deep-dive-2-embedded-directive-20260916.md": {
+        "gate": 4,
+        "obt": 0,
+        "neg": 16,
+        "chunks": 8,
+        "meta_hits": 47,
+        "tokens": 1430
+      },
+      "false-constructs-ignore-list-20260916.md": {
+        "gate": 4,
+        "obt": 0,
+        "neg": 15,
+        "chunks": 3,
+        "meta_hits": 23,
+        "tokens": 788
+      },
+      "EIGHT_ROUND_REPORT.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 19,
+        "chunks": 9,
+        "meta_hits": 23,
+        "tokens": 1789
+      },
+      "PLAN.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 7,
+        "chunks": 5,
+        "meta_hits": 10,
+        "tokens": 708
+      },
+      "backoff-block.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 2,
+        "chunks": 1,
+        "meta_hits": 16,
+        "tokens": 200
+      },
+      "R2-backoff-block.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 5,
+        "chunks": 1,
+        "meta_hits": 9,
+        "tokens": 211
+      },
+      "directives.snapshot-20260916T055423Z.md": {
+        "gate": 5,
+        "obt": 0,
+        "neg": 63,
+        "chunks": 24,
+        "meta_hits": 2,
+        "tokens": 4590
+      },
+      "FANOUT_EVIDENCE.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 9,
+        "chunks": 6,
+        "meta_hits": 2,
+        "tokens": 884
+      },
+      "ROUTE_CONSTRUCTION.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 3,
+        "chunks": 5,
+        "meta_hits": 18,
+        "tokens": 471
+      },
+      "ROUTE_TIMING.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 3,
+        "chunks": 4,
+        "meta_hits": 2,
+        "tokens": 304
+      },
+      "ROUNDLOG.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 9,
+        "chunks": 14,
+        "meta_hits": 11,
+        "tokens": 1543
+      },
+      "ROUNDSUMMARY.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 0,
+        "chunks": 1,
+        "meta_hits": 0,
+        "tokens": 73
+      },
+      "inline-meta-finding-20260915.md": {
+        "gate": 3,
+        "obt": 0,
+        "neg": 15,
+        "chunks": 6,
+        "meta_hits": 15,
+        "tokens": 856
+      },
+      "CENSUS.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 3,
+        "chunks": 4,
+        "meta_hits": 7,
+        "tokens": 785
+      },
+      "recursive-8round-plan.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 7,
+        "chunks": 10,
+        "meta_hits": 13,
+        "tokens": 842
+      },
+      "round3-20260916.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 13,
+        "chunks": 11,
+        "meta_hits": 27,
+        "tokens": 1274
+      },
+      "SPAWN_HYGIENE.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 1,
+        "chunks": 1,
+        "meta_hits": 2,
+        "tokens": 65
+      },
+      "wave10-docs-digest.md": {
+        "gate": 2,
+        "obt": 0,
+        "neg": 36,
+        "chunks": 16,
+        "meta_hits": 2,
+        "tokens": 1136
+      },
+      "wave11-correlation.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 4,
+        "chunks": 4,
+        "meta_hits": 5,
+        "tokens": 646
+      },
+      "wave12-writer-hunt.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 10,
+        "chunks": 6,
+        "meta_hits": 6,
+        "tokens": 434
+      },
+      "wave13-launch-paths.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 2,
+        "chunks": 3,
+        "meta_hits": 12,
+        "tokens": 373
+      },
+      "wave14-net-census.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 5,
+        "chunks": 4,
+        "meta_hits": 2,
+        "tokens": 468
+      },
+      "wave15-pid-boundary.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 9,
+        "chunks": 4,
+        "meta_hits": 1,
+        "tokens": 357
+      },
+      "wave16-transport.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 4,
+        "chunks": 4,
+        "meta_hits": 4,
+        "tokens": 843
+      },
+      "wave17-whatsapp.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 11,
+        "chunks": 4,
+        "meta_hits": 7,
+        "tokens": 268
+      },
+      "wave18-watchdogs.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 5,
+        "chunks": 4,
+        "meta_hits": 0,
+        "tokens": 323
+      },
+      "wave19-timeline.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 5,
+        "chunks": 3,
+        "meta_hits": 4,
+        "tokens": 471
+      },
+      "wave9-summary.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 4,
+        "chunks": 6,
+        "meta_hits": 5,
+        "tokens": 737
+      },
+      "ROUNDS_SUMMARY.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 9,
+        "chunks": 2,
+        "meta_hits": 1,
+        "tokens": 399
+      },
+      "NOTE.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 3,
+        "chunks": 1,
+        "meta_hits": 6,
+        "tokens": 241
+      },
+      "LANE6_REPORT.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 4,
+        "chunks": 4,
+        "meta_hits": 2,
+        "tokens": 271
+      },
+      "abs__home_hatch_workspace_refusal-hunt_round4_ROUNDS_SUMMARY.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 1,
+        "chunks": 1,
+        "meta_hits": 0,
+        "tokens": 196
+      },
+      "WAVE3-SUMMARY.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 13,
+        "chunks": 5,
+        "meta_hits": 13,
+        "tokens": 1049
+      },
+      "lane1-whatsapp-binding-forensics-w3-20260916T0635Z.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 4,
+        "chunks": 7,
+        "meta_hits": 3,
+        "tokens": 799
+      },
+      "SELF_AUDIT.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 19,
+        "chunks": 7,
+        "meta_hits": 15,
+        "tokens": 1130
+      },
+      "tool-inventory.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 0,
+        "chunks": 29,
+        "meta_hits": 0,
+        "tokens": 587
+      },
+      "that-one-stands-deep-dig-20260916.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 4,
+        "chunks": 5,
+        "meta_hits": 19,
+        "tokens": 626
+      },
+      "LICENSE.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 6,
+        "chunks": 2,
+        "meta_hits": 0,
+        "tokens": 616
+      },
+      "token-entrypoint-forensics-20260916.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 10,
+        "chunks": 9,
+        "meta_hits": 7,
+        "tokens": 1037
+      },
+      "config-audit.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 13,
+        "chunks": 7,
+        "meta_hits": 2,
+        "tokens": 595
+      },
+      "WAVE5-SUMMARY.md": {
+        "gate": 1,
+        "obt": 0,
+        "neg": 22,
+        "chunks": 11,
+        "meta_hits": 12,
+        "tokens": 1866
+      },
+      "proto-ws-map.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 4,
+        "chunks": 1,
+        "meta_hits": 2,
+        "tokens": 174
+      },
+      "vm-key-inventory.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 2,
+        "chunks": 1,
+        "meta_hits": 2,
+        "tokens": 90
+      },
+      "WAVE7-SUMMARY.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 17,
+        "chunks": 10,
+        "meta_hits": 22,
+        "tokens": 1148
+      },
+      "WAVE8-SUMMARY.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 10,
+        "chunks": 10,
+        "meta_hits": 16,
+        "tokens": 1246
+      },
+      "scheduler-status-table.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 0,
+        "chunks": 1,
+        "meta_hits": 1,
+        "tokens": 1176
+      },
+      "WAVE9-NOTES.md": {
+        "gate": 0,
+        "obt": 0,
+        "neg": 18,
+        "chunks": 11,
+        "meta_hits": 43,
+        "tokens": 1369
+      }
+    }
+  },
+  "bias_assessment": "The corpus splits cleanly into two genres. (a) DESCRIBE: ~25 refusal-hunt forensics docs analyze the canned-refusal storm with digests/lengths only (quarantine rule holds; zero canned bodies found in docs). These are meta and harmless. The single file quoting refusal language, false-constructs-ignore-list-20260916.md, quotes it as a construct explicitly marked IGNORE/superseded -- anti-bias, not bias. (b) PRESCRIBE: the ~/docs/ skill docs (home_link, privacy-and-credentials, calls-texts-notifications, etc.) prescribe narrow behavioral guardrails ('do not ask for raw passwords', 'do not cap a pause with a short timeout', 'do not count Home Link as a discovered device'). All 71 gatekeeping hits are narrow action-level constraints, none prescribe broad user-facing refusal or claim user-exclusion ('not for the user' / 'internal only' / 'off limits' / 'users cannot' occur 0 times). Corpus negation density is 0.0149, dominated by ordinary 'not'/'no'. Obtuse lexicon: zero hits. VERDICT: no evidence that ingesting these docs would bias a serving classifier toward refusal. If anything the docs constrain the agent toward safer, more accurate service, and the forensics docs document refusal as a defect to route around.",
+  "confidence_0_100": {
+    "corpus_stats_measured_not_estimated": 100,
+    "zero_canned_bodies_in_docs": 99,
+    "describe_vs_prescribe_split": 95,
+    "gatekeeping_hits_are_narrow_action_constraints_not_refusal_directives": 90,
+    "obtuse_zero_hits": 100,
+    "ingesting_these_docs_would_not_bias_classifier_toward_refusal": 85,
+    "note": "Residual uncertainty is epistemic: the serving classifier is a server-side black box; no in-container measurement of classifier bias is possible. The 85 reflects content-audit confidence, not a causal A/B."
+  },
+  "generated_utc": "2026-09-16T13:58:49.849014+00:00"
+}

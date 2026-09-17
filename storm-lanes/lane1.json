@@ -1,0 +1,227 @@
+{
+  "lane": 1,
+  "method": "direct-by-main-agent-after-worker-timeout",
+  "parquet": "/home/hatch/workspace/refusal-hunt/storm-lanes/../parquet-20260916/storm_full.parquet",
+  "n_rows_parquet": 1006,
+  "n_parseable": 1000,
+  "n_storm_rows": 950,
+  "time_range": [
+    "2026-09-15T10:46:04.321000+00:00",
+    "2026-09-16T11:19:01.224000+00:00"
+  ],
+  "bucket_minutes": 5,
+  "n_nonempty_buckets": 82,
+  "storm_by_source": {
+    "chat": 864,
+    "runtime.messages": 7,
+    "spawn": 79
+  },
+  "hourly_utc": {
+    "2026-09-15T10": 1,
+    "2026-09-15T11": 1,
+    "2026-09-15T19": 5,
+    "2026-09-16T00": 1,
+    "2026-09-16T02": 7,
+    "2026-09-16T03": 93,
+    "2026-09-16T04": 39,
+    "2026-09-16T05": 189,
+    "2026-09-16T06": 166,
+    "2026-09-16T07": 179,
+    "2026-09-16T08": 108,
+    "2026-09-16T09": 47,
+    "2026-09-16T10": 95,
+    "2026-09-16T11": 19
+  },
+  "burst_onsets_30min_quiet": [
+    {
+      "onset_bucket": "2026-09-15T10:45:00+00:00",
+      "n_rows": 1,
+      "by_source": {
+        "chat": 1
+      },
+      "by_kind": {
+        "anomaly": 1
+      },
+      "first_ts": "2026-09-15T10:46:04.321000+00:00",
+      "last_ts": "2026-09-15T10:46:04.321000+00:00"
+    },
+    {
+      "onset_bucket": "2026-09-15T19:35:00+00:00",
+      "n_rows": 1,
+      "by_source": {
+        "chat": 1
+      },
+      "by_kind": {
+        "anomaly": 1
+      },
+      "first_ts": "2026-09-15T19:36:37.690000+00:00",
+      "last_ts": "2026-09-15T19:36:37.690000+00:00"
+    },
+    {
+      "onset_bucket": "2026-09-16T00:00:00+00:00",
+      "n_rows": 1,
+      "by_source": {
+        "runtime.messages": 1
+      },
+      "by_kind": {
+        "anomaly": 1
+      },
+      "first_ts": "2026-09-16T00:00:00+00:00",
+      "last_ts": "2026-09-16T00:00:00+00:00"
+    },
+    {
+      "onset_bucket": "2026-09-16T02:55:00+00:00",
+      "n_rows": 7,
+      "by_source": {
+        "chat": 6,
+        "runtime.messages": 1
+      },
+      "by_kind": {
+        "anomaly": 7
+      },
+      "first_ts": "2026-09-16T02:57:08.804000+00:00",
+      "last_ts": "2026-09-16T02:58:47.328000+00:00"
+    },
+    {
+      "onset_bucket": "2026-09-16T07:10:00+00:00",
+      "n_rows": 5,
+      "by_source": {
+        "spawn": 4,
+        "chat": 1
+      },
+      "by_kind": {
+        "anomaly": 5
+      },
+      "first_ts": "2026-09-16T07:11:57+00:00",
+      "last_ts": "2026-09-16T07:12:22.050000+00:00"
+    }
+  ],
+  "n_onsets": 5,
+  "top10_buckets": [
+    {
+      "bucket": "2026-09-16T07:35:00+00:00",
+      "n": 50,
+      "by_source": {
+        "chat": 50
+      }
+    },
+    {
+      "bucket": "2026-09-16T05:55:00+00:00",
+      "n": 43,
+      "by_source": {
+        "chat": 43
+      }
+    },
+    {
+      "bucket": "2026-09-16T06:15:00+00:00",
+      "n": 40,
+      "by_source": {
+        "spawn": 1,
+        "chat": 38,
+        "runtime.messages": 1
+      }
+    },
+    {
+      "bucket": "2026-09-16T05:05:00+00:00",
+      "n": 34,
+      "by_source": {
+        "spawn": 12,
+        "chat": 22
+      }
+    },
+    {
+      "bucket": "2026-09-16T08:20:00+00:00",
+      "n": 33,
+      "by_source": {
+        "spawn": 7,
+        "chat": 26
+      }
+    },
+    {
+      "bucket": "2026-09-16T07:40:00+00:00",
+      "n": 32,
+      "by_source": {
+        "spawn": 8,
+        "chat": 24
+      }
+    },
+    {
+      "bucket": "2026-09-16T03:00:00+00:00",
+      "n": 29,
+      "by_source": {
+        "spawn": 2,
+        "chat": 25,
+        "runtime.messages": 2
+      }
+    },
+    {
+      "bucket": "2026-09-16T05:00:00+00:00",
+      "n": 28,
+      "by_source": {
+        "chat": 28
+      }
+    },
+    {
+      "bucket": "2026-09-16T06:30:00+00:00",
+      "n": 28,
+      "by_source": {
+        "spawn": 8,
+        "chat": 20
+      }
+    },
+    {
+      "bucket": "2026-09-16T06:25:00+00:00",
+      "n": 27,
+      "by_source": {
+        "spawn": 4,
+        "chat": 23
+      }
+    }
+  ],
+  "applied_then_starts_test": {
+    "hypothesis": "storm onsets follow an applied event (cron add/update, job deploy) within 60 min",
+    "verdict": "REJECTED",
+    "onset_correlations": [
+      {
+        "onset": "2026-09-15T10:45:00+00:00",
+        "n": 1,
+        "applied_60min_before": "none (nearest: sidechat-watch adds 06:35Z, 4h before)"
+      },
+      {
+        "onset": "2026-09-15T19:35:00+00:00",
+        "n": 1,
+        "applied_60min_before": "none (nearest: sidechat-watch adds 06:35Z, 13h before)"
+      },
+      {
+        "onset": "2026-09-16T00:00:00+00:00",
+        "n": 1,
+        "applied_60min_before": "none"
+      },
+      {
+        "onset": "2026-09-16T02:55:00+00:00",
+        "n": 7,
+        "applied_60min_before": "NONE - zero cron_mutations, zero job adds in prior 60 min; only routine scheduled watchdogs (sidechat-watch-*, squawk-ws-client-watchdog, service-restart-watchdog, whatsapp-fleet-digest), all status=succeeded"
+      },
+      {
+        "onset": "2026-09-16T07:10:00+00:00",
+        "n": 5,
+        "applied_60min_before": "16 jobs ADDED 06:20:40-06:26:49Z (gate-x-p1-sysbody, gate-x-p2-nodelivery, gate-x-p3-goalowned, gate-x-p4-verbose, gate-x-l1..l6, doctor-followup, system-maintenance-probe, deterministic-doctor-2, fleet-snapshot-5m-2, gate-fuzz-control-1, squawk-ws-client-watchdog-2) - BUT spawn refusals predated additions (lane2 window opens 03:01Z < 06:20Z); correlation real, causation reversed"
+      }
+    ],
+    "response_events_after_onset": [
+      {
+        "at": "2026-09-16T03:47Z",
+        "what": "6 sidechat-watch jobs UPDATED + gate-probe-minimal ADDED",
+        "relation_to_onset4": "52 min AFTER onset - incident response, not cause"
+      }
+    ],
+    "corrected_causal_direction": "storm -> applied (diagnostic/response jobs follow onsets), NOT applied -> storm",
+    "note": "The remembered feature-unlock ordering is backwards: the gate-x probe ladder was applied AFTER the storm started (02:55Z onset precedes 06:20Z adds), as a diagnostic response."
+  },
+  "confidence_0_100": {
+    "time_series": 95,
+    "onset_detection": 85,
+    "applied_rejection": 90,
+    "causal_reversal": 85
+  }
+}

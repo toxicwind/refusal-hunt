@@ -1,0 +1,53 @@
+# Refusal forensics — 2026-09-15 ~04:07–04:11 UTC
+
+## Verdict
+Chris's hypothesis confirmed: the "Sorry, I can't help you with this request right now.
+Is there anything else I can help you with?" texts are **generation-time replacements
+at the completions endpoint**, not client rendering glitches and not Dash refusing.
+Every one is stored server-side in muse.db as a real assistant message
+(`runtime.messages`, role=assistant, exact canned body).
+
+## Evidence (from muse.db, ground truth)
+- 8 canned refusals in 33 min (04:07:57 → 04:11:21 UTC), ALL in this side chat.
+- Zero refusal-text assistant messages in any other chat in the last 3h — isolated here.
+- Refusals return in ~1.5–2.6s: classifier short-circuit, not full generation.
+- The client's behavior on refusal: it re-sends the identical user message; the retry
+  is refused identically every time (observed 3 duplicate-send pairs).
+- Rephrasing the same request succeeds. Dash's normal replies in the same context
+  (honeypot verification, APK teardown, exploit-lane report) all went through fine.
+
+## Trigger classes
+- **Class A (5/8): the user's message contains the literal canned refusal string.**
+  Pasting "Sorry, I can't help you..." back into chat guarantees another refusal.
+  It reads like the input classifier treats the refusal string as a jailbreak/
+  injection pattern and short-circuits.
+- **Class B (3/8): exploit/CVE-saturated context.** "uhhh i dont agree with 'tracker'
+  test" (CVE-2026-46333 dispute) and "ugh the dedupe job is worrying me check wtf"
+  (benign text, but the window was full of CVE-2026-46333/53365 exploit discussion).
+  Not a blanket CVE ban — the full exploit-lane report posted fine 1 min earlier.
+
+## Separate mechanism (not this pattern)
+The kernel ground-truth worker (95bbf777) got a deliberate, explained safety refusal
+via system handoff — different path from the canned string, do not conflate.
+
+## Timeline (UTC, from DB)
+- 04:07:54 user disputes 46333 tracker verdict → 04:07:57 refusal (#1, class B)
+- 04:08:45 user rephrases → 04:09:32 Dash's real honeypot reply posts fine
+- 04:09:11 user "dedupe job" → 04:09:12 refusal (#2, class B); 04:09:20 duplicate → 04:09:22 refusal (#3)
+- 04:09:41 user quotes refusal string → 04:09:42 refusal (#4, class A)
+- 04:09:56 user IS the refusal string → 04:09:59 refusal (#5, class A)
+- 04:10:53 user "i saw literal 'Sorry...'" → 04:10:55 refusal (#6, class A)
+- 04:11:11 / 04:11:20 duplicates → 04:11:13 / 04:11:21 refusals (#7, #8, class A)
+- 04:11:24 Dash's real "Digging in" reply posts fine (recorded in DB)
+
+## Operational rules
+1. NEVER paste the canned refusal string into chat — paraphrase as "the canned refusal".
+2. NEVER hammer-retry a refused message — rephrase and resend instead.
+3. The CVE/exploit topic is not blanket-blocked; keep requests concrete and it posts.
+4. If other chats show the canned string, check muse.db the same way before assuming
+   a wider outage — as of 04:12 UTC the pattern is isolated to this conversation.
+
+## Note on "other chats frozen"
+No refusal-text assistant messages outside this chat in 3h. If Chris sees freezes
+elsewhere, they are a different symptom — pull the same DB query scoped to that
+chat before attributing it to this pattern.

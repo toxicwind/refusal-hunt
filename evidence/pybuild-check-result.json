@@ -1,0 +1,168 @@
+{
+ "generated_at": "2026-09-16T12:31:40Z",
+ "checks": [
+  {
+   "check": "python_version",
+   "cmd": "/usr/bin/python3 --version",
+   "returncode": 0,
+   "elapsed_s": 0.004,
+   "stdout": "Python 3.12.3\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "pip_version",
+   "cmd": "/usr/bin/python3 -m pip --version",
+   "returncode": 0,
+   "elapsed_s": 0.868,
+   "stdout": "pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "pip_check_system",
+   "cmd": "/usr/bin/python3 -m pip check",
+   "returncode": 0,
+   "elapsed_s": 1.715,
+   "stdout": "No broken requirements found.\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "venv_create",
+   "cmd": "/usr/bin/python3 -m venv /home/hatch/workspace/venvs/pybuild-check-20260916",
+   "returncode": 0,
+   "elapsed_s": 6.687,
+   "stdout": "",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "venv_pip_version",
+   "cmd": "/home/hatch/workspace/venvs/pybuild-check-20260916/bin/pip --version",
+   "returncode": 0,
+   "elapsed_s": 1.127,
+   "stdout": "pip 24.0 from /home/hatch/workspace/venvs/pybuild-check-20260916/lib/python3.12/site-packages/pip (python 3.12)\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "venv_pip_check",
+   "cmd": "/home/hatch/workspace/venvs/pybuild-check-20260916/bin/pip check",
+   "returncode": 0,
+   "elapsed_s": 0.726,
+   "stdout": "No broken requirements found.\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "venv_pip_install_six",
+   "cmd": "/home/hatch/workspace/venvs/pybuild-check-20260916/bin/pip install six",
+   "returncode": 0,
+   "elapsed_s": 3.118,
+   "stdout": "Collecting six\n  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)\nUsing cached six-1.17.0-py2.py3-none-any.whl (11 kB)\nInstalling collected packages: six\nSuccessfully installed six-1.17.0\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "venv_import_six",
+   "cmd": "/home/hatch/workspace/venvs/pybuild-check-20260916/bin/python -c import six; print('six', six.__version__)",
+   "returncode": 0,
+   "elapsed_s": 0.035,
+   "stdout": "six 1.17.0\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "cc_version",
+   "cmd": "cc --version",
+   "returncode": 0,
+   "elapsed_s": 0.007,
+   "stdout": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "cc_compile_hello",
+   "cmd": "cc -o /tmp/tmphzabxt_9/hello /tmp/tmphzabxt_9/hello.c",
+   "returncode": 0,
+   "elapsed_s": 0.117,
+   "stdout": "",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "cc_run_hello",
+   "cmd": "/tmp/tmphzabxt_9/hello",
+   "returncode": 0,
+   "elapsed_s": 0.003,
+   "stdout": "",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "setuptools_wheel_system",
+   "cmd": "/usr/bin/python3 -c import setuptools, wheel; print('setuptools', setuptools.__version__, 'wheel', wheel.__version__)",
+   "returncode": 0,
+   "elapsed_s": 0.257,
+   "stdout": "setuptools 68.1.2 wheel 0.42.0\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "setuptools_wheel_venv",
+   "cmd": "/home/hatch/workspace/venvs/pybuild-check-20260916/bin/python -c import setuptools; print('setuptools', setuptools.__version__)",
+   "returncode": 1,
+   "elapsed_s": 0.018,
+   "stdout": "",
+   "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'setuptools'\n",
+   "error": ""
+  },
+  {
+   "check": "import_pyarrow",
+   "cmd": "/home/hatch/workspace/venvs/forensics/bin/python -c import pyarrow; print('pyarrow', pyarrow.__version__)",
+   "returncode": 0,
+   "elapsed_s": 0.391,
+   "stdout": "pyarrow 25.0.1\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "import_pandas",
+   "cmd": "/home/hatch/workspace/venvs/forensics/bin/python -c import pandas; print('pandas', pandas.__version__)",
+   "returncode": 0,
+   "elapsed_s": 1.217,
+   "stdout": "pandas 3.0.5\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "import_tiktoken",
+   "cmd": "/home/hatch/workspace/venvs/forensics/bin/python -c import tiktoken; print('tiktoken', tiktoken.__version__)",
+   "returncode": 0,
+   "elapsed_s": 0.088,
+   "stdout": "tiktoken 0.14.0\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "parquet_roundtrip",
+   "cmd": "/home/hatch/workspace/venvs/forensics/bin/python -c \nimport pyarrow as pa, pyarrow.parquet as pq, os\np = os.path.expanduser('~/workspace/refusal-hunt/evidence/pybuild-roundtrip.parquet')\nt = pa.table({'a':[1,2,3],'b':['x','y','z'],'c':[1.1,2.2,3.3]})\npq.write_table(t, p, compression='zstd')\nt2 = pq.read_table(p)\nassert t2.num_rows == 3 and t2.num_columns == 3\nassert t2.column('a').to_pylist() == [1,2,3]\nprint('roundtrip OK', t2.num_rows, 'rows x', t2.num_columns, 'cols')\n",
+   "returncode": 0,
+   "elapsed_s": 1.195,
+   "stdout": "roundtrip OK 3 rows x 3 cols\n",
+   "stderr": "",
+   "error": ""
+  },
+  {
+   "check": "venv_setuptools_wheel_install",
+   "cmd": "pip install setuptools wheel && python -c import setuptools, wheel",
+   "returncode": 0,
+   "elapsed_s": 10.1,
+   "stdout": "Successfully installed packaging-26.3 setuptools-84.0.0 wheel-0.48.0\nsetuptools 84.0.0 wheel 0.48.0\n",
+   "stderr": "",
+   "error": "",
+   "note": "fresh 3.12 venv ships pip-only; setuptools/wheel installed cleanly to close the gap"
+  }
+ ]
+}

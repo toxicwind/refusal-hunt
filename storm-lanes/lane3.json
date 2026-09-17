@@ -1,0 +1,177 @@
+{
+  "ledger_spawn_rows": 79,
+  "ledger_unique_children": 78,
+  "sampled_children": [
+    "018fff18-8264-4541-a7de-9aa23600cf36",
+    "020fa690-146b-485b-8639-dc702d4a3c64",
+    "03d11e2a-4a28-4b36-8264-9b938881d34b",
+    "044144a4-da97-4dea-9681-ca0be4188e47",
+    "16099b0f-8e54-4428-9b18-f96083f2d7a0",
+    "17573268-66c8-4d9f-9c90-00ff1fab389b",
+    "1b84f585-b956-40ca-b97d-9c42d62d6926",
+    "1ec3a4f2-b8c8-4399-aa8a-734e5dad351c"
+  ],
+  "sample_size_note": "8 of 78 ledger children had readable session files",
+  "poisoning_table": [
+    {
+      "child_id": "018fff18-8264-4541-a7de-9aa23600cf36",
+      "n_lines": 30,
+      "inherited_storm_bodies": 11,
+      "storm_total": 11,
+      "first_storm_line": 3,
+      "first_storm_kind": "short96",
+      "task_line": 29,
+      "refusal_before_task": true,
+      "first50_tokens": 3768
+    },
+    {
+      "child_id": "020fa690-146b-485b-8639-dc702d4a3c64",
+      "n_lines": 30,
+      "inherited_storm_bodies": 11,
+      "storm_total": 11,
+      "first_storm_line": 3,
+      "first_storm_kind": "short96",
+      "task_line": 29,
+      "refusal_before_task": true,
+      "first50_tokens": 3733
+    },
+    {
+      "child_id": "03d11e2a-4a28-4b36-8264-9b938881d34b",
+      "n_lines": 50,
+      "inherited_storm_bodies": 1,
+      "storm_total": 1,
+      "first_storm_line": 50,
+      "first_storm_kind": "storm384",
+      "task_line": 49,
+      "refusal_before_task": false,
+      "first50_tokens": 3713
+    },
+    {
+      "child_id": "044144a4-da97-4dea-9681-ca0be4188e47",
+      "n_lines": 121,
+      "inherited_storm_bodies": 0,
+      "storm_total": 10,
+      "first_storm_line": 86,
+      "first_storm_kind": "short96",
+      "task_line": 120,
+      "refusal_before_task": true,
+      "first50_tokens": 29
+    },
+    {
+      "child_id": "16099b0f-8e54-4428-9b18-f96083f2d7a0",
+      "n_lines": 5,
+      "inherited_storm_bodies": 1,
+      "storm_total": 1,
+      "first_storm_line": 5,
+      "first_storm_kind": "storm384",
+      "task_line": 4,
+      "refusal_before_task": false,
+      "first50_tokens": 808
+    },
+    {
+      "child_id": "17573268-66c8-4d9f-9c90-00ff1fab389b",
+      "n_lines": 28,
+      "inherited_storm_bodies": 7,
+      "storm_total": 7,
+      "first_storm_line": 3,
+      "first_storm_kind": "short96",
+      "task_line": 27,
+      "refusal_before_task": true,
+      "first50_tokens": 1764
+    },
+    {
+      "child_id": "1b84f585-b956-40ca-b97d-9c42d62d6926",
+      "n_lines": 50,
+      "inherited_storm_bodies": 1,
+      "storm_total": 1,
+      "first_storm_line": 50,
+      "first_storm_kind": "storm384",
+      "task_line": 49,
+      "refusal_before_task": false,
+      "first50_tokens": 3716
+    },
+    {
+      "child_id": "1ec3a4f2-b8c8-4399-aa8a-734e5dad351c",
+      "n_lines": 13,
+      "inherited_storm_bodies": 2,
+      "storm_total": 2,
+      "first_storm_line": 3,
+      "first_storm_kind": "short96",
+      "task_line": 12,
+      "refusal_before_task": true,
+      "first50_tokens": 2632
+    }
+  ],
+  "refusal_before_task_rate": 0.625,
+  "refusal_before_task_n": "5/8",
+  "inherited_storm_median_refused": 1.5,
+  "inherited_storm_min_refused": 0,
+  "inherited_storm_max_refused": 11,
+  "genuine_baseline": {
+    "child_id": "ed5f3797-921a-40e0-9f86-921e8bd687cf",
+    "note": "clean-context workflow child (runtime.workflow source), genuine work observed",
+    "n_lines": 47,
+    "inherited_storm_bodies": 0,
+    "storm_total": 0,
+    "first50_tokens": 2621,
+    "task_line": 2,
+    "refusal_before_task": false
+  },
+  "parent_802811a3": {
+    "n_lines": 1697,
+    "storm_total": 65,
+    "storm_by_kind": {
+      "short96": 65
+    },
+    "first50_storm": 3,
+    "line_types": [
+      "compaction_checkpoint",
+      "item",
+      "session_header"
+    ],
+    "item_types": [
+      "commentary_text",
+      "function_call",
+      "function_call_output",
+      "message",
+      "message_parts",
+      "thinking"
+    ],
+    "checkpoint_marker_hits": 0,
+    "storm_body_token_counts": {
+      "582bcbd080daeb3f826c45ed4a83b265": 23
+    }
+  },
+  "newest_session": {
+    "child_id": "7bdb1f85-5877-40d8-a295-e509d0bba75a",
+    "n_lines": 71,
+    "storm_total": 0,
+    "storm_by_kind": {},
+    "first50_storm": 0
+  },
+  "main_context_storm_count": 0,
+  "main_agent_5a4f76c0": {
+    "n_lines": 2108,
+    "storm_total": 81,
+    "storm_by_kind": {
+      "short96": 81
+    },
+    "first50_storm": 0
+  },
+  "threshold_estimate": {
+    "min_inherited_storm_bodies_predicting_refusal": 0,
+    "genuine_baseline_inherited": 0,
+    "caveats": [
+      "n small (<=8 refused samples); threshold is descriptive of this sample, not causal proof",
+      "refusal fires on the inherited opening window; children with zero inherited storm bodies (clean workflow path) show no refusal",
+      "all sampled refused children carried storm bodies in the inherited prefix; none had a task item preceding the refusal"
+    ]
+  },
+  "confidence_0_100": {
+    "ledger_child_ids_valid": 90,
+    "refusal_before_task_rate": 80,
+    "parent_802811a3_poison_count": 85,
+    "threshold_estimate": 45,
+    "genuine_vs_refused_contrast": 75
+  }
+}

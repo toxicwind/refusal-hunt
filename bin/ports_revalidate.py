@@ -38,12 +38,22 @@ async def scan_port(sem, port):
         try:
             fut = asyncio.open_connection("127.0.0.1", port)
             r, w = await asyncio.wait_for(fut, timeout=PER_ATTEMPT_S)
+            try:
+                # Discard the loopback simultaneous-open artifact: with a large
+                # concurrent scan the kernel can hand the probe's source socket
+                # the same port number as its target (ephemeral range overlaps
+                # the scanned range), completing a self-connection that is not
+                # a real listener.
+                sockname = w.get_extra_info("sockname")
+                phantom = bool(sockname) and sockname[1] == port
+            except Exception:
+                phantom = False
             w.close()
             try:
                 await w.wait_closed()
             except Exception:
                 pass
-            return port
+            return None if phantom else port
         except Exception:
             return None
 

@@ -1,0 +1,11 @@
+{
+ "name": "r5f2-pcap-timing",
+ "cmd": [
+  "python3",
+  "/home/toxic/refusal-hunt/round3/r5f2_pcap_timing.py"
+ ],
+ "cwd": "/home/toxic/refusal-hunt/round3",
+ "env": {},
+ "heartbeat_interval": 60,
+ "timeout": 900
+}

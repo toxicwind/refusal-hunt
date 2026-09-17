@@ -1,0 +1,14 @@
+{
+  "sweep_ts": 1789681575,
+  "window_start": 1789681362,
+  "chat_hits": 0,
+  "spawn_hits": 0,
+  "daemon_hits": 0,
+  "total_hits": 0,
+  "storm_active": false,
+  "digests_seen": [],
+  "fix_rounds": 0,
+  "fixed_count": 0,
+  "green": true,
+  "checked_at": 1789681720
+}

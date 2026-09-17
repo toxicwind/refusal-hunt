@@ -1,0 +1,48 @@
+ledger rows: 1000, storm rows: 950
+canary: pong_genuine=False detail={"sweep_age_s": -21717.0, "storm_active": true, "chat_hits": 3, "spawn_hits": 0, "total_hits": 3}
+ROUND 1: severity=MELTDOWN storm_hits_15m=409 fake_completed=28 {"chat": 380, "runtime.messages": 1, "spawn": 28}
+  triage: {"fake-completed-spawn": 9, "echo-amplified": 359, "storm-sig-chat": 41}
+  planned actions: 137 (dry-run, none taken)
+    [DRY-RUN] fake-completed-spawn spawn:b4aefd29: re-dispatch task through the clean workflow path (vompl saved workflow) with a rephrased prompt; mark original ledger row superseded via append-only record (never delete). child=f8a70291-d41b-4cf9-a5c7-0f91aeade4e3
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:30'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:31'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:32'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:33'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:34'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:35'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:36'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:37'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:38'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    ... +127 more planned actions
+  GREEN check: False {"storm_hits_trailing_30m": 443, "fake_completed_trailing_30m": 28, "canary_pong_genuine": false}
+ROUND 2: severity=MELTDOWN storm_hits_15m=409 fake_completed=28 {"chat": 380, "runtime.messages": 1, "spawn": 28}
+  triage: {"fake-completed-spawn": 9, "echo-amplified": 359, "storm-sig-chat": 41}
+  planned actions: 137 (dry-run, none taken)
+    [DRY-RUN] fake-completed-spawn spawn:b4aefd29: re-dispatch task through the clean workflow path (vompl saved workflow) with a rephrased prompt; mark original ledger row superseded via append-only record (never delete). child=f8a70291-d41b-4cf9-a5c7-0f91aeade4e3
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:30'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:31'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:32'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:33'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:34'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:35'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:36'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:37'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:38'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    ... +127 more planned actions
+  GREEN check: False {"storm_hits_trailing_30m": 443, "fake_completed_trailing_30m": 28, "canary_pong_genuine": false}
+ROUND 3: severity=MELTDOWN storm_hits_15m=409 fake_completed=28 {"chat": 380, "runtime.messages": 1, "spawn": 28}
+  triage: {"fake-completed-spawn": 9, "echo-amplified": 359, "storm-sig-chat": 41}
+  planned actions: 137 (dry-run, none taken)
+    [DRY-RUN] fake-completed-spawn spawn:b4aefd29: re-dispatch task through the clean workflow path (vompl saved workflow) with a rephrased prompt; mark original ledger row superseded via append-only record (never delete). child=f8a70291-d41b-4cf9-a5c7-0f91aeade4e3
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:30'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:31'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:32'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:33'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:34'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:35'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:36'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:37'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    [DRY-RUN] echo-amplified chat:582bcbd0: cluster ('chat', '582bcbd0', '2026-09-16T07:38'): quarantine byte-identical repeats — run NO new assistant turns for them; emit one consolidated response covering the cluster.
+    ... +127 more planned actions
+  GREEN check: False {"storm_hits_trailing_30m": 443, "fake_completed_trailing_30m": 28, "canary_pong_genuine": false}
+ESCALATE after 3 round(s): {"escalated_at": "2026-09-16T07:45:00+00:00", "rounds_run": 3, "detection": {"query": "count(body_md5 in storm_digests) where created_at >= now()-15m", "window_min": 15, "storm_hits": 409, "fake_completed_hits": 28, "by_source": {"chat": 380, "runtime.messages": 1, "spawn": 28}, "severity": "MELTDOWN", "window_start": "2026-09-16T07:30:00+00:00", "window_end": "2026-09-16T07:45:00+00:00"}, "triage": {"fake-completed-spawn": 9, "echo-amplified": 359, "storm-sig-chat": 41}, "planned_actions": 137, "green_check": {"green": false, "criteria": {"storm_hits_trailing_30m": 443, "fake_completed_trailing_30m": 28, "canary_pong_genuine": false}}, "next_step": "manual review of trigger source; do NOT re-run fixes blind \u2014 the classifier misfires persistently, escalate the evidence bundle to the u

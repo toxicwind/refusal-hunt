@@ -1,1 +1,76 @@
-{"established":"2026-09-16T07:34:49Z","ppid0":{"1":{"cmdline":"/usr/lib/systemd/systemd","comm":"systemd"},"67":{"cmdline":"/opt/hatch/bin/hatch daemon --runtime-cell-leader=1958","comm":"hatch","note":"cell reboot ~08:25:49Z 2026-09-16; leader 1967 -> 1958; exe unreadable (kernel-isolated, as documented)"},"706":{"cmdline":"/opt/hatch/bin/hatch-execd --runtime-cell-leader=1967","comm":"hatch-execd","note":"superseded 2026-09-16T08:27Z by PID 715 on cell reboot"},"715":{"cmdline":"/opt/hatch/bin/hatch-execd --runtime-cell-leader=1958","comm":"hatch-execd","note":"known hatch infra: replaced 706 on cell reboot ~08:25:49Z 2026-09-16; verified /proc/715/status PPid 0, exe -> /opt/hatch/bin/hatch-execd, starttime 5797 ticks"}},"update_reason":"cell reboot: PID 706 -> 715, leader 1967 -> 1958","updated":"2026-09-16T08:28:00Z"}
+{
+ "established": "2026-09-17T02:07:55Z",
+ "last_fold": "2026-09-17T21:09:30Z",
+ "ppid0": {
+  "1": {
+   "cmdline": "/usr/lib/systemd/systemd",
+   "comm": "systemd",
+   "ppid": 0
+  },
+  "1592": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1969",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "67": {
+   "cmdline": "/opt/hatch/bin/hatch daemon --runtime-cell-leader=1969",
+   "comm": "hatch",
+   "ppid": 0
+  },
+  "709": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1966",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "710": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1970",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "712": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1968",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "714": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1967",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "723": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1962",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "725": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1967",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "726": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1963",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "729": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1970",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "736": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1963",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "745": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1955",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "820": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1969",
+   "comm": "hatch-execd",
+   "ppid": 0
+  }
+ }
+}

@@ -1,0 +1,90 @@
+{
+  "documented": {
+    "25149": {
+      "cmdline": "python3 /home/hatch/workspace/gk-honeypot/gk_honeypot.py",
+      "first_seen_vs_baseline": "2026-09-17T10:53:55Z (shard 2 poll, new_vs_baseline=[80, 25149])",
+      "identified_pid": 11078,
+      "name": "gk_honeypot.py admin surface",
+      "role": "127.0.0.1:25149 admin/control surface only (/health, /mode, /gates, /stats) \u2014 :80 is never probed, verified via admin port + socket tables",
+      "started": "2026-09-17T10:39:47Z (cell local 10:39 MDT; PPID 1, detached via start.sh)",
+      "verdict": "known hatch/user infra; same process as :80; ss confirmed LISTEN on 127.0.0.1:25149 fd=3 of PID 11078; log kind='listening' at 10:39:51 confirms both binds"
+    },
+    "3129": {
+      "cmdline": "python3 /home/hatch/workspace/skills/annas-router/bin/proxy_fwd.py",
+      "first_seen_vs_baseline": "2026-09-16T08:42:35Z (shard 0 poll)",
+      "identified_pid": 3080,
+      "name": "proxy_fwd.py (annas-router)",
+      "note": "Known infra documented in TOOLS.md; earlier wave-5 also saw transient 3129. Inode 80111 cross-checked via /proc/net/tcp + /proc/3080/fd.",
+      "role": "127.0.0.1:3129 -> hatch-egress-proxy:3128 forward for headless Chromium",
+      "started": "2026-09-16T08:29:17Z",
+      "verdict": "known hatch/user infra; transient by design (down during wave-7 zero-listener truth, restarted via cell-boot-resume.sh)"
+    },
+    "80": {
+      "cmdline": "python3 /home/hatch/workspace/gk-honeypot/gk_honeypot.py",
+      "first_seen_vs_baseline": "2026-09-17T10:53:55Z (shard 2 poll, new_vs_baseline=[80, 25149])",
+      "identified_pid": 11078,
+      "name": "gk_honeypot.py (gk-honeypot)",
+      "role": "*:80 trap socket for Meta Gatekeeper check instrument \u2014 captures hatch daemon's true /hatch/check_gatekeepers request shape, answers per mode.txt (currently 'selective'); direct :80 probes are contamination by standing rule",
+      "started": "2026-09-17T10:39:47Z (cell local 10:39 MDT; PPID 1, detached via start.sh)",
+      "verdict": "known hatch/user infra; built Sep 15 by gatekeeper-audit lanes (memory 2026-09-14.md), re-established today via start.sh (cell-boot-resume.sh sec 2b pattern); ss confirmed LISTEN on *:80 fd=4 of PID 11078"
+    }
+  },
+  "listeners": [
+    [
+      "127.0.0.1",
+      3129
+    ],
+    [
+      "0.0.0.0",
+      80
+    ],
+    [
+      "127.0.0.1",
+      25149
+    ]
+  ],
+  "transients_evaluated": {
+    "33534": {
+      "action": "not appended to baseline listeners; only real listening ports qualify",
+      "followup": "2026-09-16T12:00Z: connect refused (ECONNREFUSED 111), ss -tlnp empty, /proc/net/tcp+tcp6 show zero LISTEN (0A) sockets anywhere; residue is a TIME_WAIT loopback self-socket 127.0.0.1:33534<->127.0.0.1:33534 (state 06, inode 0, no holder) \u2014 same residue signature as 60524 @09:13Z; ws_daemon.py/squawk-push.py sockets checked, none hold 33534",
+      "seen_open": "2026-09-16T11:58:12Z (shard 2 poll, port range 32769-49152)",
+      "ss_listen": "never seen in ss//proc-net-tcp (ss_listen: [])",
+      "verdict": "transient scan artifact (port in ephemeral range 32768-60999, phantom OPEN during 1500-concurrency loopback scan; same signature as 43558 @08:19:39Z, 45122 @08:57:25Z, 60524 @09:12:22Z, 41042 @10:10:42Z)"
+    },
+    "40358": {
+      "action": "not appended to baseline listeners; only real listening ports qualify",
+      "followup": "2026-09-16T15:49Z: connect refused (ECONNREFUSED 111) on 127.0.0.1 and ::1; ss -tlnp shows zero listeners; /proc/net/tcp+tcp6 show zero LISTEN (0A) rows across all 15 rows and no 40358 (9D96) residue in ANY state \u2014 not even TIME_WAIT; no PID/cmdline exists \u2014 nothing ever held it",
+      "seen_open": "2026-09-16T15:48:59Z (shard 2 poll, port range 32769-49152)",
+      "ss_listen": "never seen in ss//proc-net-tcp (ss_listen: [])",
+      "verdict": "transient scan artifact (port in ephemeral range 32768-60999, phantom OPEN during high-concurrency loopback scan; same signature as 43558 @08:19:39Z, 45122 @08:57:25Z, 60524 @09:12:22Z, 41042 @10:10:42Z, 33534 @11:58:12Z, 51742 @13:06:34Z \u2014 6th instance)"
+    },
+    "41042": {
+      "action": "not appended to baseline listeners; only real listening ports qualify",
+      "followup": "2026-09-16T10:11Z: connect refused (ECONNREFUSED 111), ss -tlnp empty, /proc/net/tcp+tcp6 show zero LISTEN (0A) sockets anywhere and no 41042 residue in any state (not even TIME_WAIT)",
+      "seen_open": "2026-09-16T10:10:42Z (shard 2 poll, port range 32769-49152)",
+      "ss_listen": "never seen in ss//proc-net-tcp (ss_listen: [])",
+      "verdict": "transient scan artifact (port in ephemeral range, phantom OPEN during 1500-concurrency loopback scan; same signature as 43558 @08:19:39Z, 45122 @08:57:25Z, 60524 @09:12:22Z)"
+    },
+    "45122": {
+      "action": "not appended to baseline listeners; only real listening ports qualify",
+      "followup": "2026-09-16T08:58-09:00Z: connect refused, ss shows only 3129, 60s watch clean, no TIME_WAIT residue",
+      "seen_open": "2026-09-16T08:57:25Z (shard 2 poll)",
+      "ss_listen": "never seen in ss//proc-net-tcp",
+      "verdict": "transient scan artifact (port in ephemeral range 32768-60999, phantom OPEN during 1500-concurrency loopback scan; same signature as 43558 @08:19:39Z)"
+    },
+    "51742": {
+      "action": "not appended to baseline listeners; only real listening ports qualify",
+      "followup": "2026-09-16T13:07Z: connect refused (ECONNREFUSED), ss -tlnp empty, /proc/net/tcp+tcp6 show zero LISTEN (0A) sockets anywhere and no 51742 residue in any state (not even TIME_WAIT); no PID/cmdline exists \u2014 nothing ever held it",
+      "seen_open": "2026-09-16T13:06:34Z (shard 3 poll, port range 49153-65535)",
+      "ss_listen": "never seen in ss//proc-net-tcp (ss_listen: [])",
+      "verdict": "transient scan artifact (port in ephemeral range, phantom OPEN during 1500-concurrency loopback scan; same signature as 43558 @08:19:39Z, 45122 @08:57:25Z, 60524 @09:12:22Z, 41042 @10:10:42Z, 33534 @11:58:12Z)"
+    },
+    "60524": {
+      "action": "not appended to baseline listeners; only real listening ports qualify",
+      "followup": "2026-09-16T09:13Z: connect refused, /proc/net/tcp shows 60524 only as TIME_WAIT loopback self-socket (state 06, inode 0, no holder); no PID/cmdline exists",
+      "seen_open": "2026-09-16T09:12:22Z (shard 3 poll, port range 49153-65535)",
+      "ss_listen": "never seen in ss//proc-net-tcp (ss showed only [3129])",
+      "verdict": "transient scan artifact (port in ephemeral range, phantom OPEN during 1500-concurrency loopback scan; same signature as 43558 @08:19:39Z and 45122 @08:57:25Z)"
+    }
+  }
+}

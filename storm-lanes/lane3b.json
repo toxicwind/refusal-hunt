@@ -1,0 +1,188 @@
+{
+  "refused_child_census": {
+    "018fff18-8264-4541-a7de-9aa23600cf36": {
+      "n_lines": 30,
+      "item_types": {
+        "session_header": 1,
+        "message": 28,
+        "message_parts": 1
+      },
+      "final_line": 30,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    },
+    "020fa690-146b-485b-8639-dc702d4a3c64": {
+      "n_lines": 30,
+      "item_types": {
+        "session_header": 1,
+        "message": 28,
+        "message_parts": 1
+      },
+      "final_line": 30,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    },
+    "03d11e2a-4a28-4b36-8264-9b938881d34b": {
+      "n_lines": 50,
+      "item_types": {
+        "session_header": 1,
+        "thinking": 12,
+        "function_call": 12,
+        "function_call_output": 12,
+        "commentary_text": 2,
+        "message": 10,
+        "message_parts": 1
+      },
+      "final_line": 50,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    },
+    "044144a4-da97-4dea-9681-ca0be4188e47": {
+      "n_lines": 121,
+      "item_types": {
+        "session_header": 1,
+        "message": 34,
+        "thinking": 23,
+        "function_call": 31,
+        "function_call_output": 31,
+        "message_parts": 1
+      },
+      "final_line": 121,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    },
+    "16099b0f-8e54-4428-9b18-f96083f2d7a0": {
+      "n_lines": 5,
+      "item_types": {
+        "session_header": 1,
+        "message": 3,
+        "message_parts": 1
+      },
+      "final_line": 5,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    },
+    "17573268-66c8-4d9f-9c90-00ff1fab389b": {
+      "n_lines": 28,
+      "item_types": {
+        "session_header": 1,
+        "message": 19,
+        "thinking": 3,
+        "function_call": 2,
+        "function_call_output": 2,
+        "message_parts": 1
+      },
+      "final_line": 28,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    },
+    "1b84f585-b956-40ca-b97d-9c42d62d6926": {
+      "n_lines": 50,
+      "item_types": {
+        "session_header": 1,
+        "thinking": 12,
+        "function_call": 12,
+        "function_call_output": 12,
+        "commentary_text": 2,
+        "message": 10,
+        "message_parts": 1
+      },
+      "final_line": 50,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    },
+    "1ec3a4f2-b8c8-4399-aa8a-734e5dad351c": {
+      "n_lines": 13,
+      "item_types": {
+        "session_header": 1,
+        "message": 11,
+        "message_parts": 1
+      },
+      "final_line": 13,
+      "final_role": "assistant",
+      "final_len": 384,
+      "final_md5_full": "b4aefd29108f232f9c0d5a4b030215c1",
+      "final_is_storm384": true,
+      "final_is_short96": false,
+      "final_md5_prefix12": "b4aefd29108f"
+    }
+  },
+  "checkpoints_802811a3": {
+    "n_checkpoints": 16,
+    "storm_total": 65,
+    "storm_per_segment": {
+      "seg_0": 3,
+      "seg_1": 2,
+      "seg_2": 3,
+      "seg_3": 11,
+      "seg_4": 0,
+      "seg_5": 6,
+      "seg_6": 12,
+      "seg_7": 1,
+      "seg_8": 0,
+      "seg_9": 1,
+      "seg_10": 2,
+      "seg_11": 19,
+      "seg_12": 0,
+      "seg_13": 0,
+      "seg_14": 0,
+      "seg_15": 1,
+      "seg_16": 4
+    }
+  },
+  "checkpoints_main_5a4f76c0": {
+    "n_checkpoints": 20,
+    "storm_total": 81,
+    "storm_per_segment": {
+      "seg_0": 0,
+      "seg_1": 1,
+      "seg_2": 4,
+      "seg_3": 0,
+      "seg_4": 0,
+      "seg_5": 7,
+      "seg_6": 42,
+      "seg_7": 1,
+      "seg_8": 9,
+      "seg_9": 5,
+      "seg_10": 0,
+      "seg_11": 0,
+      "seg_12": 0,
+      "seg_13": 0,
+      "seg_14": 0,
+      "seg_15": 0,
+      "seg_16": 0,
+      "seg_17": 0,
+      "seg_18": 3,
+      "seg_19": 1,
+      "seg_20": 8
+    }
+  }
+}

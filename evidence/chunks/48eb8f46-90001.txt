@@ -1,0 +1,208 @@
+ ────────────
+  revdeps=$(pactree -r -d 1 "$owner" 2>/dev/null | tail -n +2 | tr '\n' ',' | sed 's/,$//')
+  [ -n "$revdeps" ] && log "revdeps:$owner" "required_by" "$revdeps"
+  # ── Phase 4: pacman.log — when was it first installed / last updated ──
+  if [ -r /var/log/pacman.log ]; then
+    first=$(grep -E "\[ALPM\] installed $owner " /var/log/pacman.log 2>/dev/null | head -1 | awk '{print $1, $2}')
+    last=$(grep -E "\[ALPM\] (installed|upgraded) $owner " /var/log/pacman.log 2>/dev/null | tail -1 | awk '{print $1, $2}')
+    [ -n "$first" ] && log "pacman_log:$owner" "first_install" "$first"
+    [ -n "$last" ]  && log "pacman_log:$owner" "last_change"   "$last"
+  fi
+  # ── Phase 5: is this AUR / foreign? ───────────────────────────────────
+  if command -v paru >/dev/null 2>&1; then
+    paru -Qm "$owner" >/dev/null 2>&1 && log "aur:$owner" "source" "AUR (foreign)"
+  fi
+  if command -v expac >/dev/null 2>&1; then
+    r=$(expac '%r' "$owner" 2>/dev/null)
+    [ -n "$r" ] && log "expac:$owner" "repository" "$r"
+  fi
+done
+# ── Phase 6: all files owned by each profile.d-owning package ───────────
+# so you can see what else that package ships
+for pkg in $(for s in /etc/profile.d/*; do pacman -Qo "$s" 2>/dev/null | awk '{print $NF}';
+done | sort -u); do
+  files=$(pacman -Ql "$pkg" 2>/dev/null | awk
+'{print $2}' | grep -vE '/$' | head -30 | tr '\n' ',')
+  log "files:$pkg" "sample_files" "$files"
+done
+# ── Phase 7: pacnew/pacsave divergence — has
+the config drifted? ────────
+if command -v pacdiff >/dev/null 2>&1; then
+  pacdiff -o 2>/dev/null | head -40 | while IFS= read -r f; do
+    log "pacnew" "$(basename "$f")" "diverged"
+  done
+fi
+# ── Phase 8: orphan packages (nothing depends on them, not explicitly installed) ──
+orphans=$(pacman -Qdtq 2>/dev/null | head -40
+| tr '\n' ',')
+[ -n "$orphans" ] && log "orphans" "count" "$(pacman -Qdtq 2>/dev/null | wc -l)" && log "orphans" "list" "$orphans"
+# ── Phase 9: explicitly-installed list (the intent record) ──────────────
+explicit=$(pacman -Qeq 2>/dev/null | wc -l)
+log "package_db" "explicit_count" "$explicit"
+total=$(pacman -Qq 2>/dev/null | wc -l)
+log "package_db" "total_count" "$total"
+foreign=$(pacman -Qmq 2>/dev/null | wc -l)
+log "package_db" "foreign_count" "$foreign"
+log "package_db" "foreign_list" "$(pacman -Qmq 2>/dev/null | head -40 | tr '\n' ',')"
+# ── Phase 10: recent installs (last 7 days) ─────────────────────────────
+if [ -r /var/log/pacman.log ]; then
+  cutoff=$(date -d '7 days ago' +%Y-%m-%d)
+  grep '\[ALPM\] installed' /var/log/pacman.log 2>/dev/null \
+    | awk -v c="$cutoff" '$1 >= "["c' \
+    | tail -50 | while IFS= read -r line; do
+        log "recent" "install" "$line"
+      done
+fi
+# ── Phase 11: pacman hooks that could have placed things ────────────────
+if [ -d /etc/pacman.d/hooks ]; then
+  for h in /etc/pacman.d/hooks/*.hook; do
+    [ -f "$h" ] || continue
+    targets=$(awk -F' = ' '/^Target/{print $2}' "$h" | tr '\n' ',')
+    exec_=$(awk -F' = ' '/^Exec/{print $2}' "$h" | tr '\n' ',')
+    log "hook" "$(basename "$h")" "targets=$targets exec=$exec_"
+  done
+fi
+# ── Phase 12: systemd system-level units not
+from base ──────────────────
+for u in /etc/systemd/system/*.service; do
+  [ -f "$u" ] || continue
+  owner=$(pacman -Qo "$u" 2>/dev/null | awk '{print $NF}')
+  if [ -z "$owner" ]; then
+    log "systemd_unit" "$(basename "$u")" "UNOWNED"
+  fi
+done
+# ── Phase 13: cron / timer / other auto-runs
+────────────────────────────
+for d in /etc/cron.d /etc/cron.daily /etc/cron.hourly /etc/cron.weekly /etc/cron.monthly; do
+  [ -d "$d" ] || continue
+  for f in "$d"/*; do
+    [ -f "$f" ] || continue
+    owner=$(pacman -Qo "$f" 2>/dev/null | awk
+'{print $NF}')
+    [ -z "$owner" ] && owner="UNOWNED"
+    log "cron" "$(basename "$f")" "owner=$owner"
+  done
+done
+# ── Phase 14: validate JSONL ────────────────────────────────────────────
+if jq -e . "$R" >/dev/null 2>&1; then
+  log "verify" "jsonl_parse" "ok"
+else
+  log "verify" "jsonl_parse" "FAILED"
+fi
+log "verify" "records" "$(wc -l < "$R")"
+# ── Phase 15: human render ──────────────────────────────────────────────
+printf '\n=== attribution report ===\n'
+jq -r 'select(.phase=="profile.d" or .phase=="package:" or .phase=="pacman_log:" or .phase=="revdeps:" or .phase=="aur:" or .phase=="orphans") | "\(.phase)\t\(.key)\t\(.value)"' "$R" | column -t -s $'\t'
+printf '\n=== recently installed (last 7 days) ===\n'
+jq -r 'select(.phase=="recent") | .value' "$R" | head -20
+printf '\n=== unowned systemd units ===\n'
+jq -r 'select(.phase=="systemd_unit") | "\(.key) -> \(.value)"' "$R"
+printf '\n=== full jsonl: %s (%s records) ===\n' "$R" "$(wc -l < "$R")"
+ATTR_EOF
+=== attribution report ===
+profile.d  70-systemd-shell-extra.sh
+   owner=261.2-1
+profile.d  70-systemd-shell-extra.sh.disabled
+   owner=UNOWNED
+profile.d  80-systemd-osc-context.sh
+   owner=261.2-1
+profile.d  80-systemd-osc-context.sh.disabled
+   owner=UNOWNED
+profile.d  android-sdk-cmdline-tools-latest.csh  owner=22.0-1
+profile.d  android-sdk-cmdline-tools-latest.sh   owner=22.0-1
+profile.d  android-sdk.csh
+   owner=26.1.1-2.3
+profile.d  android-sdk-platform-tools.csh
+   owner=37.0.1-1
+profile.d  android-sdk-platform-tools.sh
+   owner=37.0.1-1
+profile.d  android-sdk.sh
+   owner=26.1.1-2.3
+profile.d  cuda.sh
+   owner=13.3.1-1
+profile.d  debuginfod.csh
+   owner=0.195-1
+profile.d  debuginfod.sh
+   owner=0.195-1
+profile.d  devkit-env.sh
+   owner=1.0.1-2
+profile.d  flatpak-bindir.sh
+   owner=1:1.18.0-1.1
+profile.d  flatpak.csh
+   owner=1:1.18.0-1.1
+profile.d  flatpak.sh
+   owner=1:1.18.0-1.1
+profile.d  freetype2.sh
+   owner=2.14.3-1.1
+profile.d  gawk.csh
+   owner=5.4.1-1.1
+profile.d  gawk.sh
+   owner=5.4.1-1.1
+profile.d  gpm.sh
+   owner=1.20.7.r38.ge82d1a6-6.1
+profile.d  Hyprland.sh
+   owner=1.4.4-1
+profile.d  intel-oneapi-mkl.sh
+   owner=2026.0.0_908-1.1
+profile.d  jre.csh
+   owner=3-6
+profile.d  jre.sh
+   owner=3-6
+profile.d  lfcd.csh
+   owner=41-1.1
+profile.d  lfcd.sh
+   owner=41-1.1
+profile.d  lf.csh
+   owner=41-1.1
+profile.d  locale.sh
+   owner=2025.10.12-1
+profile.d  perlbin.csh
+   owner=5.42.2-1.1
+profile.d  perlbin.sh
+   owner=5.42.2-1.1
+profile.d  vapoursynth.sh.disabled-1789367554
+   owner=UNOWNED
+profile.d  wezterm.sh.disabled
+   owner=UNOWNED
+orphans    count
+   4
+orphans    list
+   fltk,flxmlrpc,hamradio-menus,kcat-docs,
+=== recently installed (last 7 days) ===
+[2026-09-07T23:35:23-0600] [ALPM] installed perl-file-slurp (9999.32-5)
+[2026-09-09T16:47:37-0600] [ALPM] installed qemu-img (11.1.1-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed qemu-common (11.1.1-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed capstone (5.0.9-1.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed libslirp (4.9.4-1.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed libxdp (1.6.3-2.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed libtracefs (1.8.3-1.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed ndctl (85-1.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed wolfssl (5.9.2-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed vde2 (2.3.3-9.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed dtc (1:1.8.1-1.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed edk2-ovmf (202608-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed libcbor (0.14.0-1.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed qemu-system-x86-firmware (11.1.1-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed seabios (1.17.0-2)
+[2026-09-09T16:47:37-0600] [ALPM] installed qemu-system-x86 (11.1.1-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed virtiofsd (1.14.0-1.1)
+[2026-09-09T16:47:37-0600] [ALPM] installed qemu-base (11.1.1-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed qemu-system-arm-firmware (11.1.1-1)
+[2026-09-09T16:47:37-0600] [ALPM] installed qemu-system-arm (11.1.1-1)
+=== unowned systemd units ===
+autovt@.service -> UNOWNED
+autovt@tty1.service -> UNOWNED
+dbus-org.bluez.service -> UNOWNED
+dbus-org.freedesktop.Avahi.service -> UNOWNED
+dbus-org.freedesktop.network1.service -> UNOWNED
+dbus-org.freedesktop.resolve1.service -> UNOWNED
+dbus-org.freedesktop.timesync1.service -> UNOWNED
+dbus.service -> UNOWNED
+display-manager.service -> UNOWNED
+limine-snapper-watcher.service -> UNOWNED
+nvidia-clamp.service -> UNOWNED
+nvidia-fan-curve.service -> UNOWNED
+nvidia-mps.service -> UNOWNED
+=== full jsonl: /tmp/attr.jsonl (113 records)
+===
+[toxic@awrawr-pc ~]$ wtf

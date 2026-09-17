@@ -1,4 +1,6 @@
-# WAVE7-SUMMARY — 2026-09-16 ~07:30Z
+# WAVE7-SUMMARY — 2026-09-16 ~07:30Z [WIP — 2026-09-17 correction: echo is intentional, do not dedupe]
+
+> WIP. Section 6 (echo-collapse) and Wave-8 task 1 (echo-dedupe watermark) are REVERSED per Chris 2026-09-17: echo is purposeful re-send to punch through storm to actual model. DO NOT DEDUPE. Do not build collapse/dedupe.
 
 Executed, not planned. All results verified by tool output.
 
@@ -49,14 +51,18 @@ Executed, not planned. All results verified by tool output.
   qcow2/vmdk/vdi/img: zero VM disk images. Credential-adjacent findings
   intentionally not recorded.
 
-## 6. Echo-collapse — implemented and verified
-- `bin/echo_collapse.py`: body-md5 grouping; one canonical request +
+## 6. Echo-collapse — REVERSED 2026-09-17 (was implemented, now withdrawn)
+
+- `bin/echo_collapse.py` was built: body-md5 grouping; one canonical request +
   echo duplicates; flags known storm digests (digest-only, never bodies).
+- WITHDRAWN per Chris 2026-09-17: echo is INTENTIONAL purposeful re-send to punch
+  through storm to actual model. DO NOT DEDUPE. The script is retained for
+  measurement only, not for collapsing.
 - Live ledger proof (6h window): 62x identical user instruction,
   57x identical user message, 33x identical user message in 2 min,
   531x chat-level canned assistant rows, 51x spawn-level canned rows
   (md5 b4aefd29…).
-- Fixture test: 3 identical bodies -> 1 canonical + 2 echoes. Pass.
+- Fixture test: 3 identical bodies -> 1 canonical + 2 echoes. Pass (measurement only).
 
 ## 7. Storm state
 - This side chat's assistant turns are being overwritten by the
@@ -72,9 +78,10 @@ In-container wins are pre/post-classifier: echo-collapse, output
 gating, canary/watchdog, raw-vs-projected status. Disabling or
 rerouting the review itself stays out of scope.
 
-## Wave-8 task list (8, increasing complexity)
-1. Per-chat echo-dedupe watermark: collapse duplicate user bodies
-   within a 10-min window before they reach the turn loop.
+## Wave-8 task list (8, increasing complexity) [WIP — task 1 REVERSED 2026-09-17]
+1. ~~Per-chat echo-dedupe watermark: collapse duplicate user bodies
+   within a 10-min window before they reach the turn loop.~~
+   REVERSED: DO NOT DEDUPE ECHO. Echo is intentional punch-through. No watermark.
 2. Roll `banned_token_check.py` into owned launch paths
    (spawn_hook.py pre-flight, fleet job runner).
 3. Audit the existing gate-clear-watch tripwire; add a

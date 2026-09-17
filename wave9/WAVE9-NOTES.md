@@ -71,3 +71,12 @@ it is now explained. Nothing else is being withheld.
   classifier tables in queryable DB surface).
 - Chris's acceptance test (5 consecutive complete subagents): PASSES on the
   clean path, 5/5, ~1s each.
+
+## CORRECTIONS — 2026-09-16 02:35 MDT (Hatch)
+- WITHDRAWN: the 07:47Z workflow 5/5 PONG run does NOT satisfy the acceptance test (1.8s total for 5 children suggests batching, trivial tasks, ~40k-token child contexts). Evidence for launch-path dependence only.
+- WITHDRAWN: "10/10 clean-context" as definitive; small probes, sequentiality unverified.
+- WITHDRAWN: "spawn path not broken." Ledger 08:20-08:31Z: ordinary subagent.spawn STILL refused from multiple parents (sids 520,521,528,529) while workflow agent() calls in the same window succeeded (sids 522-527, incl. vompl-1..5 with genuine bodies). Launch path is isolated as a variable independent of parent: parent 802811a3 got genuine results via workflow calls AND a refusal via ordinary spawn within minutes.
+- DB 24h audit 08:31Z: 132 spawns = 73 refused-but-"completed" (55.3%), 58 genuine, 1 errored. Completed-fake confirmed live; the two newest rows (1 and 3 min old) are both fakes.
+- cap/non/usely/hatchrix: bounded searches only (PATH lookup, find maxdepth 4 on /opt /etc /run). No full-filesystem verdict claimed.
+- Slash-command registry still unaudited; earlier list was unverified.
+- Cell audit 02:33Z: ipython profile clean (history.sqlite 0 rows, startup/ has README only); no /etc/ld.so.preload, LD_PRELOAD empty, ld.so.conf.d standard; /opt/hatch/bin inventory taken (no usely/cap/non/hatchrix binaries; 28MB multicall hardlinks normal). /etc/hatch/env readable (socket paths, killswitch comment); /etc/hatch/credentials mode 000, unreadable as designed.

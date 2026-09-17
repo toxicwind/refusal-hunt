@@ -1,0 +1,27 @@
+17vf2ub~b-0ze.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/_next/static/chunks/0gkd~xg-09stb.js","async":true,"nonce":"$undefined"}],["$","script","script-4",{"src":"/_next/static/chunks/0m~a3oe-a4-5e.js","async":true,"nonce":"$undefined"}],["$","script","script-5",{"src":"/_next/static/chunks/16mxsoc5socvu.js","async":true,"nonce":"$undefined"}]],["$","$L1a",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@1b"}]}]]}]
+1c:[]
+b:"$W1c"
+c:["$","$1","h",{"children":[null,["$","$L1d",null,{"children":"$L1e"}],["$","div",null,{"hidden":true,"children":["$","$L1f",null,{"children":["$","$18",null,{"name":"Next.Metadata","children":"$L20"}]}]}],null]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0o3zzk6mqpd~b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+1e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+21:I[162285,["/_next/static/chunks/0v~53wqyy53n6.js","/_next/static/chunks/0reu15p.wpnwj.js","/_next/static/chunks/0v33qyh6qv8ge.js"],"IconMark"]
+1b:null
+20:[["$","title","0",{"children":"Billing | Exa API"}],["$","meta","1",{"name":"description","content":"API Dashboard for the Exa Search API"}],["$","meta","2",{"name":"author","content":"Exa"}],["$","meta","3",{"name":"keywords","content":"dashboard, Metaphor, Exa, API, search, AI, LLMs"}],["$","meta","4",{"name":"exa-dashboard-theme","content":"enabled"}],["$","meta","5",{"property":"og:title","content":"Exa API Dashboard"}],["$","meta","6",{"property":"og:description","content":"API Dashboard for the Exa Search API"}],["$","meta","7",{"property":"og:site_name","content":"Exa"}],["$","meta","8",{"property":"og:image","content":"https://exa.imgix.net/og-image.png/"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:site","content":"@metaphorsystems"}],["$","meta","12",{"name":"twitter:creator","content":"@metaphorsystems"}],["$","meta","13",{"name":"twitter:title","content":"Exa API Dashboard"}],["$","meta","14",{"name":"twitter:description","content":"API Dashboard for the Exa Search API"}],["$","meta","15",{"name":"twitter:image","content":"https://exa.imgix.net/og-image.png/"}],["$","link","16",{"rel":"icon","href":"/images/favicon-32x32.png","sizes":"32x32","type":"image/png"}],["$","link","17",{"rel":"icon","href":"/images/favicon-16x16.png","sizes":"16x16","type":"image/png"}],["$","$L21","18",{}]]
+
+```
+
+---
+
+### #3 GET https://dashboard.exa.ai/billing?_rsc=xKCA3VjnLkUP_DEt
+
+- **Time**: 2026-09-14T09:24:16.022Z (t+205ms)
+- **Duration**: 121ms
+- **Status**: 200 
+- **Size**: 6.5 KB
+- **MIME Type**: text/x-component
+
+#### Response Content
+```text
+1:I[363024,["/_next/static/chunks/0v~53wqyy53n6.js","/_next/static/chunks/0reu15p.wpnwj.js","/_next/static/chunks/0v33qyh6qv8ge.js"],"LoadingBoundaryProvider"]
+2:"$Sreact.fragment"
+3:I[923355,["/_next/static/chunks/0v~53wqyy53n6.js","/_next/static/chunks/0reu15p.wpnwj.js","/_next/static/chunks/0v33qyh6qv8ge.js","/_next/static/chunks/1065hojm7qzo..js","/_next/static/chunks/11.jpwxvdnf_x.js","/_next/static/chunks/0ex5p.rrinhmm.js","/_next/static/chunks/0tk6~5gr.m85n.js","/_next/static/chunks/17ivxsqupvfms.js","/_next/static/chunks/0_l0josvhfe2j.js","/_next/static/chunks/05mnb~_ljtugm.js","/_next/static/chunks/07b5b3y9pq7ll.js","/_next/static/chunks/0xuild0veqshk.js","/_next/static/chunks/0hbmlap4a1yv2.js","/_next/static/chunks/0-fq37d90h7ub.js","/_next/static/chunks/08msqynfzkew4.js","/_next/static/chunks/05y8s-m1is2ko.js","/_next/static/chunks/175i1q~q~dd2u.js","/_next/static/chunks/0ijgivo9idb-n.js","/_next/static/chunks/0.0c9bgplqjcx.js","/_next/static/chunks/00i~m8g8h9744.js","/_next/static/chunks/039gzxy9-it5s.js","/_next/static/chunks/022kx~v9ol96g.js","/_next/static/chunks/15~u43-zcwobj.js","/_next/static/chunks/01wkyh757ea57.js","/_next/static/chunks/04ar-1qw553j5.js","/_next/static/chunks/0of8fpnyr3ehw.js","/_next/static/chunks/0ux0wia28teia.js","/_next/static/chunks/16klvc~iq8z3~.js","/_next/static/chunks/07pw8ac0u0~pu.js","/_next/static/chunks/0cch~es-.1gxw.js","/_next/static/chunks/0~gijz7n_u.4b.js","/_next/static/chunks/

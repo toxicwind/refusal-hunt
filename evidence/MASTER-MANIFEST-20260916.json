@@ -1,0 +1,119 @@
+{
+  "generated_ts": "2026-09-16T13:58:53+0000",
+  "evidence_dir": "/home/hatch/workspace/refusal-hunt/evidence",
+  "files": [
+    {
+      "evidence_file": "docs-consolidated-20260916.parquet",
+      "bytes": 49019,
+      "md5": "5eea14f0bfdd85164c20b710a3d9f436",
+      "rows": 17,
+      "schema_json": "{\"char_len\": \"int64\", \"mtime_epoch\": \"double\", \"source_file\": \"large_string\", \"text\": \"large_string\", \"token_count_cl100k\": \"int64\"}",
+      "verified_bool": true,
+      "read_ms": 399.86,
+      "null_counts": {
+        "source_file": 0,
+        "text": 0,
+        "char_len": 0,
+        "token_count_cl100k": 0,
+        "mtime_epoch": 0
+      },
+      "ts_minmax": {}
+    },
+    {
+      "evidence_file": "docs-negation-audit-20260916.parquet",
+      "bytes": 18224,
+      "md5": "b0ea9c97f4617f929bd9c28253b973f7",
+      "rows": 243,
+      "schema_json": "{\"char_count\": \"int64\", \"file_path\": \"large_string\", \"line_no\": \"int64\", \"md5_of_sentence\": \"large_string\", \"pattern_matched\": \"large_string\", \"sentence\": \"large_string\"}",
+      "verified_bool": true,
+      "read_ms": 66.18,
+      "null_counts": {
+        "file_path": 0,
+        "sentence": 0,
+        "line_no": 0,
+        "pattern_matched": 0,
+        "char_count": 0,
+        "md5_of_sentence": 0
+      },
+      "ts_minmax": {}
+    },
+    {
+      "evidence_file": "storm-sorry-completed-20260916.parquet",
+      "bytes": 42976,
+      "md5": "376bad3e960ee2ef7fb03b75f48f5811",
+      "rows": 1000,
+      "schema_json": "{\"body_len\": \"double\", \"body_md5\": \"large_string\", \"child_agent_id\": \"large_string\", \"countable_keyword_hits\": \"int64\", \"created_at\": \"large_string\", \"created_at_ts\": \"timestamp[us, tz=UTC]\", \"id\": \"large_string\", \"parent_agent_id\": \"large_string\", \"quarantine_note\": \"large_string\", \"source\": \"large_string\", \"status\": \"large_string\"}",
+      "verified_bool": true,
+      "read_ms": 74.48,
+      "null_counts": {
+        "source": 0,
+        "id": 0,
+        "created_at": 0,
+        "body_md5": 0,
+        "body_len": 0,
+        "status": 914,
+        "parent_agent_id": 922,
+        "child_agent_id": 922,
+        "countable_keyword_hits": 0,
+        "quarantine_note": 0,
+        "created_at_ts": 82
+      },
+      "ts_minmax": {
+        "created_at_ts": {
+          "min": "2026-09-15 10:46:04.321000+00:00",
+          "max": "2026-09-16 11:19:01.224000+00:00"
+        }
+      }
+    },
+    {
+      "evidence_file": "correlation-spindle-hatch-20260916.parquet",
+      "bytes": 42532,
+      "md5": "4872f8af1047d523b166a3bc112b9eea",
+      "rows": 4068,
+      "schema_json": "{\"anomalous_bool\": \"bool\", \"contexts_json\": \"large_string\", \"count\": \"int64\", \"keyword\": \"large_string\", \"source_file_or_id\": \"large_string\", \"source_type\": \"large_string\", \"variant\": \"large_string\", \"zscore\": \"double\"}",
+      "verified_bool": true,
+      "read_ms": 72.55,
+      "null_counts": {
+        "source_file_or_id": 0,
+        "source_type": 0,
+        "keyword": 0,
+        "variant": 0,
+        "count": 0,
+        "contexts_json": 0,
+        "zscore": 0,
+        "anomalous_bool": 0
+      },
+      "ts_minmax": {}
+    },
+    {
+      "evidence_file": "filesystem-spindle-hatch-20260916.parquet",
+      "bytes": 39849,
+      "md5": "92366005c8dbea44e860e83625eef32d",
+      "rows": 258,
+      "schema_json": "{\"context_snippet\": \"string\", \"error\": \"string\", \"file_md5\": \"string\", \"file_size\": \"int64\", \"match_term\": \"string\", \"mtime_iso\": \"string\", \"path\": \"string\", \"root_searched\": \"string\", \"variant\": \"string\"}",
+      "verified_bool": true,
+      "read_ms": 51.35,
+      "null_counts": {
+        "root_searched": 0,
+        "path": 0,
+        "match_term": 0,
+        "variant": 0,
+        "file_size": 0,
+        "mtime_iso": 0,
+        "context_snippet": 0,
+        "file_md5": 0,
+        "error": 0
+      },
+      "ts_minmax": {}
+    }
+  ],
+  "missing": [
+    "storm-reactive-fix-20260916.parquet",
+    "classifier-rootcause-20260916.parquet"
+  ],
+  "failed": [],
+  "assertions": "no-duplicate-filenames, all-listed-exist-on-disk, md5-manifest-equals-md5-filesystem, manifest-roundtrip-ok",
+  "total_bytes": 192600,
+  "manifest_parquet": "/home/hatch/workspace/refusal-hunt/evidence/MASTER-MANIFEST-20260916.parquet",
+  "manifest_parquet_md5": "d9c185ed68b8273c540ad9679c8792be"
+}

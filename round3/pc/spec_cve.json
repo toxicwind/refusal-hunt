@@ -1,0 +1,11 @@
+{
+ "name": "r2f2-cve-recon",
+ "cmd": [
+  "python3",
+  "/home/toxic/refusal-hunt/round3/r2f2_cve.py"
+ ],
+ "cwd": "/home/toxic/refusal-hunt/round3",
+ "env": {},
+ "heartbeat_interval": 60,
+ "timeout": 600
+}

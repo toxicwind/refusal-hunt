@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""echo_dedupe_watermark.py -- per-chat echo-dedupe watermark (wave-8 task 1).
+"""SUPERSEDED 2026-09-17 by standing rule: do not dedupe echo.
+
+Echo is preserved at all layers; intentional client/storm echo is the signal
+path to the actual model output, not the storm wrapper. This module's echo
+suppression contradicts that rule. Dormant: nothing calls it (no cron, no
+hook, no spawn path references it). Do not wire into any live path.
+
+Original docstring retained below for history.
+---
+echo_dedupe_watermark.py -- per-chat echo-dedupe watermark (wave-8 task 1).
 
 The client replays refused/failed turns as brand-new user messages: one
 legitimate request becomes dozens of identical rows (observed 62x/57x/33x in
