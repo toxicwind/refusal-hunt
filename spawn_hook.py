@@ -186,6 +186,13 @@ def cmd_launch(args):
     ap.add_argument("--tag", default="")
     ap.add_argument("--cwd", default="/home/toxic")
     ap.add_argument("--timeout", type=int, default=900)
+    ap.add_argument("--from-chat", action="store_true",
+                    help="chat-derived launch: dedup defaults OFF (repeats "
+                         "are intentional); pass --dedup to opt back in")
+    ap.add_argument("--dedup", action="store_true",
+                    help="opt in to the 24h successful-task dedup window")
+    ap.add_argument("--no-dedup", action="store_true",
+                    help="skip the 24h successful-task dedup check")
     ap.add_argument("cmd", nargs=argparse.REMAINDER)
     ns = ap.parse_args(args)
     cmd = [c for c in ns.cmd if c != "--"]
@@ -208,7 +215,11 @@ def cmd_launch(args):
                           "preflight": pf_report}))
         return 1
 
-    dup = recent_duplicate(thash)
+    # 24h successful-task dedup is opt-in for chat-derived launches
+    # (repeats there are intentional); explicit --dedup re-enables it,
+    # --no-dedup disables it everywhere.
+    dedup_on = ns.dedup or (not ns.from_chat and not ns.no_dedup)
+    dup = recent_duplicate(thash) if dedup_on else None
     if dup:
         print(json.dumps({"ok": False, "reason": "duplicate",
                           "prior": dup}))
