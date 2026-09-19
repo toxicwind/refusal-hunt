@@ -1,11 +1,11 @@
 {
   "ledger": "/home/hatch/workspace/refusal-hunt/ledger/anomalies.parquet",
-  "total_rows": 1354,
-  "new_rows_this_run": 1,
+  "total_rows": 1357,
+  "new_rows_this_run": 0,
   "write_verified": true,
   "by_source_digest": {
     "chat:582bcbd0": 1179,
-    "chat:5ddc59a5": 1,
+    "chat:5ddc59a5": 4,
     "chat:bcf90ac8": 1,
     "fleet-spawn:b4aefd29": 11,
     "runtime.messages:06d19ac6": 1,
@@ -62,6 +62,6 @@
     "runtime.messages:b4aefd29:b4aefd29": 4,
     "spawn:b4aefd29": 102
   },
-  "newest_created_at": "2026-09-17T20:12:36.898000+00:00",
-  "updated_at": "2026-09-17T20:22:53.698802+00:00"
+  "newest_created_at": "2026-09-19T08:22:11.002000+00:00",
+  "updated_at": "2026-09-19T08:38:46.599375+00:00"
 }

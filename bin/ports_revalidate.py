@@ -26,6 +26,10 @@ import subprocess
 import sys
 import time
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import safe_write  # noqa: E402 -- append-exception guards (fail loud,
+                   # keep prior good copy intact; debate 0220db63 slice 1)
+
 STATE = os.path.expanduser("~/workspace/refusal-hunt/state/ports")
 N_SHARDS = 4
 PORTS_PER_SHARD = 65536 // N_SHARDS
@@ -123,10 +127,12 @@ def main():
            "shard": shard, "range": [lo, hi - 1],
            "open": open_ports, "ss_listen": ssl,
            "reconciled": reconciled, "new_vs_baseline": new, "ms": ms}
-    with open(os.path.join(STATE, "history.jsonl"), "a") as f:
-        f.write(json.dumps(rec) + "\n")
-    with open(os.path.join(STATE, "shard.idx"), "w") as f:
-        json.dump((shard + 1) % N_SHARDS, f)
+    # Append-exception guard: verified append + atomic shard rotation.
+    # A torn shard.idx would rescan the wrong shard forever; a failed
+    # history write must raise, never silently skip the poll row.
+    safe_write.append_jsonl(os.path.join(STATE, "history.jsonl"), rec)
+    safe_write.atomic_write_json(os.path.join(STATE, "shard.idx"),
+                                 (shard + 1) % N_SHARDS)
     print(json.dumps(rec))
     return 2 if new else 0
 

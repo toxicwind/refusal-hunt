@@ -15,9 +15,14 @@ Contract:
 """
 import json
 import os
+import sys
 import time
 import traceback
 from datetime import datetime, timezone
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import safe_write  # noqa: E402 -- append-exception guards (fail loud,
+                   # keep prior good copy intact; debate 0220db63 slice 1)
 
 HOME = "/home/hatch"
 BASE = f"{HOME}/workspace/refusal-hunt"
@@ -35,17 +40,18 @@ def utcnow() -> str:
 
 
 def beat(note: str = "ok") -> None:
-    try:
-        with open(HEARTBEAT, "w") as f:
-            f.write(f"{utcnow()} {note}\n")
-    except OSError:
-        pass
+    # Append-exception guard: atomic heartbeat write. A zero-byte
+    # heartbeat makes supervisors misread aliveness; any failure
+    # raises so the supervisor script sees it.
+    safe_write.atomic_write_text(HEARTBEAT, f"{utcnow()} {note}\n")
 
 
 def log(msg: str) -> None:
+    # Best-effort by daemon contract (never exits): this IS the failure
+    # reporter, so it cannot raise. Still fsyncs so a reported line is
+    # really on disk.
     try:
-        with open(LOG, "a") as f:
-            f.write(f"{utcnow()} {msg}\n")
+        safe_write.append_text(LOG, f"{utcnow()} {msg}\n")
     except OSError:
         pass
 
@@ -75,11 +81,9 @@ def load_seen() -> int:
 
 
 def save_seen(n: int) -> None:
-    try:
-        with open(SEEN, "w") as f:
-            f.write(str(n))
-    except OSError:
-        pass
+    # Append-exception guard: atomic seen-counter write. A torn write
+    # would re-alert already-seen refusals; any failure raises.
+    safe_write.atomic_write_text(SEEN, str(n))
 
 
 def alert(entry: dict, idx: int, total: int) -> None:
@@ -90,15 +94,17 @@ def alert(entry: dict, idx: int, total: int) -> None:
         f"\n## {utcnow()} -- canned refusal #{idx}/{total} UNRESOLVED\n"
         f"- kind: {kind}\n- task: {str(task)[:300]}\n- at: {ts}\n"
     )
-    try:
-        lines = open(ALERTS).read().splitlines() if os.path.exists(ALERTS) else []
-        if not lines:
-            lines = ["# SORRY-ALERTS -- canned-refusal watchdog feed",
-                     "Appended by sorry_watchdog.py (system daemon, not scheduler)."]
-        lines.extend(block.splitlines())
-        open(ALERTS, "w").write("\n".join(lines[-MAX_ALERT_LINES:]) + "\n")
-    except OSError as e:
-        log(f"alert write failed: {e}")
+    # Append-exception guard: atomic alerts rewrite (tmp + fsync +
+    # rename). The old alerts file stays intact until the new one is
+    # fully on disk. Failure raises -- callers log it, never swallow it
+    # into a zero-byte alerts file.
+    lines = open(ALERTS).read().splitlines() if os.path.exists(ALERTS) else []
+    if not lines:
+        lines = ["# SORRY-ALERTS -- canned-refusal watchdog feed",
+                 "Appended by sorry_watchdog.py (system daemon, not scheduler)."]
+    lines.extend(block.splitlines())
+    safe_write.atomic_write_text(
+        ALERTS, "\n".join(lines[-MAX_ALERT_LINES:]) + "\n")
 
 
 def poll_once() -> None:

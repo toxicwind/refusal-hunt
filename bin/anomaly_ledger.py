@@ -16,6 +16,11 @@ import argparse
 import datetime
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import safe_write  # noqa: E402 -- append-exception guards (fail loud,
+                   # keep prior good copy intact)
 
 os.environ.setdefault("TIKTOKEN_CACHE_DIR",
                       os.path.expanduser("~/workspace/refusal-hunt/.tiktoken-cache"))
@@ -150,7 +155,10 @@ def main():
         df = pd.concat([df, new_df], ignore_index=True)
         df = df.drop_duplicates(subset=["source", "id"], keep="last")
         n_new = len(df) - before
-        df.to_parquet(LEDGER_PATH, compression="zstd", index=False)
+        # Append-exception guard (2026-09-19, debate 0220db63 slice 1):
+        # atomic parquet replace + .bak of the prior good copy. Any
+        # failure raises -- never a zero-byte/truncated ledger.
+        safe_write.atomic_write_parquet(df, LEDGER_PATH)
         # Fail loudly: re-read and confirm the write actually landed. A
         # mismatch means the ledger writer is broken — never update the
         # status file to claim rows that did not persist (2026-09-17:
@@ -175,8 +183,10 @@ def main():
                               if total and "created_at" in df else None),
         "updated_at": ingested_now,
     }
-    with open(STATUS_PATH, "w") as fh:
-        json.dump(status, fh, indent=2)
+    # Append-exception guard: atomic status replace (tmp + fsync +
+    # rename). A crash mid-write can never leave a zero-byte
+    # LEDGER_STATUS.json behind.
+    safe_write.atomic_write_json(STATUS_PATH, status)
 
     if args.banner or args.rows:
         print(f"LEDGER total={total} new={n_new} write_verified=True "

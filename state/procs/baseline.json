@@ -1,7 +1,13 @@
 {
  "established": "2026-09-17T02:07:55Z",
- "last_fold": "2026-09-17T21:09:30Z",
+ "last_fold": "2026-09-19T08:36:19Z",
  "ppid0": {
+  "713": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1976",
+   "comm": "hatch-execd",
+   "ppid": 0,
+   "verdict": "known hatch infra; full cell restart 2026-09-18 20:32:42 MDT (systemd PID 1 20:32:01, hatch daemon PID 67 20:32:03 leader=1976, hatch-execd PID 713 20:32:42; PIDs 1/67/713 recycled by coincidence as in prior boots; leader number 1976 is new; on-disk md5 874f6d199e83146a6a8d922d9a4db3ff differs from prior boot's 355bea47972370bad9c416dfbbe50c9f, consistent with fresh cell image; n_procs dropped 22->11 across the reboot; readlink /proc/713/exe empty as usual; RE-FIRE 2026-09-19T02:47:55Z was a baseline-staleness artifact \u2014 same process, start time unchanged 02:32:42Z, folded here)"
+  },
   "1": {
    "cmdline": "/usr/lib/systemd/systemd",
    "comm": "systemd",
@@ -13,14 +19,27 @@
    "ppid": 0
   },
   "67": {
-   "cmdline": "/opt/hatch/bin/hatch daemon --runtime-cell-leader=1969",
+   "cmdline": "/opt/hatch/bin/hatch daemon --runtime-cell-leader=1968",
    "comm": "hatch",
-   "ppid": 0
+   "ppid": 0,
+   "verdict": "known hatch infra; cell restart 2026-09-18 12:46:48 MDT (leader flag 1968, matches hatch-execd PID 718)"
+  },
+  "737": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1971",
+   "comm": "hatch-execd",
+   "ppid": 0,
+   "verdict": "known hatch infra; full cell restart 2026-09-18 06:25:43 MDT (systemd PID1 06:25:43, hatch daemon PID67 06:25:44 leader=1971, hatch-execd PID737 06:26:14; on-disk md5 001cb411025ef89eca7b48f56f0d537e; n_procs 23->12)"
   },
   "709": {
    "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1966",
    "comm": "hatch-execd",
    "ppid": 0
+  },
+  "711": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1975",
+   "comm": "hatch-execd",
+   "ppid": 0,
+   "verdict": "known hatch infra; full cell restart 2026-09-18 04:48 MDT (systemd PID 1 04:47:47, hatch daemon PID 67 04:47:49 leader=1975, hatch-execd PID 711 04:48:11; on-disk md5 355bea47972370bad9c416dfbbe50c9f)"
   },
   "710": {
    "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1970",
@@ -37,6 +56,12 @@
    "comm": "hatch-execd",
    "ppid": 0
   },
+  "716": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1952",
+   "comm": "hatch-execd",
+   "ppid": 0,
+   "verdict": "known hatch infra; full cell restart 2026-09-18 03:02 MDT (systemd PID 1 03:01:40, hatch daemon PID 67 03:01:42 leader=1952, hatch-execd PID 716 03:02:31)"
+  },
   "723": {
    "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1962",
    "comm": "hatch-execd",
@@ -52,8 +77,23 @@
    "comm": "hatch-execd",
    "ppid": 0
   },
+  "728": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1961",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
   "729": {
    "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1970",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "730": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1964",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "732": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1960",
    "comm": "hatch-execd",
    "ppid": 0
   },
@@ -71,6 +111,41 @@
    "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1969",
    "comm": "hatch-execd",
    "ppid": 0
+  },
+  "731": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1967",
+   "comm": "hatch-execd",
+   "ppid": 0
+  },
+  "718": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1968",
+   "comm": "hatch-execd",
+   "ppid": 0,
+   "verdict": "known hatch infra; full cell restart 2026-09-18 12:46:38 MDT (systemd PID 1 12:46:47, hatch daemon PID 67 12:46:48 leader=1968, hatch-execd PID 718 12:47:11; on-disk md5 a56160732daa917b43e3bdfee82b74cb; n_procs 16->12)"
+  },
+  "24230": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1954",
+   "comm": "hatch-execd",
+   "ppid": 0,
+   "verdict": "known hatch infra; daemons-only restart 2026-09-18 20:07 MDT (systemd PID 1 unchanged since ~19:12 MDT; hatch-execd PID 24230 20:07:3x, hatch daemon PID 24231 20:07:4x leader=1954; prior daemons PID 67/730 gone; PPid 0 normal posture; exe symlink masked as usual; on-disk hatch-execd md5 9cc1fa69d8d0b508772dcd6c6d1728c4; n_procs 24->21)"
+  },
+  "24231": {
+   "cmdline": "/opt/hatch/bin/hatch daemon --runtime-cell-leader=1954",
+   "comm": "hatch",
+   "ppid": 0,
+   "verdict": "known hatch infra; daemons-only restart 2026-09-18 20:07 MDT (systemd PID 1 unchanged since ~19:12 MDT; hatch-execd PID 24230 20:07:3x, hatch daemon PID 24231 20:07:4x leader=1954; prior daemons PID 67/730 gone; PPid 0 normal posture; exe symlink masked as usual; on-disk hatch-execd md5 9cc1fa69d8d0b508772dcd6c6d1728c4; n_procs 24->21)"
+  },
+  "18542": {
+   "cmdline": "/opt/hatch/bin/hatch-execd --runtime-cell-leader=1963",
+   "comm": "hatch-execd",
+   "ppid": 0,
+   "verdict": "known hatch infra; daemon-pair self-restart 2026-09-19 02:33:35 MDT (08:33:35Z): hatch-execd PID 18542 at 08:33:35Z + hatch daemon PID 18543 at 08:33:36Z, both --runtime-cell-leader=1963, PPid 0, replacing prior pair (hatch daemon PID 67 + hatch-execd PID 710, both gone). Paired 1s start delta. Preceded by UNDOCUMENTED full cell restart 2026-09-19 02:04:49 MDT (btime 1789805089; systemd PID 1 08:04:58Z) that did NOT fire the hook because PIDs 1/67/710 recycled into baseline-known values; n_procs dropped 21->12 across it. on-disk hatch-execd md5 586431c4dabe070d3c12b3ae77e7075a (fresh image value, differs from prior folds). Leader 1963 recycled (seen 2026-09-16 21:12, 2026-09-17 02:00/08:43 boots, 2026-09-17 17:06 rotation). exe symlink masked as usual."
+  },
+  "18543": {
+   "cmdline": "/opt/hatch/bin/hatch daemon --runtime-cell-leader=1963",
+   "comm": "hatch",
+   "ppid": 0,
+   "verdict": "known hatch infra; same daemon-pair self-restart 2026-09-19 02:33:36 MDT as 18542; paired hatch daemon with leader=1963"
   }
  }
 }

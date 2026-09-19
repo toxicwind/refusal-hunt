@@ -15,7 +15,12 @@ exit 0 = no delta, exit 2 = new PPID-0 daemon(s).
 """
 import json
 import os
+import sys
 import time
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import safe_write  # noqa: E402 -- append-exception guards (fail loud,
+                   # keep prior good copy intact; debate 0220db63 slice 1)
 
 STATE = os.path.expanduser("~/workspace/refusal-hunt/state/procs")
 
@@ -66,8 +71,10 @@ def main():
         baseline = {"ppid0": ppid0,
                     "established": time.strftime("%Y-%m-%dT%H:%M:%SZ",
                                                  time.gmtime())}
-        with open(os.path.join(STATE, "baseline.json"), "w") as f:
-            json.dump(baseline, f, indent=1)
+        # Append-exception guard: atomic baseline write. A zero-byte
+        # baseline would wake on every subsequent poll.
+        safe_write.atomic_write_json(os.path.join(STATE, "baseline.json"),
+                                     baseline)
         cold = True
     else:
         cold = False
@@ -78,8 +85,10 @@ def main():
            "n_procs": len(procs), "ppid0_count": len(ppid0),
            "ppid0_pids": sorted(int(p) for p in ppid0),
            "new_ppid0": new, "cold_start": cold, "ms": ms}
-    with open(os.path.join(STATE, "history.jsonl"), "a") as f:
-        f.write(json.dumps(rec) + "\n")
+    # Append-exception guard: verified append. The file is never
+    # truncated; any write failure raises instead of silently dropping
+    # the poll row.
+    safe_write.append_jsonl(os.path.join(STATE, "history.jsonl"), rec)
     print(json.dumps({**rec,
                       "new_ppid0_detail": {str(p): ppid0[str(p)] for p in new}}))
     return 2 if new else 0
