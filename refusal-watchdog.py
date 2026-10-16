@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """refusal-watchdog — event-driven supervisor for the refusal-hunt pipeline.
 
-Pitchfork daemon: sovereign/refusal-watchdog (see /home/toxic/sovereign/pitchfork.toml).
+Pitchfork daemon: estate-scripts/refusal-watchdog (see /home/toxic/estate-scripts/pitchfork.toml).
 No cron, no sleep, no timers anywhere in this file. The main loop blocks in
 inotifywait; every check is single-shot, fired by a filesystem event.
 

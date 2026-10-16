@@ -97,7 +97,7 @@
         "",
         "/home/hatch/workspace/goals/exa-api-spend-audit/crons:",
         "",
-        "/home/hatch/workspace/goals/first-class-sovereign-organization/crons:"
+        "/home/hatch/workspace/goals/first-class-estate-scripts-organization/crons:"
       ],
       "decision": "NO local disable performed this turn; scheduler watchers left hot per additive rule (await Chris explicit order)",
       "verdict": "CHECKED: 25/25 recent job_runs safety-skipped (platform gate). Definitions were sanitized 2026-09-16; post-edit skip rate unchanged (100%). Disabling would be red-herring forcing and violate additive-only rule. LEFT HOT per Chris 'don't remove things willy nilly'.",

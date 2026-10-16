@@ -20,7 +20,7 @@
   worktree hits: 1
     encrypted-github-fs/store/blobs/333317120540361e.bin:1 [doc/example] [mtime-ok]
       ctx: gAAAAABqp7YsasImUoweC6Yc6Mx_0XYe2WVSIMW0PjQd7tEopuvWOKl_Us09JIVvDlFydzTVSN2QJHKntfp_Slm_qu8a1WrWnzdZvLgOacT4QK43cIRa14XKe6gpi-CiVjejkovMYi15n22W3FRLU52OOSoToQEk
-== sovereign-router-sanitize ==
+== estate-scripts-router-sanitize ==
   history hits (github_pat_): 0
   history hits (ghp_): 0
   worktree hits: 0

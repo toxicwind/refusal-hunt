@@ -46,7 +46,7 @@
     "iso-27001-evidence-collection",
     "paper-writing",
     "report-writing",
-    "sovereign-egress-orchestrator",
+    "estate-scripts-egress-orchestrator",
     "sun-path",
     "zipfs-vault"
   ],
@@ -55,6 +55,6 @@
     "br",
     "ur"
   ],
-  "finding": "All 27 deferred tool namespaces load successfully (159 functions). The 'disabled tools' construct is false at the namespace level: nothing refused to load. 475 workspace skills present; 14 carry disabled/deprecated markers in their headers: ['adr', 'batch-download', 'blind-spot-pass', 'cache-components', 'creative-writing', 'email-to-calendar', 'general-writing', 'glab-runner-controller', 'iso-27001-evidence-collection', 'paper-writing', 'report-writing', 'sovereign-egress-orchestrator', 'sun-path', 'zipfs-vault'].",
+  "finding": "All 27 deferred tool namespaces load successfully (159 functions). The 'disabled tools' construct is false at the namespace level: nothing refused to load. 475 workspace skills present; 14 carry disabled/deprecated markers in their headers: ['adr', 'batch-download', 'blind-spot-pass', 'cache-components', 'creative-writing', 'email-to-calendar', 'general-writing', 'glab-runner-controller', 'iso-27001-evidence-collection', 'paper-writing', 'report-writing', 'estate-scripts-egress-orchestrator', 'sun-path', 'zipfs-vault'].",
   "read_only": true
 }

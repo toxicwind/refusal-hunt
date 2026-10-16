@@ -8,7 +8,7 @@ import os, re, subprocess, sys
 from datetime import datetime
 
 HOME = os.path.expanduser("~")
-REPOS = ["herd-ci-health", "herd-ci", "skills", "sovereign-router-sanitize",
+REPOS = ["herd-ci-health", "herd-ci", "skills", "estate-scripts-router-sanitize",
          "tau-ext-forks", "tau-lockregen", "tau", "tauwork"]
 PAT_RE = re.compile(r"(github_pat_|ghp_|gho_)[A-Za-z0-9_]{8,}")
 # disclosure window: 2026-09-14 18:00 -> 20:00 MDT = 2026-09-15 00:00 -> 02:00 UTC

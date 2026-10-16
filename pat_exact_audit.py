@@ -24,7 +24,7 @@ def load_target_hash():
 TARGET = load_target_hash()
 print("target hash derived in-memory (not displayed)")
 
-REPOS = ["herd-ci-health", "herd-ci", "skills", "sovereign-router-sanitize",
+REPOS = ["herd-ci-health", "herd-ci", "skills", "estate-scripts-router-sanitize",
          "tau-ext-forks", "tau-lockregen", "tau", "tauwork"]
 WS = os.path.expanduser("~/workspace")
 

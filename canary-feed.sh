@@ -4,7 +4,7 @@
 # The missing link, made explicit: canary.py on awrawr-pc is a one-shot
 # classifier; nothing invoked it on a schedule. This script closes one feed:
 #   snapshot CSV -> bridge xfer put -> canary.py check --csv -> log.jsonl
-# The awrawr-pc watchdog (sovereign/refusal-watchdog, inotify-driven) reacts
+# The awrawr-pc watchdog (estate-scripts/refusal-watchdog, inotify-driven) reacts
 # to log.jsonl changes; it needs no cron and no scheduler gate.
 #
 # Contract: single shot, no loops, no sleep. Idempotent per snapshot file

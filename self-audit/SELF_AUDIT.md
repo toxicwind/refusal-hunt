@@ -80,5 +80,5 @@ work already called for them (`muse.exec`, `muse.db`, `muse.read`,
 The completion gate is the daemon's, in another mount namespace, behind
 a kernel-isolated process. In-container wins stay pre/post-gate:
 signature detection, echo collapsing, degraded-continue, the tripwire,
-and the ungated execution paths (sovereign stack, workflows). There is
+and the ungated execution paths (estate-scripts stack, workflows). There is
 no local reset to find because there is no local control to reset.
