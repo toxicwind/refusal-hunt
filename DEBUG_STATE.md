@@ -1,4 +1,4 @@
-# Debug state — parquet-first paradigm (Chris's order, 2026-09-15)
+# Debug state — parquet-first paradigm (the Architect's order, 2026-09-15)
 
 All refusal-hunt debug state lives in **parquet dataframes**, not in ad-hoc SQL pulls or chat memory.
 Fast to read (32ms for 396 rows), typed, versioned, replayable.

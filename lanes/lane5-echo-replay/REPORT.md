@@ -1,6 +1,6 @@
 # LANE 5 — client echo + composite replay [WIP — 2026-09-17 correction: echo is INTENTIONAL]
 
-> WIP. Prior framing treated echo as a bug/amplifier to dedupe. Corrected 2026-09-17 per Chris: echo is purposeful — re-sending to punch through the storm to the actual model. DO NOT DEDUPE. Do not build echo-collapse/dedupe watermarks.
+> WIP. Prior framing treated echo as a bug/amplifier to dedupe. Corrected 2026-09-17 per the Architect: echo is purposeful — re-sending to punch through the storm to the actual model. DO NOT DEDUPE. Do not build echo-collapse/dedupe watermarks.
 
 - byte-identical user-message groups (top 20, last 3d): sizes 27x..417x; median avg inter-arrival 4s
 - largest group: single-char message (md5 5058f1af) replayed 417x across the window — intentional tap/retry echo, not a bug

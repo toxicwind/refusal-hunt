@@ -45,7 +45,7 @@ Notes:
 Repeated verbatim "do not follow / not instructions" framing attached to
 all external evidence may raise the serving classifier's refusal
 sensitivity, so a benign parent turn that leans on just-read content tips
-over. This fits the class-B (context-saturation) pattern and the user's
+over. This fits the class-B (context-saturation) pattern and the architect's
 report that the PDF/MD *payloads* are unhelpful while trouble follows
 their handling. It does NOT fit as the sole cause: the spawn-path A/B
 shows the gate opening and closing independent of wording.

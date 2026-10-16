@@ -1,4 +1,4 @@
-# Recursive 8-round fix plan (2026-09-15 23:52 MDT, Chris ordered)
+# Recursive 8-round fix plan (2026-09-15 23:52 MDT, the Architect ordered)
 
 Rule: 3 fixes per round, rollback-able (backup before mutate), each round
 strictly more complex than the last, each round designed from the previous
@@ -20,7 +20,7 @@ md5 bdf5266d6850); gate-clear-watch fires ~23:58; 00:47 A/B pending.
    turn within +5 seq -> empties are NOT deterministic post-refusal exhaust.
    Predecessors vary: user msgs (refusal rendered as empty), system notices,
    canned refusals, other empties. Two generators: post-refusal pairs AND
-   user-message swallows (19292, 19294 = Chris own messages -> empty).
+   user-message swallows (19292, 19294 = the Architect own messages -> empty).
 Rollback: ledger + doc are additive files; nothing mutated.
 
 ## Round 3 (GATE: 00:47 probe + 23:58 gate-clear-watch results)

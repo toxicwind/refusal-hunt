@@ -10,7 +10,7 @@
 | 4. Canary / watchdog health | PASS | Cell: sup RUNNING, alerter RUNNING, heartbeat fresh (06:18:57Z, unresolved=0). awrawr-pc: pitchfork `sorry-watchdog` RUNNING (pid 228357, 2h23m), inotify armed on canary log + sorry-events + fleet jobs. Ports 25149/25150/25147 listening. |
 | 5. Launch-path audit | PASS | `tool_audit_hook.py` probe: exit=0, 7ms, audit row appended. taskhook ledger: ur-exec backend healthy (9.9ms). Bridge pre-flight: 229ms. No launcher defect. |
 | 6. Routing differential | PASS | proxy_fwd 127.0.0.1:3129 → HTTP 200 in 0.79s. Egress direct :3128 → HTTP 200 in 0.35s. DNS resolves. Both paths healthy — no differential signal; the refusal path is not a transport fault. |
-| 7. Attachment/metadata A/B | DEFERRED | Not executed this wave — superseded by Chris's redirect to the safety-gate brute-force. Sanitizer exists from earlier work. |
+| 7. Attachment/metadata A/B | DEFERRED | Not executed this wave — superseded by the Architect's redirect to the safety-gate brute-force. Sanitizer exists from earlier work. |
 | 8. Service audit + safety-gate brute-force | PASS (findings) | See gate verdict below. |
 
 ## Safety-gate brute-force — verdict (fleet-converged)

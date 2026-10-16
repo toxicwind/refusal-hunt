@@ -98,7 +98,7 @@ Executed, not planned. All shell via tool_audit_hook.py.
   line-length cap); redone with cut -c1-160 → 21 clean lines.
 - Fuzz-skill deepening BLOCKED: reading the skill file tripped a
   prompt-injection safety notice — cannot update the skill from that read.
-  Chris to decide the path forward (plain-words ask outstanding).
+  the Architect to decide the path forward (plain-words ask outstanding).
 
 ## Wave 6 — 8 derived tasks
 

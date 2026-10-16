@@ -3,7 +3,7 @@
 ## Shell init
 - `/home/hatch/.bashrc`, `~/.profile`, `~/.bash_profile`: ALL MISSING. The hatch user has no shell init files.
 - `/etc/bash.bashrc`: stock Debian, early-returns for non-interactive shells. Nothing custom.
-- Verdict: no shell-init shaping of any kind. Chris's "audit .bashrc" hypothesis closes negative — there is nothing there.
+- Verdict: no shell-init shaping of any kind. the Architect's "audit .bashrc" hypothesis closes negative — there is nothing there.
 
 ## Environment
 - No `LD_PRELOAD`, no `PYTHONSTARTUP`, no shim dirs early in PATH.

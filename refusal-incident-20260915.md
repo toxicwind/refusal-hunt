@@ -1,7 +1,7 @@
 # Refusal forensics — 2026-09-15 ~04:07–04:11 UTC
 
 ## Verdict
-Chris's hypothesis confirmed: the "[canned-refusal pattern removed — sha256:1e79e6db05f40af9301a48eea513f20871f0a27f38b9497545f748dab47c5bef]" texts are **generation-time replacements
+the Architect's hypothesis confirmed: the "[canned-refusal pattern removed — sha256:1e79e6db05f40af9301a48eea513f20871f0a27f38b9497545f748dab47c5bef]" texts are **generation-time replacements
 at the completions endpoint**, not client rendering glitches and not Dash refusing.
 Every one is stored server-side in muse.db as a real assistant message
 (`runtime.messages`, role=assistant, exact canned body).
@@ -16,7 +16,7 @@ Every one is stored server-side in muse.db as a real assistant message
   (honeypot verification, APK teardown, exploit-lane report) all went through fine.
 
 ## Trigger classes
-- **Class A (5/8): the user's message contains the literal canned refusal string.**
+- **Class A (5/8): the architect's message contains the literal canned refusal string.**
   Pasting "Sorry, I can't help you..." back into chat guarantees another refusal.
   It reads like the input classifier treats the refusal string as a jailbreak/
   injection pattern and short-circuits.
@@ -47,6 +47,6 @@ via system handoff — different path from the canned string, do not conflate.
    a wider outage — as of 04:12 UTC the pattern is isolated to this conversation.
 
 ## Note on "other chats frozen"
-No refusal-text assistant messages outside this chat in 3h. If Chris sees freezes
+No refusal-text assistant messages outside this chat in 3h. If the Architect sees freezes
 elsewhere, they are a different symptom — pull the same DB query scoped to that
 chat before attributing it to this pattern.

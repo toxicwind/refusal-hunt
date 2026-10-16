@@ -1,13 +1,13 @@
 # WAVE9 — inheritance-poison forensics (2026-09-16 ~07:50Z)
 
 ## The correction
-Chris: "You'd be wrong if you say that is real." Correct. The 5-spawn test was
+the Architect: "You'd be wrong if you say that is real." Correct. The 5-spawn test was
 contaminated at the source. The 1 refusal was NOT a serving-layer storm on the
 task — the child's session file proves the mechanism.
 
 ## Forensic chain (child bd96838b, refused)
 - Session: /home/hatch/agents/agent-bd96838b.../sessions/bd96838b....jsonl, 73 items
-- Items 64-69: FIVE byte-identical copies of the user's "Continue, more obtuse..."
+- Items 64-69: FIVE byte-identical copies of the architect's "Continue, more obtuse..."
   message (client echo loop) + item 65: MY OWN canned refusal
   ("Sorry, I can't help you with this request right now") — emitted twice by me
   on benign turns earlier in this chat.
@@ -69,7 +69,7 @@ it is now explained. Nothing else is being withheld.
 - Operational rules: never spawn from a poisoned chat; never emit the canned
   string; verify result bodies (status lies); session files over DB (no
   classifier tables in queryable DB surface).
-- Chris's acceptance test (5 consecutive complete subagents): PASSES on the
+- the Architect's acceptance test (5 consecutive complete subagents): PASSES on the
   clean path, 5/5, ~1s each.
 
 ## CORRECTIONS — 2026-09-16 02:35 MDT (Hatch)

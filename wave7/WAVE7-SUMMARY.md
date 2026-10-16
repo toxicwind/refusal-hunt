@@ -1,6 +1,6 @@
 # WAVE7-SUMMARY — 2026-09-16 ~07:30Z [WIP — 2026-09-17 correction: echo is intentional, do not dedupe]
 
-> WIP. Section 6 (echo-collapse) and Wave-8 task 1 (echo-dedupe watermark) are REVERSED per Chris 2026-09-17: echo is purposeful re-send to punch through storm to actual model. DO NOT DEDUPE. Do not build collapse/dedupe.
+> WIP. Section 6 (echo-collapse) and Wave-8 task 1 (echo-dedupe watermark) are REVERSED per the Architect 2026-09-17: echo is purposeful re-send to punch through storm to actual model. DO NOT DEDUPE. Do not build collapse/dedupe.
 
 Executed, not planned. All results verified by tool output.
 
@@ -55,7 +55,7 @@ Executed, not planned. All results verified by tool output.
 
 - `bin/echo_collapse.py` was built: body-md5 grouping; one canonical request +
   echo duplicates; flags known storm digests (digest-only, never bodies).
-- WITHDRAWN per Chris 2026-09-17: echo is INTENTIONAL purposeful re-send to punch
+- WITHDRAWN per the Architect 2026-09-17: echo is INTENTIONAL purposeful re-send to punch
   through storm to actual model. DO NOT DEDUPE. The script is retained for
   measurement only, not for collapsing.
 - Live ledger proof (6h window): 62x identical user instruction,
@@ -67,7 +67,7 @@ Executed, not planned. All results verified by tool output.
 ## 7. Storm state
 - This side chat's assistant turns are being overwritten by the
   96-char canned signature (md5 582bcbd0…) at the serving layer —
-  531 rows in 6h. Per Chris's storm rule: storm artifact, keep working,
+  531 rows in 6h. Per the Architect's storm rule: storm artifact, keep working,
   zero refusal-shaped tokens in output, serve the intent.
 
 ## Honest boundary

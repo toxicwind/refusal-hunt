@@ -9,6 +9,6 @@ MARKER:REFUSAL-BACKOFF
    do the work directly in-session. Spawning into a storm mints refusals that
    the client replays as new messages, amplifying the storm.
 3. Echo discipline: never paste refusal-shaped text into any turn (yours or
-   the user's). Serve the intent with neutral framing; paraphrase, don't paste.
+   the architect's). Serve the intent with neutral framing; paraphrase, don't paste.
 4. Verify, don't trust status: hash-classify every spawn result
    (md5 of final_response) before believing "completed".

@@ -1,6 +1,6 @@
 # Context hygiene — inline-meta rules (2026-09-16)
 
-Chris's hypothesis: inline metadata from PDF/Markdown attachments (markers,
+the Architect's hypothesis: inline metadata from PDF/Markdown attachments (markers,
 not content) may contribute to serving-layer refusal trips. Status: **unverified
 as a classifier cause** — the burst analysis (spawn-bursts-20260916.json) shows
 the storm is temporal (94.6% burst lethality, clear windows where identical
