@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# refusal-hunt — self-test gate (PASS/FAIL).
+# Forensics-hunt repo. Gate = every bin/*.py forensics module + the anomaly-ledger
+# verifier compile (py_compile). No live parquet/LEDGER dependency — only syntax.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+export RUN_FAST_ACTIVE=0
+PY="${PY:-python3}"
+
+echo "== refusal-hunt check: start =="
+[ -d bin ] || { echo "FAIL: bin/ missing"; exit 1; }
+
+# Gate 1 — heavy syntax pass over the bin scripts (skip __pycache__)
+set +e
+out="$("$PY" -m compileall -q bin 2>&1)"
+echo "$out"
+echo "${PIPESTATUS[0]}" > /tmp/rc
+rc=$(cat /tmp/rc); rm -f /tmp/rc
+set -e
+[ "$rc" -eq 0 ] || { echo "FAIL: compileall bin rc=$rc"; exit 1; }
+
+# Gate 2 — verify_ledger present
+[ -f bin/verify_ledger.py ] || { echo "FAIL: bin/verify_ledger.py missing"; exit 1; }
+
+echo "== refusal-hunt check: PASS =="
+exit 0

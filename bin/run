@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# refusal-hunt — primary operation: refusal / sorry / spawn / storm forensics
+# hunts. Key enter: verify the anomaly ledger (parquet schema, counts, quarantine).
+#
+# Usage:
+#   bin/run check                     # fast gate: bin modules compile
+#   bin/run verify-ledger             # verify the anomaly parquet ledger
+#   bin/run <bin-script.> [args...]   # run any bin/* forensics script
+set -euo pipefail
+cd "$(dirname "$0")/.."
+export RUN_FAST_ACTIVE=0
+PY="${PY:-python3}"
+
+if [ "${1:-}" = "check" ]; then exec ./bin/check; fi
+case "${1:-}" in
+  verify-ledger) shift; exec python3 bin/verify_ledger.py "$@" ;;
+  *) if [ -x "bin/${1:-}" ]; then exec python3 "bin/$1" "${@:2}"; else
+       echo "usage: bin/run [check|verify-ledger | <bin-script> [args...]]"; exit 2; fi ;;
+esac
